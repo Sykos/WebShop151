@@ -8,13 +8,20 @@
 
 .section1 {
   border: 2px black solid;
- margin-left: 10%;
-position:relative;
+  position:relative;
 
 }
 
 nav{
     border: 2px black solid;
     margin-right: 80%;
-    position: absolute;
+}
+
+footer {
+  border: 2px black solid;
+  position:relative;
+}
+
+.menu {
+  display:inline;
 }
