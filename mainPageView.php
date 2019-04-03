@@ -1,10 +1,10 @@
-<?php $title = "Accueil"; ?>
+<?php $title = "Accueil";
 
 
-<?php ob_start(); ?>
-<?php require ("headerView.php"); ?>
-<?php require ("navView.php"); ?>
+ob_start();
+require ("headerView.php");
+require ("navView.php");
 
-<?php $content = ob_get_clean();  ?>
+$content = ob_get_contents();
 
-<?php require ("template.php"); ?>
+?>

@@ -1,106 +1,111 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
-
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Open Sans Italic'), local('OpenSans-Italic'), url(https://fonts.gstatic.com/s/opensans/v16/mem6YaGs126MiZpBA-UFUK0Zdcg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v16/mem8YaGs126MiZpBA-UFVZ0e.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v16/mem5YaGs126MiZpBA-UN7rgOUuhs.ttf) format('truetype');
+}
 * {
-    font-family: 'Open Sans', sans-serif;
-    box-sizing: border-box;
-    color: #333;
-    font-size: 100%;
-    line-height: 1.5;
+  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+  color: #333;
+  font-size: 100%;
+  line-height: 1.5;
 }
 body {
-    background: #9fcedf;
-    margin: 0;
+  background: #f1e4d6;
+  margin: 0;
 }
-.panel {
-    --duration: .5s;
-    --easing: ease-in-out;
-    position: relative;
-    width: 220px;
-    margin: 20px;
-    ol {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-    }
-    li {
-        margin: -4px 0 0 0;
-    }
-    a {
-        display: block;
-        text-decoration: none;
-        background: #fff;
-        transform-origin: 0 0;
-        transition: transform var(--duration) var(--easing), color var(--duration) var(--easing);
-        transition-delay: var(--delay-out);
-        border-radius: 4px;
-        padding: 1em 1.52em;
-        &:hover {
-            background: #efefef;
-        }
-    }
-    .sub-menu {
-        a {
-            font-size: .9em;
-            color: #666666;
-            border-left: 2em solid white;
-            padding: .75em;
-            background: linear-gradient(
-                to right,
-                #ddd 2px,
-                #fff 2px
-            );
-            &:hover {
-                background: linear-gradient(
-                    to right,
-                    #ddd 2px,
-                    #efefef 2px
-                );
-            }
-        }
-    }
-    header {
-        font-weight: 600;
-        display: block;
-        background: rgba(255,255,255,.5);
-        transform-origin: 0 0;
-        transition: transform var(--duration) var(--easing), color var(--duration) var(--easing);
-        transition-delay: var(--delay-out);
-        border-radius: 4px;
-        padding: 1em 1.52em;
-        span {
-            border: none;
-            background: transparent;
-            font-size: 1.5em;
-            padding: 0;
-            cursor: pointer;
-            line-height: 1;
-            float: right;
-        }
-    }
-    footer button {
-        position: absolute;
-        top: 0;
-        left: 0;
-        border: none;
-        padding: calc(~'1em - 2px');
-        width: 100%;
-        transform-origin: 0 0;
-        transition: transform var(--duration) var(--easing);
-        transition-delay: calc(~'var(--duration) + (.1s * (var(--count) / 2))');
-        cursor: pointer;
-        outline: none;
-        background: #cdcdcd;
-        opacity: 0;
-    }
-    &.closed {
-        a, header {
-            transform: translateY(~'calc(var(--top) * -1)') scaleY(0.1) scaleX(.2);
-            transition-delay: var(--delay-in);
-            color: transparent;
-        }
-        footer button {
-            transition-delay: 0s;
-            transform: scaleY(.7) scaleX(.2);
-        }
-    }
+nav {
+  --duration: 0.5s;
+  --easing: ease-in-out;
+  position: relative;
+  width: 220px;
+  margin: 20px;
+}
+nav ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+nav li {
+  margin: -4px 0 0 0;
+}
+nav a {
+  display: block;
+  text-decoration: none;
+  background: #fff;
+  transform-origin: 0 0;
+  transition: transform var(--duration) var(--easing), color var(--duration) var(--easing);
+  transition-delay: var(--delay-out);
+  border-radius: 4px;
+  padding: 1em 1.52em;
+}
+nav a:hover {
+  background: #efefef;
+}
+nav .sub-menu a {
+  font-size: 0.9em;
+  color: #666666;
+  border-left: 2em solid white;
+  padding: 0.75em;
+  background: linear-gradient(to right, #ddd 2px, #fff 2px);
+}
+nav .sub-menu a:hover {
+  background: linear-gradient(to right, #ddd 2px, #efefef 2px);
+}
+nav header {
+  font-weight: 600;
+  display: block;
+  background: rgba(255, 255, 255, 0.5);
+  transform-origin: 0 0;
+  transition: transform var(--duration) var(--easing), color var(--duration) var(--easing);
+  transition-delay: var(--delay-out);
+  border-radius: 4px;
+  padding: 1em 1.52em;
+}
+nav header span {
+  border: none;
+  background: transparent;
+  font-size: 1.5em;
+  padding: 0;
+  cursor: pointer;
+  line-height: 1;
+  float: right;
+}
+nav footer button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: none;
+  padding: calc(1em - 2px);
+  width: 100%;
+  transform-origin: 0 0;
+  transition: transform var(--duration) var(--easing);
+  transition-delay: calc(var(--duration) + (.1s * (var(--count) / 2)));
+  cursor: pointer;
+  outline: none;
+  background: #cdcdcd;
+  opacity: 0;
+}
+nav.closed a,
+nav.closed header {
+  transform: translateY(calc(var(--top) * -1)) scaleY(0.1) scaleX(0.2);
+  transition-delay: var(--delay-in);
+  color: transparent;
+}
+nav.closed footer button {
+  transition-delay: 0s;
+  transform: scaleY(0.7) scaleX(0.2);
 }
