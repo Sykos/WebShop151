@@ -1,0 +1,39 @@
+body{
+  background-color:#111;
+}
+
+h2,h3{
+  margin:5px;
+  text-align:center;
+  font-family: arial;
+  color: #666;
+  text-shadow:0px 0px 1px #222;
+}
+
+.name{
+  color : #2299FF;
+}
+
+.blue{
+  color:#3A75A3;
+}
+
+.white{
+  color:#B9B8B8;
+}
+
+.red{
+  color:#FF5A49;
+}
+
+
+#container{
+  margin:auto;
+  border: 1px solid grey;
+  transition:0.3s;
+
+}
+
+#container:hover{
+  box-shadow:0px 0px 15px #333;
+}
