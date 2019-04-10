@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="footerView.css">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="mainPageView.css">
-
+    <link rel="stylesheet" href="BodyHomePage.css">
+    <link rel="stylesheet" href="headerView.css">
 
     <title><?php $title ?></title>
   </head>

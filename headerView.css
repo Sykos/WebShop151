@@ -1,0 +1,10 @@
+#image_logo{
+  position: relative;
+  z-index: 1;
+}
+center {
+  position: absolute;
+  z-index: 2;
+  top: 20%;
+  font-size: 200%;
+}
