@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Muli%7CRoboto:400,300,500,700,900">
     <link rel="stylesheet" href="navView.css">
+    <link href="bootstrap/css/boostrap.css" rel="stylsheet">
 
 
     <title><?php $title ?></title>
