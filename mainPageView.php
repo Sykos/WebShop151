@@ -1,11 +1,17 @@
-<?php $title = "Accueil";
+<?php $title = "Accueil"; ?>
 
 
-ob_start();
-require ("headerView.php");
-require ("navView.php");
-require ("footerView.php");
+<?php ob_start(); ?>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12"><?php require ("headerView.php"); ?></div>
+  </div>
+  <div class="row">
+    <div class="col-md-1"><?php require ("navView.php"); ?></div>
+  </div>
+  <div class="row">
+    <div class="col-md-12"><?php require ("footerView.php"); ?></div>
+  </div>
+</div>
 
-$content = ob_get_contents();
-
-?>
+<?php $content = ob_get_contents(); ?>
