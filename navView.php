@@ -1,30 +1,12 @@
-
-  <nav class="menu">
-    <header>Menu <span>×</span></header>
-    <ol>
-        <li class="menu-item"><a href="#0">Home</a></li>
-        <li class="menu-item">
-            <a href="#0">Fromages</a>
-            <ol class="sub-menu">
-                <li class="menu-item"><a href="#0">Chèvre</a></li>
-                <li class="menu-item"><a href="#0">Vache</a></li>
-                <li class="menu-item"><a href="#0">Autre</a></li>
-            </ol>
-        </li>
-        <li class="menu-item">
-            <a href="#0">Appareils</a>
-            <ol class="sub-menu">
-                <li class="menu-item"><a href="#0">Raclonnettes</a></li>
-                <li class="menu-item"><a href="#0">Kits</a></li>
-                <li class="menu-item"><a href="#0">Accessoires</a></li>
-            </ol>
-        </li>
-        <li class="menu-item"><a href="#0"></a></li>
-    </ol>
-    <footer><button aria-label="Toggle Menu">Toggle</button></footer>
+<nav class="mobile-menu">
+  <input type="checkbox" id="checkbox" class="mobile-menu__checkbox">
+  <label for="checkbox" class="mobile-menu__btn"><div class="mobile-menu__icon"></div></label>
+  <div class="mobile-menu__container">
+  <ul class="mobile-menu__list">
+      <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">Home</a></li>
+      <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">About us</a></li>
+      <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">Work</a></li>
+      <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">Contacts</a></li>
+  </ul>
+  </div>
 </nav>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-
-
-
-    <script  src="navView.js"></script>

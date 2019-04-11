@@ -7,6 +7,9 @@
     <div class="col-md-12"><?php require ("headerView.php"); ?></div>
   </div>
   <div class="row">
+    <div class="col-md-12"> </div>
+  </div>
+  <div class="row" id="navView">
     <div class="col-md-1"><?php require ("navView.php"); ?></div>
   </div>
   <div class="row">
