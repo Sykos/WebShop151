@@ -27,4 +27,4 @@
 
 
 
-    <script  src="navView.js"></script>
+    <script  src="public/js/navView.js"></script>

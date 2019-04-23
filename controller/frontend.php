@@ -1,8 +1,8 @@
 <?php
-require ("template.php");
+require ("view/template.php");
 
 function mainPage(){
 
-require ("mainPageView.php");
+require ("view/mainPageView.php");
 
 }

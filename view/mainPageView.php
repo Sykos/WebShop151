@@ -4,13 +4,13 @@
 <?php ob_start(); ?>
 <div class="container">
   <div class="row">
-    <div class="col-md-12"><?php require ("headerView.php"); ?></div>
+    <div class="col-md-12"><?php require ("view/headerView.php"); ?></div>
   </div>
   <div class="row">
-    <div class="col-md-1"><?php require ("navView.php"); ?></div>
+    <div class="col-md-1"><?php require ("view/navView.php"); ?></div>
   </div>
   <div class="row">
-    <div class="col-md-12"><?php require ("footerView.php"); ?></div>
+    <div class="col-md-12"><?php require ("view/footerView.php"); ?></div>
   </div>
 </div>
 
