@@ -9,6 +9,7 @@
   font-size: 10px;
 }
 
-#footzer p{
+#footzer a{
   text-align: right;
+  position: absolute;
 }
