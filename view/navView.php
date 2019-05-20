@@ -4,7 +4,7 @@
     <ol>
         <li class="menu-item"><a href="#0">Home</a></li>
         <li class="menu-item">
-            <a href="#0">Fromages</a>
+            <a href="productList.php">Fromages</a>
             <ol class="sub-menu">
                 <li class="menu-item"><a href="#0">Chèvre</a></li>
                 <li class="menu-item"><a href="#0">Vache</a></li>
