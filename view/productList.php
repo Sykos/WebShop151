@@ -8,7 +8,8 @@
 <?php require ("view/footerView.php"); ?>
 
 <?php $content = ob_get_contents(); ?>
-
+<!DOCTYPE html>
+<html>
 <main class="container">
  
   <!-- Left Column / Raclette Image -->
@@ -74,3 +75,5 @@
     </div>
   </div>
 </main>
+
+</html>
