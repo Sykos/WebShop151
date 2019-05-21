@@ -4,7 +4,7 @@ class Product{
  
     // database connection and table name
     private $conn;
-    private $table_name="products";
+    private $table_name="produits";
  
     // object properties
     public $id;
@@ -19,10 +19,10 @@ class Product{
     public function __construct($db){
         $this->conn = $db;
     }
-	// read all products
+	// read all produits
 function read($from_record_num, $records_per_page){
  
-    // select all products query
+    // select all produits query
     $query = "SELECT
                 id, name, description, price 
             FROM
@@ -46,7 +46,7 @@ function read($from_record_num, $records_per_page){
     return $stmt;
 }
  
-// used for paging products
+// used for paging produits
 public function count(){
  
     // query to count all product records
