@@ -11,7 +11,7 @@
     <header class="header flex flex-jus-spa-aro">
         <h1>Category</h1>
         <div class="flex flex-dir-col ">
-            <h5 class="pad-ex-sml"><a href="new-item.php" >Create new item</a></h5>
+            <h5 class="pad-ex-sml"><a href="new-produits.php" >Create new produits</a></h5>
             <h5 class="pad-ex-sml"><a href="index.php">Logout</a></h5>
         </div>
     </header>
@@ -19,15 +19,15 @@
 
             <?php 
             echo "<br><br>";
-            $cid = $_POST['cid']; // getting the category id from categories
+            $produitID = $_POST['produitID']; // getting the category id from categories
             
-            if ($cid==1){?> <!--checking on which category was choosen according to the cid-->
+            if ($produitID==1){?> <!--checking on which category was choosen according to the produitID-->
                 <h1 class="flex flex-center margin-all-ex-lar">Food categoty</h1>
             <?php }
-            elseif($cid==2){?>
+            elseif($produitID==2){?>
                 <h1 class="flex flex-center margin-all-ex-lar">Drink categoty</h1>
             <?php }
-            elseif($cid==3){?>
+            elseif($produitID==3){?>
                 <h1 class="flex flex-center margin-all-ex-lar">Shoes categoty</h1>
             <?php }
             else{?>
@@ -41,14 +41,14 @@
             if (!$connection){ // if not able to connect to server user/pass/host is not correct gives message
                 die ("could not connect to data base"); // message for wrong connection
             }
-            $query = "SELECT * FROM item WHERE cnumber = $cid";
+            $query = "SELECT * FROM produits WHERE cnumber = $produitID";
             $result = mysqli_query($connection,$query);
             while ($row = mysqli_fetch_array($result)) { ?>
             <hr>
-                <form method="POST" action="item.php">
-                    <div class="items margin-all-ex-lar">
+                <form method="POST" action="produits.php">
+                    <div class="produitss margin-all-ex-lar">
                             <?php echo "<br>"; ?>
-                            <button class="sub-btn" type="submit"  name="item" value="<?php echo $row['id']?>"><?php echo $row['name']; ?></button>
+                            <button class="sub-btn" type="submit"  name="produits" value="<?php echo $row['id']?>"><?php echo $row['name']; ?></button>
                             <span> : $<?php echo $row['price']; ?></span>
                     </div>
                 </form>
@@ -58,13 +58,13 @@
             <hr>
             
             <p class="flex flex-center margin-up-down-lar pad-sml">
-                <a href="new-item.php" class="new-item bgc-blue pad-sml">Create new item</a>
+                <a href="new-produits.php" class="new-produits bgc-blue pad-sml">Create new produits</a>
             </p> 
 
 
         </div>
         <footer class="footer">
-        <p class="flex flex-center">Copyright &copy; Solotech 2017</p>
+        <p class="flex flex-center">Copyright</p>
         </footer>   
         
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
