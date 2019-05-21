@@ -36,6 +36,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             } else{
                 echo "Erreur ! merci de réessayer";
             }
+            var_dump($stmt);
         }
          
         // Close statement
@@ -66,7 +67,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         
         // Prepare an insert statement
         $sql = "INSERT INTO utilisateurs (UtilisateursPrenom , UtilisateursMotDePasse ) VALUES (?, ?)";
-         
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
             mysqli_stmt_bind_param($stmt, "ss", $param_username, $param_password);
