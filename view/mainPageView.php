@@ -1,17 +1,17 @@
-<?php $title = "Accueil"; ?>
-
-
+<?php $title = 'Home' ?>
 <?php ob_start(); ?>
-<div class="container">
-  <div class="row">
-    <div class="col-md-12"><?php require ("view/headerView.php"); ?></div>
-  </div>
-  <div class="row">
-    <div class="col-md-1"><?php require ("view/navView.php"); ?></div>
-  </div>
-  <div class="row">
-    <div class="col-md-12"><?php require ("view/footerView.php"); ?></div>
-  </div>
-</div>
+
+  <?php require "view/headerView.php"; ?>
+  <?php require "view/navView.php" ?>
+  <table>
+    <tr>
+      <td>kjl</td>
+      <td>jmfdlk</td>
+      <td>jgfdlk</td>
+    </tr>
+  </table>
+  <?php require "view/footerView.php" ?>
 
 <?php $content = ob_get_contents(); ?>
+
+<?php require 'template.php' ?>

@@ -1,17 +1,23 @@
 <?php
-require ("view/template.php");
+//require ("view/template.php");
+
+//*
 
 function mainPage(){
 
-require ("view/mainPageView.php");
+require "view/mainPageView.php";
+
 }
+
 
 function productPage(){
 
-  require ("view/productView.php");
+  require "view/productView.php";
 }
 
 function productDetailPage(){
-  
-  require ("view/productDetailView.php");
+
+  require "view/productDetailView.php";
 }
+
+//*/

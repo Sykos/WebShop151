@@ -14,6 +14,8 @@
     <title><?php $title ?></title>
   </head>
   <body>
+
     <?php $content ?>
+
   </body>
 </html>
