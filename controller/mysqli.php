@@ -1,17 +1,20 @@
+
 <?php
-  $conn = new mysqli("127.0.0.1:49386", "azure", "6#vWHD_$", "raclettev2");
-  
-  if ($conn->connect_error) {
-    die("ERROR: Unable to connect: " . $conn->connect_error);
-  } 
+$currency = 'Chf'; //Currency Character or code
 
-  echo 'Connected to the database.<br>';
+$db_username = 'azure';
+$db_password = '6#vWHD_$';
+$db_name = 'raclettev2';
+$db_host = '127.0.0.1:49386';
 
-  $result = $conn->query("SELECT ProduitNom FROM produits");
-
-  echo "Number of rows: $result->num_rows";
-
-  $result->close();
-
-  $conn->close();
+$shipping_cost      = 1.50; //shipping cost
+$taxes              = array( //List your Taxes percent here.
+                            'VAT' => 12, 
+                            'Service Tax' => 5
+                            );						
+//connect to MySql						
+$mysqli = new mysqli($db_host, $db_username, $db_password,$db_name);						
+if ($mysqli->connect_error) {
+    die('Error : ('. $mysqli->connect_errno .') '. $mysqli->connect_error);
+}
 ?>

@@ -1,79 +1,54 @@
-<?php $title = "Products" ; ?>
+<?php
+session_start();
+include_once("controller/mysqli.php");
+?>
 
-<?php ob_start(); ?>
+<div class="products">
+<?php
+$current_url = urlencode($url="http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
 
-<?php require ("view/headerView.php"); ?>
-<?php require ("view/navView.php"); ?>
-
-<?php require ("view/footerView.php"); ?>
-
-<?php $content = ob_get_contents(); ?>
-<!DOCTYPE html>
-<html>
-<main class="container">
- 
-  <!-- Left Column / Raclette Image -->
-  <div class="left-column">
-    <img data-image="black" src="public/images/couille3.jpg" alt="">
-    <img data-image="blue" src="public/images/couille4.jpg" alt="">
-    <img data-image="red" class="active" src="public/images/couille5.jpg" alt="">
-  </div>
- 
- 
-  <!-- Right Column -->
-  <div class="right-column">
- 
-    <!-- Product Description -->
-    <div class="product-description">
-      <span>Raclette</span>
-      <h1>Du pays</h1>
-      <p>La meilleure raclette, signée raclette.vs</p>
-    </div>
- 
-    <!-- Product Configuration -->
-    <div class="product-configuration">
- 
-      <!-- Product Color -->
-      <div class="product-color">
-        <span>Color</span>
- 
-        <div class="color-choose">
-          <div>
-            <input data-image="red" type="radio" id="red" name="color" value="red" checked>
-            <label for="red"><span></span></label>
-          </div>
-          <div>
-            <input data-image="blue" type="radio" id="blue" name="color" value="blue">
-            <label for="blue"><span></span></label>
-          </div>
-          <div>
-            <input data-image="black" type="radio" id="black" name="color" value="black">
-            <label for="black"><span></span></label>
-          </div>
-        </div>
- 
-      </div>
- 
-      <!-- Cable Configuration -->
-      <div class="cable-config">
-        <span>Fromage Configuration</span>
- 
-        <div class="cable-choose">
-          <button>Vache</button>
-          <button>Chèvre</button>
-          <button>Autre</button>
-        </div>
- 
-        <a href="#">Comment choisir son fromage</a>
-      </div>
-    </div>
- 
-    <!-- Product Pricing -->
-    <div class="product-price">
-      <span>148CHF</span>
-      <a href="#" class="cart-btn">Ajouter au panier</a>
-    </div>
-  </div>
-</main>
-
-</html>
+$results = $mysqli->query("SELECT ProduitNom, ProduitPrix, ProduitCartDesc FROM produits ORDER BY id ASC");
+if($results){ 
+$products_item = '<ul class="products">';
+//fetch results set as object and output HTML
+while($obj = $results->fetch_object())
+{
+$products_item .= <<<EOT
+	<li class="product">
+	<form method="post" action="cart_update.php">
+	<div class="product-content"><h3>{$obj->ProduitPrix}</h3>
+	<div class="product-thumb"><img src="images/{$obj->product_img_name}"></div>
+	<div class="product-desc">{$obj->ProduitCartDesc}</div>
+	<div class="product-info">
+	
+	
+	<fieldset>
+	
+	<label>
+		<span>Color</span>
+		<select name="product_color">
+		<option value="Black">Black</option>
+		<option value="Silver">Silver</option>
+		</select>
+	</label>
+	
+	<label>
+		<span>Quantity</span>
+		<input type="text" size="2" maxlength="2" name="product_qty" value="1" />
+	</label>
+	
+	</fieldset>
+	<input type="hidden" name="ProduitNom" value="{$obj->ProduitNom}" />
+	<input type="hidden" name="type" value="add" />
+	<input type="hidden" name="return_url" value="{$current_url}" />
+	<div align="center"><button type="submit" class="add_to_cart">Add</button></div>
+	</div></div>
+	</form>
+	</li>
+EOT;
+}
+$products_item .= '</ul>';
+echo $products_item;
+}
+?>
+</div>
