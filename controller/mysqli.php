@@ -1,5 +1,5 @@
 <?php
-  $conn = new mysqli("https://raclettev2.scm.azurewebsites.net", "azure", "6#vWHD_$", "raclettev2");
+  $conn = new mysqli("127.0.0.1:49386", "azure", "6#vWHD_$", "raclettev2");
   
   if ($conn->connect_error) {
     die("ERROR: Unable to connect: " . $conn->connect_error);
