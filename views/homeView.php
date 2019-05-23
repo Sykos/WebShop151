@@ -3,8 +3,8 @@
 
 <!-- VA RÉCUPÉRER LES DONNÉS DANS LE CONTROLLER DE LA VUE -->
 
-  <head>
-    <meta charset="utf-8">
+ <head>
+   <meta charset="utf-8">
     <title><?php echo $this->aContent['pageTitle']; ?></title>
     <?php
       //CHARGE TOUTES LES PAGES CSS
@@ -24,6 +24,7 @@
     ?>
 
     <!-- INSERT BODY -->
+    <img src="./public/images/couille5.jpg" alt="Test">
 
     <?php require_once('./templates/footer.php'); ?>
 

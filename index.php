@@ -1,4 +1,6 @@
 <?php
 
-  //NE FAIT QUE REDIRIGER VERS LE ROUTEUR
+  //CHARGE LE ROUTEUR
   require_once('routing/router.php');
+
+  

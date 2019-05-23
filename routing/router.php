@@ -3,44 +3,37 @@
     //RÉCUPÈRE LES ROUTES
     require_once('routes.php');
 
+
+
+
     $controllerToLoad = 'home';
+    $sPageToLoad;
+
 
     //RÉCUPÈRE	LE NOM DE LA PAGE À AFFICHER
-    $sPageToLoad = $_GET['page'];
-
-    //REDIRECTION VERS LE BON CONTROLLER
-    if(!is_null($controllerToLoad)){
-      switch($sPageToLoad){
-        case 'home':
-          $controllerToLoad = 'home';
-        case 'product':
-          $controllerToLoad = 'product';
-
-        break;
-      }
+  //*
+    if(isset($_GET['page'])){
+      $sPageToLoad = $_GET['page'];
     }
 
+
+
+
+    //REDIRECTION VERS LE BON CONTROLLER
+
+      switch($sPageToLoad){
+        default:
+        case 'home':
+          $controllerToLoad = 'home';
+          break;
+        case 'product':
+          $controllerToLoad = 'product';
+        break;
+      }
+
+
+    //APPEL DU MAINCONTROLLER ET DU CONTROLLER AD HOC
     require_once('./controllers/mainController.php');
     require_once('./controllers/'.$controlersList[$controllerToLoad]);
     $oController = new Controller();
     $oController->render();
-/*
-    $sPageToLoad = $_GET['page'];
-
-    $controllerToLoad = 'home';
-
-    //REDIRECTION VERS LE BON CONTROLLER
-    switch($sPageToLoad){
-      case 'product':
-        $controllerToLoad = $controlersList['product'];
-      break;
-    }
-
-    require_once('./controllers/mainController.php');
-
-    //MANQUE TRAITEMENT POUR ARRIVER JUSQU'AU $controllerToLoad
-
-    require_once('./controllers/'.$controlersList[$controllerToLoad]);
-
-    $oController = new Controller();
-    $oController->render();*/
