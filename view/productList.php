@@ -1,79 +1,78 @@
-<?php $title = "Products" ; ?>
-
-<?php ob_start(); ?>
-
-<?php require ("view/headerView.php"); ?>
-<?php require ("view/navView.php"); ?>
-
-<?php require ("view/footerView.php"); ?>
-
-<?php $content = ob_get_contents(); ?>
 <!DOCTYPE html>
-<html>
-<main class="container">
- 
-  <!-- Left Column / Raclette Image -->
-  <div class="left-column">
-    <img data-image="black" src="public/images/couille3.jpg" alt="">
-    <img data-image="blue" src="public/images/couille4.jpg" alt="">
-    <img data-image="red" class="active" src="public/images/couille5.jpg" alt="">
-  </div>
- 
- 
-  <!-- Right Column -->
-  <div class="right-column">
- 
-    <!-- Product Description -->
-    <div class="product-description">
-      <span>Raclette</span>
-      <h1>Du pays</h1>
-      <p>La meilleure raclette, signée raclette.vs</p>
-    </div>
- 
-    <!-- Product Configuration -->
-    <div class="product-configuration">
- 
-      <!-- Product Color -->
-      <div class="product-color">
-        <span>Color</span>
- 
-        <div class="color-choose">
-          <div>
-            <input data-image="red" type="radio" id="red" name="color" value="red" checked>
-            <label for="red"><span></span></label>
-          </div>
-          <div>
-            <input data-image="blue" type="radio" id="blue" name="color" value="blue">
-            <label for="blue"><span></span></label>
-          </div>
-          <div>
-            <input data-image="black" type="radio" id="black" name="color" value="black">
-            <label for="black"><span></span></label>
-          </div>
-        </div>
- 
-      </div>
- 
-      <!-- Cable Configuration -->
-      <div class="cable-config">
-        <span>Fromage Configuration</span>
- 
-        <div class="cable-choose">
-          <button>Vache</button>
-          <button>Chèvre</button>
-          <button>Autre</button>
-        </div>
- 
-        <a href="#">Comment choisir son fromage</a>
-      </div>
-    </div>
- 
-    <!-- Product Pricing -->
-    <div class="product-price">
-      <span>148CHF</span>
-      <a href="#" class="cart-btn">Ajouter au panier</a>
-    </div>
-  </div>
-</main>
 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Category information</title>
+    <link rel="stylesheet" type="text/css" href="src/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"> 
+</head>
+    <body>
+    <header class="header flex flex-jus-spa-aro">
+        <h1>Category</h1>
+        <div class="flex flex-dir-col ">
+            <h5 class="pad-ex-sml"><a href="new-produits.php" >Create new produits</a></h5>
+            <h5 class="pad-ex-sml"><a href="index.php">Logout</a></h5>
+        </div>
+    </header>
+        <div >
+
+            <?php 
+            echo "<br><br>";
+            $produitID = $_POST['produitID']; // getting the category id from categories
+            
+            if ($produitID==1){?> <!--checking on which category was choosen according to the produitID-->
+                <h1 class="flex flex-center margin-all-ex-lar">Food categoty</h1>
+            <?php }
+            elseif($produitID==2){?>
+                <h1 class="flex flex-center margin-all-ex-lar">Drink categoty</h1>
+            <?php }
+            elseif($produitID==3){?>
+                <h1 class="flex flex-center margin-all-ex-lar">Shoes categoty</h1>
+            <?php }
+            else{?>
+                <h1 class="flex flex-center margin-all-ex-lar">New categoty</h1>
+            <?php }
+            $dbervername = "127.0.0.1:49386"; //server name
+            $dbUsername = "azure"; // user name to login to db
+            $dbPassword = "6#vWHD_$" ; // password to login to db
+            $dbName = "raclettev2" ; // db name
+            $connection = mysqli_connect($dbervername,$dbUsername,$dbPassword,$dbName) ; //a connection to db func ('env/ip','user','pass' ,'db name')
+            if (!$connection){ // if not able to connect to server user/pass/host is not correct gives message
+                die ("could not connect to data base"); // message for wrong connection
+            }
+            $query = "SELECT * FROM produits WHERE cnumber = $produitID";
+            $result = mysqli_query($connection,$query);
+            while ($row = mysqli_fetch_array($result)) { ?>
+            <hr>
+                <form method="POST" action="produits.php">
+                    <div class="produitss margin-all-ex-lar">
+                            <?php echo "<br>"; ?>
+                            <button class="sub-btn" type="submit"  name="produits" value="<?php echo $row['id']?>"><?php echo $row['name']; ?></button>
+                            <span> : $<?php echo $row['price']; ?></span>
+                    </div>
+                </form>
+               
+            <?php } ?>
+
+            <hr>
+            
+            <p class="flex flex-center margin-up-down-lar pad-sml">
+                <a href="new-produits.php" class="new-produits bgc-blue pad-sml">Create new produits</a>
+            </p> 
+
+
+        </div>
+        <footer class="footer">
+        <p class="flex flex-center">Copyright</p>
+        </footer>   
+        
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
+
+    </body>
 </html>
