@@ -15,8 +15,9 @@
                     <li><a href="?page=product">Fromages</a></li>
                     <li><a href="#">Three</a></li>
                     <li><a href="#">Four</a></li>
+                    <li><a href="?page=testForm">Test Formulaire</a></li>
       </ul>
 
   </nav>
 
-<!-- LIEN AVEC LA DB À FAIRE POUR REMPLIRE LES CHAMPS DES CATÉGORIES (DANS LE mainController) -->
+<!-- LIEN AVEC LA DB À FAIRE POUR REMPLIRE LES CHAMPS DES CATÉGORIES (DANS LE MAINCONTROLLER) -->

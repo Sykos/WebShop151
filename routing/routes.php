@@ -4,5 +4,6 @@
   $controlersList = [
     'home' => 'homeController.php',
     'product' => 'productController.php',
-    'productDetail' => 'productDetailController.php'
+    'productDetail' => 'productDetailController.php',
+    'testForm' => 'testFormController.php'
   ];

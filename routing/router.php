@@ -24,10 +24,13 @@
       switch($sPageToLoad){
         default:
         case 'home':
-          $controllerToLoad = 'home';
+            $controllerToLoad = 'home';
           break;
         case 'product':
-          $controllerToLoad = 'product';
+            $controllerToLoad = 'product';
+        break;
+        case 'testForm':
+            $controllerToLoad = 'testForm';
         break;
       }
 

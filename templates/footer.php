@@ -2,7 +2,7 @@
 <footer class="page-footer font-small mdb-color lighten-3 pt-4">
 
   <!-- Footer Links -->
-  <div class="container text-center text-md-left">
+  <div class="container text-left text-md-left">
 
     <!-- Grid row -->
     <div class="row">
