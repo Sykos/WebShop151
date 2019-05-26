@@ -11,11 +11,8 @@
       <div class="col-md-4 col-lg-3 mr-auto my-md-4 my-0 mt-4 mb-1">
 
         <!-- Content -->
-        <h5 class="font-weight-bold text-uppercase mb-4">Footer Content</h5>
-        <p>Here you can use rows and columns to organize your footer content.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit amet numquam iure provident voluptate
-          esse
-          quasi, veritatis totam voluptas nostrum.</p>
+        <h5 class="font-weight-bold text-uppercase mb-4">L'histoire de la raclette</h5>
+        <p>Cette recette a été inventée par des bergers suisses au XIXème siècle dans le canton du Valais. A l’origine, l’appellation n’était pas celle de « raclette » mais de « fromage rôti ».</p>
 
       </div>
       <!-- Grid column -->
@@ -60,24 +57,24 @@
       <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
 
         <!-- Contact details -->
-        <h5 class="font-weight-bold text-uppercase mb-4">Address</h5>
+        <h5 class="font-weight-bold text-uppercase mb-4"> Adresse</h5>
 
         <ul class="list-unstyled">
           <li>
             <p>
-              <i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
+              <i class="fas fa-home mr-3"></i> Lausanne, EPSIC, 1004</p>
           </li>
           <li>
             <p>
-              <i class="fas fa-envelope mr-3"></i> info@example.com</p>
+              <i class="fas fa-envelope mr-3"></i> raclette@vs.ch </p>
           </li>
           <li>
             <p>
-              <i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+              <i class="fas fa-phone mr-3"></i> + 41 696 69 69</p>
           </li>
           <li>
             <p>
-              <i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+              <i class="fas fa-print mr-3"></i> + 41 666 77 77</p>
           </li>
         </ul>
 
@@ -90,7 +87,7 @@
       <div class="col-md-2 col-lg-2 text-center mx-auto my-4">
 
         <!-- Social buttons -->
-        <h5 class="font-weight-bold text-uppercase mb-4">Follow Us</h5>
+        <h5 class="font-weight-bold text-uppercase mb-4">Suivez-nous !</h5>
 
         <!-- Facebook -->
         <a type="button" class="btn-floating btn-fb">
@@ -119,8 +116,8 @@
   <!-- Footer Links -->
 
   <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2018 Copyright:
-    <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+  <div class="footer-copyright text-center py-3">© 2019 Copyright:
+    <a href="https://www.epsic.ch/"> epsic.ch</a>
   </div>
   <!-- Copyright -->
 
