@@ -21,6 +21,7 @@
     <?php
       require_once('./templates/header.php');
       require_once('./templates/nav.php');
+      require_once('./templates/homeBody.php');
     ?>
 
     <!-- INSERT BODY -->
