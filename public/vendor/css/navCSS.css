@@ -14,7 +14,7 @@ body ul li {
 }
 
 .nav {
-  background-color: #679EB9;
+  background-color: #dfa958;
   width: 100%;
   position: fixed;
   z-index: 10;
@@ -26,7 +26,7 @@ ul#menu {
 ul#menu li a {
   width: 100%;
   display: block;
-  background-color: #679EB9;
+  background-color: #dfa958;
   color: #000;
   font-size: 1.0em;
   padding: 1.5em 1.6em;
@@ -34,7 +34,7 @@ ul#menu li a {
   text-decoration: none;
 }
 ul#menu a:hover {
-  background-color: #4b85a2;
+  background-color:#e3804a	;
 }
 
 @media screen and (min-width: 2000px) {
