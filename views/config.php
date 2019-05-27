@@ -4,14 +4,14 @@
 server with default setting (user 'root' with no password) */
 define('DB_SERVER', '127.0.0.1:49386');
 define('DB_USERNAME', 'azure');
-define('DB_PASSWORD', '6#vWHD_$');
+define('DB_PASSWORD', 'x6#vWHD_$');
 define('DB_NAME', 'raclettev2');
  
 /* Attempt to connect to MySQL database */
 $dbconnect = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
 
-if ($dbconnect->connect_error) {
-  die("Database connection failed: " . $dbconnect->connect_error);
+if (mysqli_connect_errno()) {
+  die("Database connection failed: " . mysqli_connect_error());
 }
 
 if(isset($_POST['submit'])) {
