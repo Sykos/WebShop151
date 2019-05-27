@@ -21,8 +21,8 @@ if(isset($_POST['submit'])) {
     $query = "INSERT INTO `utilisateurs` (`UtilisateursNomDeFamille`, `UtilisateursPrenom`)
     VALUES ('"$nom"', '"$prenom"')";
 	
-	   if (!mysqli_query($dbconnect, $query)) {
-        die('Error sql:' . mysqli_error($dbconnect));
+	   if (!$dbconnect->query($query)) {
+        die('Error sql:' . $dbconnect->error;
     } else {
       echo "Thanks for your review.";
     }
