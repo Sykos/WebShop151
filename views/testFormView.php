@@ -5,7 +5,6 @@
 		<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <title><?php echo $this->aContent['pageTitle']; ?></title>
     <?php
-	#require_once "config.php";
     //CHARGE TOUTES LES PAGES CSS
     foreach($this->aContent['css'] as $sCssPath) {
       echo "<link rel='stylesheet' href='".$sCssPath."'>";
@@ -14,8 +13,13 @@
     foreach($this->aContent['js'] as $sJsPath){
       echo "<script src='".$sJsPath."'></script>";
     }
-	#$sql = "INSERT INTO `utilisateurs`(UtilisateursNomDeFamille, UtilisateursPrenom,UtilisateursEmailVerifiee,UtilisateursMotDePasse) VALUES ('".$nom"','".$prenom"','".$mail"','".$pass"')";
+
      ?>
+	 
+	 <?php
+	 	#require_once "config.php";
+		#$sql = "INSERT INTO `utilisateurs`(UtilisateursNomDeFamille, UtilisateursPrenom,UtilisateursEmailVerifiee,UtilisateursMotDePasse) VALUES ('".$nom"','".$prenom"','".$mail"','".$pass"')";
+	 ?>
   </head>
   <body>
 	
