@@ -19,10 +19,10 @@ if(isset($_POST['submit'])) {
   $pass=$_POST['pass'];
 
     $query = "INSERT INTO utilisateurs (UtilisateursNomDeFamille, UtilisateursPrenom)
-    VALUES ('$nom', '$prenom')";
+    VALUES ('"$nom"', '"$prenom"')";
 	
 	   if (!mysqli_query($dbconnect, $query)) {
-        die('Error sql:' + mysqli_error($dbconnect));
+        die('Error sql:' . mysqli_error($dbconnect));
     } else {
       echo "Thanks for your review.";
     }
