@@ -16,7 +16,11 @@
 		
 	require_once "config.php";
 	$sql = "INSERT INTO `utilisateurs`(`UtilisateursNomDeFamille`) VALUES (".nom")";
-
+	if ($link->query($sql) === TRUE) {
+    echo "New record created successfully";
+		} else {
+    echo "Error: " . $sql . "<br>" . $link->error;
+}
      ?>
 	
   </head>
