@@ -2,7 +2,7 @@
 // Include config file
 require_once "config.php";
 
-$toto = "INSERT INTO `utilisateurs`(`UtilisateursNomDeFamille`) VALUES ('$nom')";
+$toto = "INSERT INTO `utilisateurs`(`UtilisateursNomDeFamille`) VALUES ('"$nom"')";
 
 if ($link->query($toto) === TRUE) {
     echo "New record created successfully";
