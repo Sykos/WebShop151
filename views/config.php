@@ -20,7 +20,7 @@ if(isset($_POST['submit'])) {
   $mail=$_POST['mail'];
   $pass=$_POST['pass'];
 
-    $query = "INSERT INTO `utilisateurs` (`UtilisateursNomDeFamille`, `UtilisateursPrenom`, `UtilisateursEmailVerifiee`, `UtilisateursMotDePasse`) VALUES ('$nom', '$prenom', '$mail', '$pass')";
+    $query = "INSERT INTO `utilisateurs` (`UtilisateursNomDeFamille`, `UtilisateursPrenom`, `UtilisateursEmail`, `UtilisateursMotDePasse`) VALUES ('$nom', '$prenom', '$mail', '$pass')";
 	
 if ($dbconnect->query($query) === TRUE) {
     echo "New record created successfully";
