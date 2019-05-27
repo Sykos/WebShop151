@@ -6,7 +6,7 @@ $username = "azure";
 $password = "6#vWHD_$";
 $db = "raclettev2";
 
-$dbconnect=mysqli_connect($hostname,$username,$password,$db);
+$dbconnect=mysqli_connect($hostname,$username,$pass,$db);
 
 if ($dbconnect->connect_error) {
   die("Database connection failed: " . $dbconnect->connect_error);
@@ -16,7 +16,7 @@ if(isset($_POST['submit'])) {
   $nom=$_POST['nom'];
   $prenom=$_POST['prenom'];
   $mail=$_POST['mail'];
-  $pass=$_POST['password'];
+  $pass=$_POST['pass'];
 
     $query = "INSERT INTO utilisateurs (UtilisateursNomDeFamille, UtilisateursPrenom, UtilisateursEmailVerifiee, UtilisateursMotDePasse)
     VALUES ('$nom', '$prenom', '$mail', '$pass')";
