@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+		<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <title><?php echo $this->aContent['pageTitle']; ?></title>
     <?php
     //CHARGE TOUTES LES PAGES CSS
@@ -12,10 +13,16 @@
     foreach($this->aContent['js'] as $sJsPath){
       echo "<script src='".$sJsPath."'></script>";
     }
+
      ?>
+	 
+	 <?php
+	 	require_once "config.php";
+		$sql = "INSERT INTO `utilisateurs`(UtilisateursNomDeFamille, UtilisateursPrenom,UtilisateursEmailVerifiee,UtilisateursMotDePasse) VALUES ('".$nom"','".$prenom"','".$mail"','".$pass"')";
+	 ?>
   </head>
   <body>
-
+	
       <div class="container-fluid">
           <div class="row">
               <div class="col-md-12">
@@ -32,10 +39,10 @@
               <div class="col-md-12">
                   <!-- INSERT BODY -->
                   <form class="testForm" action="index.html" method="get">
-                      Nom: <input type="text" name="name" value="">
-                      Prénom: <input type="text" name="surname" value="">
-                      E-mail: <input type="text" name="email" value="">
-                      Mot de Passe : <input type="password" name="password" value="">
+                      Nom: <input type="text" name="nom" value="">
+                      Prénom: <input type="text" name="prenom" value="">
+                      E-mail: <input type="text" name="mail" value="">
+                      Mot de Passe : <input type="password" name="pass" value="">
                       <input type="submit" name="submit" value="">
                   </form>
               </div>
