@@ -1,7 +1,7 @@
 <?php
 /* Database credentials. Assuming you are running MySQL
 server with default setting (user 'root' with no password) */
-define('DB_SERVER', '127.0.0.1:49386');
+define('DB_SERVER', 'https://raclettev2.scm.azurewebsites.net:49386');
 define('DB_USERNAME', 'azure');
 define('DB_PASSWORD', '6#vWHD_$');
 define('DB_NAME', 'raclettev2');
