@@ -1,4 +1,4 @@
-<?php
+<?php/*
 // Include config file
 require_once "config.php";
 
@@ -10,7 +10,7 @@ if ($link->query($toto) === TRUE) {
     echo "Error: " . $toto . "<br>" . $link->error;
 }
 
-?>
+*/?>
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
