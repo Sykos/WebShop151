@@ -21,15 +21,12 @@
   </head>
   <body>
     <?php
+    //APPEL DE TOUTES LES PARTIES DE LA PAGE
       require_once('./templates/header.php');
       require_once('./templates/nav.php');
       require_once('./templates/homeBody.php');
+      require_once('./templates/footer.php'); 
     ?>
-
-    <!-- INSERT BODY -->
-    <img src="./public/images/couille5.jpg" alt="Test">
-
-    <?php require_once('./templates/footer.php'); ?>
 
   </body>
 </html>
