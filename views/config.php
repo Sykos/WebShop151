@@ -18,7 +18,7 @@ if(isset($_POST['submit'])) {
   $mail=$_POST['mail'];
   $pass=$_POST['pass'];
 
-    $query = "INSERT INTO utilisateurs (UtilisateursNomDeFamille, UtilisateursPrenom)
+    $query = "INSERT INTO `utilisateurs` (`UtilisateursNomDeFamille`, `UtilisateursPrenom`)
     VALUES ('"$nom"', '"$prenom"')";
 	
 	   if (!mysqli_query($dbconnect, $query)) {
