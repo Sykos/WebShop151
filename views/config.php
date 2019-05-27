@@ -18,14 +18,8 @@ if(isset($_POST['submit'])) {
   $mail=$_POST['mail'];
   $pass=$_POST['pass'];
 
-    $query = "INSERT INTO `utilisateurs` (`UtilisateursNomDeFamille`, `UtilisateursPrenom`)
-    VALUES ('"$nom"', '"$prenom"')";
+    $query = "INSERT INTO `utilisateurs` (`UtilisateursNomDeFamille`, `UtilisateursPrenom`) VALUES ('" . $nom."', '" . $prenom . "')";
 	
-	   if (!$dbconnect->query($query)) {
-		   echo("test");
-        die('Error sql:' . $dbconnect->error);
-    } else {
-      echo "Thanks for your review.";
-    }
+	die($query);
 }
 ?>
