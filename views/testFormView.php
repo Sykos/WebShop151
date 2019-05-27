@@ -13,13 +13,11 @@
     foreach($this->aContent['js'] as $sJsPath){
       echo "<script src='".$sJsPath."'></script>";
     }
-
+		
+	require_once "config.php";
+	$sql = "INSERT INTO `utilisateurs`(UtilisateursNomDeFamille, UtilisateursPrenom,UtilisateursEmailVerifiee,UtilisateursMotDePasse) VALUES ('".$nom"','".$prenom"','".$mail"','".$pass"')";
      ?>
-	 
-	 <?php
-	 	require_once "config.php";
-		$sql = "INSERT INTO `utilisateurs`(UtilisateursNomDeFamille, UtilisateursPrenom,UtilisateursEmailVerifiee,UtilisateursMotDePasse) VALUES ('".$nom"','".$prenom"','".$mail"','".$pass"')";
-	 ?>
+	
   </head>
   <body>
 	
