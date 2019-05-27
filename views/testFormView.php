@@ -2,14 +2,15 @@
 // Include config file
 require_once "config.php";
 
-$toto = "INSERT INTO `utilisateurs`(`UtilisateursNomDeFamille`) VALUES ('"$nom"')";
+if(isset($_POST['submit'])) {
+  $nom=$_POST['name'];
+  $prenom=$_POST['prenom'];
+  $mail=$_POST['mail'];
+  $pass=$_POST['password'];
 
-if ($link->query($toto) === TRUE) {
-    echo "New record created successfully";
-} else {
-    echo "Error: " . $toto . "<br>" . $link->error;
-}
-
+    $query = "INSERT INTO utilisateurs (UtilisateursNomDeFamille, UtilisateursPrenom, UtilisateursEmailVerifiee, UtilisateursMotDePasse)
+    VALUES ('$nom', '$prenom', '$mail', '$pass')";
+  
 ?>
 
 <!DOCTYPE html>
