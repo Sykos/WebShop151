@@ -17,8 +17,8 @@
      ?>
 	 
 	 <?php
-	 	#require_once "config.php";
-		#$sql = "INSERT INTO `utilisateurs`(UtilisateursNomDeFamille, UtilisateursPrenom,UtilisateursEmailVerifiee,UtilisateursMotDePasse) VALUES ('".$nom"','".$prenom"','".$mail"','".$pass"')";
+	 	require_once "config.php";
+		$sql = "INSERT INTO `utilisateurs`(UtilisateursNomDeFamille, UtilisateursPrenom,UtilisateursEmailVerifiee,UtilisateursMotDePasse) VALUES ('".$nom"','".$prenom"','".$mail"','".$pass"')";
 	 ?>
   </head>
   <body>
