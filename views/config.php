@@ -22,6 +22,7 @@ if(isset($_POST['submit'])) {
     VALUES ('"$nom"', '"$prenom"')";
 	
 	   if (!$dbconnect->query($query)) {
+		   echo("test");
         die('Error sql:' . $dbconnect->error);
     } else {
       echo "Thanks for your review.";
