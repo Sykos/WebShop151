@@ -16,7 +16,7 @@
           <div class="row">
               <div class="col-md-12">
                   <!-- INSERT BODY -->
-				   <form action="config.php" method="POST">
+				   <form action="/views/config.php" method="POST">
                       Nom: <input type="text" name="nom" value="">
                       Prénom: <input type="text" name="prenom" value="">
                       E-mail: <input type="text" name="mail" value="">
