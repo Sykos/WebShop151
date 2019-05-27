@@ -2,10 +2,10 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-		# <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <title><?php echo $this->aContent['pageTitle']; ?></title>
     <?php
-	require_once "config.php";
+	#require_once "config.php";
     //CHARGE TOUTES LES PAGES CSS
     foreach($this->aContent['css'] as $sCssPath) {
       echo "<link rel='stylesheet' href='".$sCssPath."'>";
