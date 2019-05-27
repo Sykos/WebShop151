@@ -1,4 +1,4 @@
-<?php/*
+<?php
 // Include config file
 require_once "config.php";
 
@@ -10,7 +10,7 @@ if ($link->query($toto) === TRUE) {
     echo "Error: " . $toto . "<br>" . $link->error;
 }
 
-*/?>
+?>
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -52,7 +52,7 @@ if ($link->query($toto) === TRUE) {
                       Prénom: <input type="text" name="prenom" value="">
                       E-mail: <input type="text" name="mail" value="">
                       Mot de Passe : <input type="password" name="pass" value="">
-                      <input type="submit" name="submit" value="" method="post">
+                      <input type="submit" name="submit" value="">
                   </form>
               </div>
           </div>
