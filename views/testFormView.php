@@ -1,17 +1,8 @@
-	<?php/*
-	require_once "config.php";
-	$sql = "INSERT INTO `utilisateurs`(`UtilisateursNomDeFamille`) VALUES (".nom")";
-	if ($link->query($sql) === TRUE) {
-    echo "New record created successfully";
-		} else {
-    echo "Error: " . $sql . "<br>" . $link->error;
-}*/
-     ?>
 <?php
 // Include config file
 require_once "config.php";
 
-$toto = "INSERT INTO `utilisateurs`(`UtilisateursPrenom`) VALUES ('toto')";
+$toto = "INSERT INTO `utilisateurs`(`UtilisateursNomDeFamille`) VALUES ('$nom')";
 
 if ($link->query($toto) === TRUE) {
     echo "New record created successfully";
