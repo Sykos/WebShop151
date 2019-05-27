@@ -22,6 +22,10 @@ if(isset($_POST['submit'])) {
 
     $query = "INSERT INTO `utilisateurs` (`UtilisateursNomDeFamille`, `UtilisateursPrenom`) VALUES ('$nom', '$prenom')";
 	
-	die($query);
+if ($dbconnect->query($query) === TRUE) {
+    echo "New record created successfully";
+} else {
+	die($dbconnect->error);
+}
 }
 ?>
