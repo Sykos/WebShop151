@@ -18,8 +18,8 @@ if(isset($_POST['submit'])) {
   $mail=$_POST['mail'];
   $pass=$_POST['pass'];
 
-    $query = "INSERT INTO utilisateurs (UtilisateursNomDeFamille, UtilisateursPrenom, UtilisateursEmailVerifiee, UtilisateursMotDePasse)
-    VALUES ('$nom', '$prenom', '$mail', '$pass')";
+    $query = "INSERT INTO utilisateurs (UtilisateursNomDeFamille, UtilisateursPrenom)
+    VALUES ('$nom', '$prenom')";
 	
 	   if (!mysqli_query($dbconnect, $query)) {
         die('An error occurred when submitting your review.');
