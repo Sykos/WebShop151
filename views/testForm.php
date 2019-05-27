@@ -1,16 +1,4 @@
-<?php
-// Include config file
-require_once "config.php";
 
-$toto = "INSERT INTO `utilisateurs`(`UtilisateursNomDeFamille`) VALUES ('"$nom"')";
-
-if ($link->query($toto) === TRUE) {
-    echo "New record created successfully";
-} else {
-    echo "Error: " . $toto . "<br>" . $link->error;
-}
-
-?>
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -44,19 +32,7 @@ if ($link->query($toto) === TRUE) {
               </div>
           </div>
 
-          <div class="row">
-              <div class="col-md-12">
-                  <!-- INSERT BODY -->
-                  <form class="testForm" action="index.html" method="get">
-                      Nom: <input type="text" name="nom" value="">
-                      Prénom: <input type="text" name="prenom" value="">
-                      E-mail: <input type="text" name="mail" value="">
-                      Mot de Passe : <input type="password" name="pass" value="">
-                      <input type="submit" name="submit" value="" method="post">
-                  </form>
-              </div>
-          </div>
-
+ 
           <div class="row">
               <div class="col-md-12">
                  <?php require_once('./templates/footer.php'); ?>
@@ -64,14 +40,6 @@ if ($link->query($toto) === TRUE) {
           </div>
 
       </div>
-
-
-
-
-
-
-
-
 
   </body>
 </html>
