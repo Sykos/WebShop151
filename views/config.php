@@ -22,7 +22,7 @@ if(isset($_POST['submit'])) {
     VALUES ('$nom', '$prenom')";
 	
 	   if (!mysqli_query($dbconnect, $query)) {
-        die('An error occurred when submitting your review.');
+        die(mysqli_error($dbconnect));
     } else {
       echo "Thanks for your review.";
     }
