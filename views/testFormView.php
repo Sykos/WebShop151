@@ -14,7 +14,7 @@
     foreach($this->aContent['js'] as $sJsPath){
       echo "<script src='".$sJsPath."'></script>";
     }
-	$sql = "INSERT INTO `utilisateurs`(UtilisateursNomDeFamille, UtilisateursPrenom,UtilisateursEmailVerifiee,UtilisateursMotDePasse) VALUES ('".$nom"','".$prenom"','".$mail"','".$pass"')";"
+	$sql = "INSERT INTO `utilisateurs`(UtilisateursNomDeFamille, UtilisateursPrenom,UtilisateursEmailVerifiee,UtilisateursMotDePasse) VALUES ('".$nom"','".$prenom"','".$mail"','".$pass"')";
      ?>
   </head>
   <body>
