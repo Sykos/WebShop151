@@ -3,7 +3,7 @@
 
 $hostname = "127.0.0.1:49386";
 $username = "azure";
-$password = "6#vWHD_$";
+$password = "X6#vWHD_$";
 $db = "raclettev2";
 
 $dbconnect=mysqli_connect($hostname,$username,$pass,$db);
