@@ -15,7 +15,8 @@
     }
 		
 	require_once "config.php";
-	$sql = "INSERT INTO 'utilisateurs' (UtilisateursNomDeFamille) VALUES (".$nom")";
+	$sql = "INSERT INTO `utilisateurs`(`UtilisateursNomDeFamille`) VALUES (".nom")";
+
      ?>
 	
   </head>
