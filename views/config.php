@@ -13,7 +13,7 @@ if ($dbconnect->connect_error) {
 }
 
 if(isset($_POST['submit'])) {
-  $nom=$_POST['name'];
+  $nom=$_POST['nom'];
   $prenom=$_POST['prenom'];
   $mail=$_POST['mail'];
   $pass=$_POST['password'];
