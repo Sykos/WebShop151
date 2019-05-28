@@ -2,10 +2,11 @@
 	require_once "config.php";
 	$sql = "INSERT INTO `utilisateurs`(`UtilisateursNomDeFamille`) VALUES (".nom")";
 	if ($link->query($sql) === TRUE) {
-    echo "New record created successfully";
-		} else {
-    echo "Error: " . $sql . "<br>" . $link->error;
-}
+	echo "New record created successfully";
+		}
+	else {
+	echo "Error: " . $sql . "<br>" . $link->error;
+	}
      ?>
 
 
@@ -13,7 +14,6 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-		<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <title><?php echo $this->aContent['pageTitle']; ?></title>
     <?php
     //CHARGE TOUTES LES PAGES CSS
@@ -25,10 +25,10 @@
       echo "<script src='".$sJsPath."'></script>";
     }
      ?>
-	
+
   </head>
   <body>
-	
+
       <div class="container-fluid">
           <div class="row">
               <div class="col-md-12">
