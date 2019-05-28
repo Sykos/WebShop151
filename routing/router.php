@@ -32,9 +32,6 @@
         case 'testForm':
             $controllerToLoad = 'testForm';
         break;
-		 case 'login':
-            $controllerToLoad = 'login';
-        break;
       }
 
 
