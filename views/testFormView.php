@@ -25,8 +25,7 @@
       echo "<script src='".$sJsPath."'></script>";
     }
      ?>
-
-  </head>
+ </head>
   <body>
 
       <div class="container-fluid">
@@ -44,7 +43,7 @@
           <div class="row">
               <div class="col-md-12">
                   <!-- INSERT BODY -->
-                  <form class="testForm" action="index.html" method="get">
+				   <form action="/views/config.php" method="POST">
                       Nom: <input type="text" name="nom" value="">
                       Prénom: <input type="text" name="prenom" value="">
                       E-mail: <input type="text" name="mail" value="">
