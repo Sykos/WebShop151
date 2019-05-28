@@ -15,7 +15,7 @@
                     <li><a href="#">Three</a></li>
                     <li><a href="#">Four</a></li>
                     <li><a href="?page=testForm">Test Formulaire</a></li>
-					<li><a href="?page=login">Login</a></li>
+					<!--<li><a href="?page=login">Login</a></li>-->
       </ul>
 
   </nav>
