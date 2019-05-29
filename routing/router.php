@@ -1,7 +1,7 @@
 <?php
   //*
     //RÉCUPÈRE LES ROUTES
-    //require_once('routes.php');
+    require_once('routes.php');
 
 
 
@@ -40,7 +40,7 @@
 
     //APPEL DU MAINCONTROLLER ET DU CONTROLLER AD HOC
     require_once('./controllers/mainController.php');
-    require_once('./controllers/homeController.php'/*$controlersList[$controllerToLoad]*/);
+    require_once('./controllers/'$controlersList[$controllerToLoad]);
     $oController = new Controller();
     $oController->render();
 */
