@@ -1,5 +1,6 @@
 <?php
-
+  echo 'test';
+  /*
     //RÉCUPÈRE LES ROUTES
     require_once('routes.php');
 
@@ -43,3 +44,4 @@
     require_once('./controllers/'.$controlersList[$controllerToLoad]);
     $oController = new Controller();
     $oController->render();
+*/
