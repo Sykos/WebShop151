@@ -1,4 +1,4 @@
-	<?php
+	<?php /*
 	require_once "config.php";
 	$sql = "INSERT INTO `utilisateurs`(`UtilisateursNomDeFamille`) VALUES (".nom")";
 	if ($link->query($sql) === TRUE) {
@@ -7,7 +7,7 @@
 	else {
 	echo "Error: " . $sql . "<br>" . $link->error;
 	}
-     ?>
+     */?>
 
 
 <!DOCTYPE html>
