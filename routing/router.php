@@ -1,5 +1,5 @@
 <?php
-  echo 'test';
+  echo 'test1';
   /*
     //RÉCUPÈRE LES ROUTES
     require_once('routes.php');
