@@ -1,6 +1,5 @@
 <?php
 
   //CHARGE LE ROUTEUR
-  require_once('routing/router.php');
-
-  
+  //require_once('routing/router.php');
+  echo 'test';
