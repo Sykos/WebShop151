@@ -11,7 +11,7 @@
 
 
     //RÉCUPÈRE	LE NOM DE LA PAGE À AFFICHER
-  //*
+
     if(isset($_GET['page'])){
       $sPageToLoad = $_GET['page'];
     }

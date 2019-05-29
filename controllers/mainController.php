@@ -14,6 +14,11 @@
     $this->aContent['css'][] = './public/vendor/css/footerCSS.css';
     $this->aContent['js'][] = 'http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js';
     $this->aContent['js'][] = './public/vendor/js/nav.js';
+<<<<<<< HEAD
+=======
+    $this->aContent['js'][] = '//code.jquery.com/jquery-1.11.0.min.js';
+
+>>>>>>> 158d07168aa7df7c3234ee9946a4397c0fdac953
     }
 
     //BUT : RÉCUPÉRER LE CONTENU À AFFICHER DEPUIS LE CONTROLLER ENFANT
