@@ -17,13 +17,11 @@
   </head>
   <body>
     <?php
-      require_once('./templates/header.php');
-      require_once('./templates/nav.php');
-     ?>
-
-     <!-- INSERT BODY -->
-
-     <?php require_once('./templates/footer.php'); ?>
+        require_once('./templates/header.php');
+        require_once('./templates/nav.php');
+        require_once('./templates/productBody.php');
+        require_once('./templates/footer.php');
+    ?>
 
   </body>
 </html>

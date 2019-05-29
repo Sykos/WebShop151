@@ -13,3 +13,23 @@
   text-align: right;
   position: absolute;
 }
+footer{
+  background-color: #e3804a;
+}
+
+footer a:link {
+  color: #e5ecaa;
+
+}
+footer a:visited {
+  color: #e5ecaa;
+
+}
+footer a:hover {
+  color:  #db6651;
+
+}
+footer a:active {
+  color: #e5ecaa;
+
+}

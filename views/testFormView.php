@@ -1,3 +1,15 @@
+	<?php
+	require_once "config.php";
+	$sql = "INSERT INTO `utilisateurs`(`UtilisateursNomDeFamille`) VALUES (".nom")";
+	if ($link->query($sql) === TRUE) {
+	echo "New record created successfully";
+		}
+	else {
+	echo "Error: " . $sql . "<br>" . $link->error;
+	}
+     ?>
+
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -13,7 +25,7 @@
       echo "<script src='".$sJsPath."'></script>";
     }
      ?>
-  </head>
+ </head>
   <body>
 
       <div class="container-fluid">
@@ -31,11 +43,11 @@
           <div class="row">
               <div class="col-md-12">
                   <!-- INSERT BODY -->
-                  <form class="testForm" action="index.html" method="get">
-                      Nom: <input type="text" name="name" value="">
-                      Prénom: <input type="text" name="surname" value="">
-                      E-mail: <input type="text" name="email" value="">
-                      Mot de Passe : <input type="password" name="password" value="">
+				   <form action="/views/config.php" method="POST">
+                      Nom: <input type="text" name="nom" value="">
+                      Prénom: <input type="text" name="prenom" value="">
+                      E-mail: <input type="text" name="mail" value="">
+                      Mot de Passe : <input type="password" name="pass" value="">
                       <input type="submit" name="submit" value="">
                   </form>
               </div>
