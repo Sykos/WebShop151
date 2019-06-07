@@ -12,7 +12,7 @@
     $this->aContent['css'][] = '../public/vendor/css/navCSS.css';
     $this->aContent['css'][] = 'https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css';
     $this->aContent['css'][] = '../public/vendor/css/footerCSS.css';
-    $this->aContent['js'][] = 'http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js';
+    $this->aContent['js'][] = 'https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js';
     $this->aContent['js'][] = '../public/vendor/js/nav.js';
 
 
