@@ -5,4 +5,4 @@
    <center> toutpourlaraclette.vs</center>
  </div>
 
-<a href='?page=login'> <button type="button">Login</button></a>
+<a href="?page=login"> <button type="button">Login</button></a>

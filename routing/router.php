@@ -13,8 +13,8 @@
 
     //RÉCUPÈRE	LE NOM DE LA PAGE À AFFICHER
 
-    if(isset($_POST['page'])){
-      $sPageToLoad = $_POST['page'];
+    if(isset($_GET['page'])){
+      $sPageToLoad = $_GET['page'];
     }
 
 
