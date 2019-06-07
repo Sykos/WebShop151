@@ -1,12 +1,7 @@
-<<<<<<< HEAD
 	<?php
 
 
 	require_once("config.php");
-=======
-	<?php /*
-	require_once "config.php";
->>>>>>> 0091e984b66034cf4045774d999125b2795c8ae5
 	$sql = "INSERT INTO `utilisateurs`(`UtilisateursNomDeFamille`) VALUES (".nom")";
 	/*
 	if ($link->query($sql) === TRUE) {
@@ -15,12 +10,8 @@
 	else {
 	echo "Error: " . $sql . "<br>" . $link->error;
 	}
-<<<<<<< HEAD
 	*/
      ?>
-=======
-     */?>
->>>>>>> 0091e984b66034cf4045774d999125b2795c8ae5
 
 
 <!DOCTYPE html>
