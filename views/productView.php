@@ -15,6 +15,7 @@
     }
      ?>
   </head>
+  
   <body>
     <?php
         require_once('./templates/header.php');

@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 	<?php
 
 
 	require_once("config.php");
+=======
+	<?php /*
+	require_once "config.php";
+>>>>>>> 0091e984b66034cf4045774d999125b2795c8ae5
 	$sql = "INSERT INTO `utilisateurs`(`UtilisateursNomDeFamille`) VALUES (".nom")";
 	/*
 	if ($link->query($sql) === TRUE) {
@@ -10,8 +15,12 @@
 	else {
 	echo "Error: " . $sql . "<br>" . $link->error;
 	}
+<<<<<<< HEAD
 	*/
      ?>
+=======
+     */?>
+>>>>>>> 0091e984b66034cf4045774d999125b2795c8ae5
 
 
 <!DOCTYPE html>
@@ -47,7 +56,7 @@
           <div class="row">
               <div class="col-md-12">
                   <!-- INSERT BODY -->
-				   <form action="/views/config.php" method="POST">
+				   <form action="./views/config.php" method="POST">
                       Nom: <input type="text" name="nom" value="">
                       Prénom: <input type="text" name="prenom" value="">
                       E-mail: <input type="text" name="mail" value="">

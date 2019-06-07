@@ -1,5 +1,5 @@
 <?php
-
+  //*
     //RÉCUPÈRE LES ROUTES
     require_once('routes.php');
 
@@ -32,11 +32,15 @@
         case 'testForm':
             $controllerToLoad = 'testForm';
         break;
+        case 'login':
+            $controllerToLoad = 'login';
+        break;
       }
 
 
     //APPEL DU MAINCONTROLLER ET DU CONTROLLER AD HOC
     require_once('./controllers/mainController.php');
-    require_once('./controllers/'.$controlersList[$controllerToLoad]);
+    require_once('./controllers/'$controlersList[$controllerToLoad]);
     $oController = new Controller();
     $oController->render();
+*/

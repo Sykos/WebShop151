@@ -3,7 +3,11 @@
    session_start();
 
    if($_SERVER["REQUEST_METHOD"] == "POST") {
+<<<<<<< HEAD:views/login.php
       // USERNAME AND PASSWORD SENT FROM FORM
+=======
+      // username and password sent from form
+>>>>>>> 0091e984b66034cf4045774d999125b2795c8ae5:views/loginView.php
 
       $myusername = mysqli_real_escape_string($db,$_POST['UtilisateursNomDeFamille']);
       $mypassword = mysqli_real_escape_string($db,$_POST['UtilisateursMotDePasse']);
@@ -15,7 +19,11 @@
 
       $count = mysqli_num_rows($result);
 
+<<<<<<< HEAD:views/login.php
       // IF RESULT MATCHED $MYUSERNAME AND $MYPASSWORD, TABLE ROW MUST BE 1 ROW
+=======
+      // If result matched $myusername and $mypassword, table row must be 1 row
+>>>>>>> 0091e984b66034cf4045774d999125b2795c8ae5:views/loginView.php
 
       if($count == 1) {
          session_register("myusername");
@@ -31,7 +39,6 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-		<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <title><?php echo $this->aContent['pageTitle']; ?></title>
     <?php
     //CHARGE TOUTES LES PAGES CSS
