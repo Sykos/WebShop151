@@ -8,7 +8,6 @@
 
       $this->aContent['viewPath'] = './views/signInView.php';
       $this->aContent['pageTitle'] = 'Inscription';
-      eval( $db )
     }
 
     public function render(){
