@@ -13,7 +13,6 @@
     public function render(){
       parent::render();
     }
-} 
 
     // Include config file
 define('DB_SERVER', '127.0.0.1:49386');
@@ -44,6 +43,6 @@ if ($dbconnect->query($query) === TRUE) {
 	die($dbconnect->error);
 }
 }
-
+} 
 
 
