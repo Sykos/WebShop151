@@ -13,7 +13,7 @@
 
     public function render(){
       parent::render();
-      db();
+      
     }
    function db(){
     // Include config file
