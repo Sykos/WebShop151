@@ -36,7 +36,13 @@
                <form action = "" method = "post">
                   <label>UserName  :</label><input type = "text" name = "UtilisateursNomDeFamille" class = "box"/><br /><br />
                   <label>Password  :</label><input type = "password" name = "UtilisateursMotDePasse" class = "box" /><br/><br />
+<<<<<<< HEAD
                   <input type = "submit" value = " Submit "/><br>
+=======
+                  <img src="captcha.php">
+
+                  <input type = "submit" value = " Submit "/><br />
+>>>>>>> 22ef5811d68da6b0ea97295ff8ff4e5e5925c20d
                </form>
           </div>
           </div>
