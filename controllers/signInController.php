@@ -8,11 +8,12 @@
 
       $this->aContent['viewPath'] = './views/signInView.php';
       $this->aContent['pageTitle'] = 'Inscription';
-      db();
+      
     }
 
     public function render(){
       parent::render();
+      db();
     }
    function db(){
     // Include config file
