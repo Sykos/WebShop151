@@ -49,6 +49,13 @@
   }
   if(isset($_POST['submit'])){
     checkData();
+    $nom=$_POST['nom'];
+  $prenom=$_POST['prenom'];
+  $mail=$_POST['email'];
+  $pass=$_POST['pass'];
+  $user=$_POST['username'];
+
+    $query = "INSERT INTO `utilisateurs` (`UtilisateursNomDeFamille`, `UtilisateursPrenom`, `UtilisateursEmail`, `UtilisateursMotDePasse`,`UtilisateursUser`) VALUES ('$nom', '$prenom', '$email', '$pass','$user')";
 
     if($sErrorMessage !=''){
       echo $sErrorMessage;
