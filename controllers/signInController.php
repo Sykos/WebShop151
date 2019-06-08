@@ -34,7 +34,7 @@ if (mysqli_connect_errno()) {
     }
   }
 
-  //VÉRIFIE LES DONNÉES ENTRÉES DANS LE FORMULAIRE
+  /*//VÉRIFIE LES DONNÉES ENTRÉES DANS LE FORMULAIRE
   function checkData(){
     $sErrorMessage = '';
     $patternString = '^[a-zA-Zéèöüàä]+$';
@@ -63,7 +63,7 @@ if (mysqli_connect_errno()) {
     return $sName;
     return $sDateOfBirth;
     return $sErrorMessage;
-  }
+  }*/
   if(isset($_POST['submit'])){
     checkData();
     $nom=$_POST['nom'];
