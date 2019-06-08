@@ -19,7 +19,7 @@
   <body>
     <?php require_once './templates/header.php'; ?>
     <?php require_once './templates/nav.php'; ?>
-    <form class='' action='./controllers/signInController.php' method='post'>
+    <form class='' action='?page=signIn' method='post'>
       Titre:
       <select name='titre'>
         <option>M.</option>
@@ -30,7 +30,7 @@
       <br>
       Prénom: <input type='text' name='prenom' required>
       <br>
-      Date de naissance: <input type='text' name='dateOfBirth' value='dd/mm/yyyy' required>
+      Date de naissance: <input type='text' name='dateOfBirth' required>
       <br>
       E-mail: <input type='text' name='email' required>
       <br>
