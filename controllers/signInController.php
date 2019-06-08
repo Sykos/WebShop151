@@ -13,7 +13,7 @@
     public function render(){
       parent::render();
     }
-/*    function db(){
+   function db(){
     // Include config file
 define('DB_SERVER', '127.0.0.1:49386');
 define('DB_USERNAME', 'azure');
@@ -43,5 +43,5 @@ if ($dbconnect->query($query) === TRUE) {
 	die($dbconnect->error);
 }
 }
-}*/
+}
 }
