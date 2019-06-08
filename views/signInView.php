@@ -10,10 +10,10 @@
       echo '<script src='.$sJsPath.'></script>';
     }
 
-      //CHARGE TOUTES LES PAGES CSS
+      /*//CHARGE TOUTES LES PAGES CSS
       foreach($this->aContent['css'] as $sCssPath) {
         echo '<link rel=stylesheet href='.$sCssPath.'>';
-      }
+      }*/
     ?>
   </head>
   <body>
