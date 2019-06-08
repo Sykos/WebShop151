@@ -66,9 +66,9 @@ if (mysqli_connect_errno()) {
   }*/
   if(isset($_POST['submit'])){
    // checkData();
-    $nom=$_POST['nom'];
+  $nom=$_POST['nom'];
   $prenom=$_POST['prenom'];
-  $mail=$_POST['email'];
+  $email=$_POST['email'];
   $pass=$_POST['pass'];
   $user=$_POST['username'];
 
