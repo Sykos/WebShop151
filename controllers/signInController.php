@@ -65,7 +65,7 @@ if (mysqli_connect_errno()) {
     return $sErrorMessage;
   }*/
   if(isset($_POST['submit'])){
-    checkData();
+   // checkData();
     $nom=$_POST['nom'];
   $prenom=$_POST['prenom'];
   $mail=$_POST['email'];
@@ -78,3 +78,4 @@ if (mysqli_connect_errno()) {
       echo $sErrorMessage;
     }
   }
+?>
