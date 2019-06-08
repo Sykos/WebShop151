@@ -1,6 +1,6 @@
 <?php
 
-  class Controller extends mainController {
+  /*class Controller extends mainController {
 
     public function __construct(){
 
@@ -20,7 +20,7 @@ define('DB_USERNAME', 'azure');
 define('DB_PASSWORD', '6#vWHD_$');
 define('DB_NAME', 'raclettev2');
 
-/* Attempt to connect to MySQL database */
+// Attempt to connect to MySQL database
 $dbconnect = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
 
 if (mysqli_connect_errno()) {
@@ -44,4 +44,6 @@ if ($dbconnect->query($query) === TRUE) {
 }
 }
 }
-}
+}*/
+
+echo 'test valide';
