@@ -37,6 +37,9 @@
         case 'login':
             $controllerToLoad = 'login';
         break;
+        case: 'signIn':
+            $controllerToLoad = 'signIn';
+        break;
       }
 
     //APPEL DU MAINCONTROLLER ET DU CONTROLLER AD HOC

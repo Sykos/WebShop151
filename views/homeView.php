@@ -5,9 +5,6 @@
 
  <head>
    <meta charset="utf-8">
-   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-
-   </script>
     <title><?php echo $this->aContent['pageTitle']; ?></title>
     <?php
     //CHARGE TOUTES LES PAGES JS

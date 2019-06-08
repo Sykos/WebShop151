@@ -6,5 +6,6 @@
     'product' => 'productController.php',
     'productDetail' => 'productDetailController.php',
     'testForm' => 'testFormController.php',
-    'login' => 'loginController.php'
+    'login' => 'loginController.php',
+    'signIn' => 'signInController.php'
   ];
