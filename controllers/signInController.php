@@ -1,7 +1,4 @@
 <?php
-
-
-
   class Controller extends mainController {
 
     public function __construct(){
