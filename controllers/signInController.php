@@ -7,9 +7,9 @@
 
       parent::__construct();
 
-      $this->aContent['viewPath'] = './views/homeView.php';
-      $this->aContent['pageTitle'] = 'Home';
-      $this->aContent['css'][] = './public/vendor/css/homeCSS.css';
+      $this->aContent['viewPath'] = '../views/signInView.php';
+      $this->aContent['pageTitle'] = 'Inscription';
+      
 
     }
     public function render(){
