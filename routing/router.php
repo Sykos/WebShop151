@@ -8,7 +8,7 @@
 
 
     $controllerToLoad = 'home';
-    $sPageToLoad;
+    $sPageToLoad = 'home';
 
 
     //RÉCUPÈRE	LE NOM DE LA PAGE À AFFICHER
