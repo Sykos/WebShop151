@@ -14,13 +14,15 @@ if (mysqli_connect_errno()) {
   die("Database connection failed: " . mysqli_connect_error());
 }
 
-if(isset($_POST['submit'])) {
-  $nom=$_POST['nom'];
-  $prenom=$_POST['prenom'];
-  $mail=$_POST['mail'];
-  $pass=$_POST['pass'];
+if(isset($_POST['submit'])){
+  // checkData();
+   $nom=$_POST['nom'];
+ $prenom=$_POST['prenom'];
+ $mail=$_POST['email'];
+ $pass=$_POST['pass'];
+ $user=$_POST['username'];
 
-    $query = "INSERT INTO `utilisateurs` (`UtilisateursNomDeFamille`, `UtilisateursPrenom`, `UtilisateursEmail`, `UtilisateursMotDePasse`) VALUES ('$nom', '$prenom', '$mail', '$pass')";
+   $query = "INSERT INTO `utilisateurs` (`UtilisateursNomDeFamille`, `UtilisateursPrenom`, `UtilisateursEmail`, `UtilisateursMotDePasse`,`UtilisateursUser`) VALUES ('$nom', '$prenom', '$email', '$pass','$user')";
 	
 if ($dbconnect->query($query) === TRUE) {
     echo "New record created successfully";
