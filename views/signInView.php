@@ -19,7 +19,7 @@
   <body>
     <?php require_once './templates/header.php'; ?>
     <?php require_once './templates/nav.php'; ?>
-    <form class='' action='./views/config.php' method='post'>
+    <form class='' action='./controllers/signInController.php' method='post'>
       Titre:
       <select name='titre'>
         <option>M.</option>
