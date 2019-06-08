@@ -8,3 +8,13 @@ center {
   top: 10%;
   font-size: 200%;
 }
+
+button{
+  padding:6px 0 6px 0;
+	font:bold 13px Arial;
+	background: black;
+	color:#555;
+	border-radius:2px;
+	width:100px;
+	border:1px solid #ccc;
+}
