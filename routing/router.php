@@ -37,7 +37,7 @@
         case 'login':
             $controllerToLoad = 'login';
         break;
-        case: 'signIn':
+        case 'signIn':
             $controllerToLoad = 'signIn';
         break;
       }

@@ -7,12 +7,12 @@
     //CHARGE TOUTES LES PAGES JS
 
     foreach($this->aContent['js'] as $sJsPath){
-      echo '<script src=''.$sJsPath.''></script>';
+      echo '<script src='.$sJsPath.'></script>';
     }
 
       //CHARGE TOUTES LES PAGES CSS
       foreach($this->aContent['css'] as $sCssPath) {
-        echo '<link rel='stylesheet' href=''.$sCssPath.''>';
+        echo '<link rel=stylesheet href='.$sCssPath.'>';
       }
     ?>
   </head>

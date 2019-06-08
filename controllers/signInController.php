@@ -14,6 +14,7 @@
       parent::render();
     }
 
+    //VÉRIFIE LES DONNÉES ENTRÉES DANS LE FORMULAIRE
     public function checkData(){
       $sErrorMessage = '';
       $patternString = '^[a-zA-Zéèöüàä]+$';
@@ -37,6 +38,17 @@
         $sErrorMessage = 'Date invalide (dd/mm/yyyy)';
       }
 
+      //RETOUR DES VALEURS POUR UTILISATION
+      return $sSurname;
+      return $sName;
+      return $sDateOfBirth;
+      return $sErrorMessage;
+    }
+  }
+  if(isset($_POST['submit'])){
+    checkData();
 
+    if($sErrorMessage !=''){
+      echo $sErrorMessage;
     }
   }
