@@ -14,7 +14,7 @@
       parent::render();
     }
 
-  }
+
 
   /*//VÉRIFIE LES DONNÉES ENTRÉES DANS LE FORMULAIRE
   function checkData(){
@@ -76,5 +76,5 @@ if ($dbconnect->query($query) === TRUE) {
 } else {
 	die($dbconnect->error);
 }
-}
+}  }
 ?>
