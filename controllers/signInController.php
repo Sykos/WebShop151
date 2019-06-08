@@ -1,6 +1,6 @@
 <?php
 
- /* class Controller extends mainController {
+  class Controller extends mainController {
 
     public function __construct(){
 
@@ -13,7 +13,7 @@
     public function render(){
       parent::render();
     }
-} */
+} 
 
     // Include config file
 define('DB_SERVER', '127.0.0.1:49386');
