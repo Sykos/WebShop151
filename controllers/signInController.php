@@ -13,10 +13,9 @@
     public function render(){
       parent::render();
     }
+}
 
     // Include config file
-/* Database credentials. Assuming you are running MySQL
-server with default setting (user 'root' with no password) */
 define('DB_SERVER', '127.0.0.1:49386');
 define('DB_USERNAME', 'azure');
 define('DB_PASSWORD', '6#vWHD_$');
@@ -46,5 +45,5 @@ if ($dbconnect->query($query) === TRUE) {
 }
 }
 
-  }
+
 
