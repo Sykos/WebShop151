@@ -18,11 +18,11 @@ if(isset($_POST['submit'])){
   // checkData();
    $nom=$_POST['nom'];
  $prenom=$_POST['prenom'];
- $mail=$_POST['email'];
- $pass=$_POST['pass'];
+ $email=$_POST['email'];
+ $password=$_POST['password'];
  $user=$_POST['username'];
 
-   $query = "INSERT INTO `utilisateurs` (`UtilisateursNomDeFamille`, `UtilisateursPrenom`, `UtilisateursEmail`, `UtilisateursMotDePasse`,`UtilisateursUser`) VALUES ('$nom', '$prenom', '$email', '$pass','$user')";
+   $query = "INSERT INTO `utilisateurs` (`UtilisateursNomDeFamille`, `UtilisateursPrenom`, `UtilisateursEmail`, `UtilisateursMotDePasse`,`UtilisateursUser`) VALUES ('$nom', '$prenom', '$email', '$password','$user')";
 	
 if ($dbconnect->query($query) === TRUE) {
     echo "New record created successfully";
