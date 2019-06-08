@@ -1,8 +1,5 @@
 <?php
-<<<<<<< HEAD
-=======
 
->>>>>>> f7ba06e1d415d36bd1a7928ceb43d698cf49cdf7
   class Controller extends mainController {
 
     public function __construct(){
@@ -16,14 +13,48 @@
     public function render(){
       parent::render();
     }
-    function db(){
-    // Include config file
-define('DB_SERVER', '127.0.0.1:49386');
+
+  }
+
+  /*//VÉRIFIE LES DONNÉES ENTRÉES DANS LE FORMULAIRE
+  function checkData(){
+    $sErrorMessage = '';
+    $patternString = '^[a-zA-Zéèöüàä]+$';
+    $patternDate = '\d{1,2}\/\d{1,2}\/\d{4}';
+
+    if(preg_match($patternString, $_POST['nom'])){
+      $sSurname = $_POST['nom'];
+    }else{
+      $sErrorMessage = 'Nom invalide';
+    }
+
+    if(preg_match($patternString, $_POST['prenom'])){
+      $sName = $_POST['prenom'];
+    }else{
+      $sErrorMessage = 'Prénom invalide';
+    }
+
+    if(preg_match($patternDate, $_POST['dateOfBirth'])){
+      $sDateOfBirth = $_POST['dateOfBirth'];
+    }else{
+      $sErrorMessage = 'Date invalide (dd/mm/yyyy)';
+    }
+
+    //RETOUR DES VALEURS POUR UTILISATION
+    return $sSurname;
+    return $sName;
+    return $sDateOfBirth;
+    return $sErrorMessage;
+  }*/
+// Include config file
+/* Database credentials. Assuming you are running MySQL
+server with default setting (user 'root' with no password) */
+/*define('DB_SERVER', '127.0.0.1:49386');
 define('DB_USERNAME', 'azure');
 define('DB_PASSWORD', '6#vWHD_$');
 define('DB_NAME', 'raclettev2');
  
-/* Attempt to connect to MySQL database */
+/* Attempt to connect to MySQL database *//*
 $dbconnect = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
 
 if (mysqli_connect_errno()) {
@@ -45,7 +76,5 @@ if ($dbconnect->query($query) === TRUE) {
 } else {
 	die($dbconnect->error);
 }
-}}
-} 
-
-
+}*/
+?>

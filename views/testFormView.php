@@ -36,7 +36,7 @@
                       Prénom: <input type="text" name="prenom" value="">
                       E-mail: <input type="text" name="mail" value="">
                       Mot de Passe : <input type="password" name="pass" value="">
-                      <input type="submit" name="submit" value="">
+                      <input type="submit" name="submit" value="Inscription">
                   </form>
               </div>
           </div>
