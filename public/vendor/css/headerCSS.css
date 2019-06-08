@@ -17,4 +17,6 @@ button{
 	border-radius:2px;
 	width:100px;
 	border:1px solid #ccc;
+  position: absolute;
+  align: right;
 }
