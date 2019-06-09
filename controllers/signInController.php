@@ -57,6 +57,7 @@ function checkData(){
     $bCheckOk = true;
   }else{
     $bCheckOk = false;
+    echo 'You fucked up bro';
   }
   //RETOUR DES VALEURS POUR UTILISATION
   return $bCheckOk;
