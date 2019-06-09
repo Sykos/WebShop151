@@ -94,9 +94,9 @@ if(isset($_POST['submit']))
     //Controller::db();
     echo 'Enregistrement ok'
   }
-  if ($sErrorMessage != '')
+  /*if ($sErrorMessage != '')
   {
     echo $sErrorMessage;
-  }
+  }*/
 
 }
