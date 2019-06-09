@@ -49,11 +49,12 @@ if ($dbconnect->query($query) === TRUE) {
 }
 
 function checkData(){
-echo 'Test Valide checkData';
+
   $sErrorMessage = '';
   $bCheckOk;
   $patternString = '^[a-zA-Zéèöüàä]+$';
   $patternDate = '\d{1,2}\/\d{1,2}\/\d{4}';
+  echo 'Test Valide checkData';
 
 /*  if((preg_match($patternString, $_POST['nom'])) && (preg_match($patternString, $_POST['prenom'])) && (preg_match($patternDate, $_POST['dateOfBirth']))){
     $bCheckOk = true;
