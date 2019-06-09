@@ -61,6 +61,7 @@
       $bCheckOk;
       $patternString = '^[a-zA-Zéèöüàä]+$';
       $patternDate = '\d{1,2}\/\d{1,2}\/\d{4}';
+      echo 'Init ok';
 
 
       /*if((preg_match($patternString, $_POST['nom'])) && (preg_match($patternString, $_POST['prenom'])) && (preg_match($patternDate, $_POST['dateOfBirth'])))
