@@ -48,7 +48,8 @@ if ($dbconnect->query($query) === TRUE) {
 }
 
 function checkData(){
-  $sErrorMessage = '';
+echo 'Test Valide checkData';
+/*  $sErrorMessage = '';
   $bCheckOk;
   $patternString = '^[a-zA-Zéèöüàä]+$';
   $patternDate = '\d{1,2}\/\d{1,2}\/\d{4}';
@@ -61,7 +62,7 @@ function checkData(){
   }
   //RETOUR DES VALEURS POUR UTILISATION
   return $bCheckOk;
-}
+}*/
 }
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
