@@ -61,5 +61,5 @@ function checkData(){
   //RETOUR DES VALEURS POUR UTILISATION
   return $bCheckOk;
 }
-echo 'Test Validé';
 }
+echo 'Test valide';
