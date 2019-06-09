@@ -63,7 +63,7 @@ function checkData(){
 }
 
 if(isset($_POST['submit'])){
-  checkData();
+  //checkData();
   echo 'Test validé';
 }
 }
