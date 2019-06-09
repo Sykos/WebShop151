@@ -56,18 +56,23 @@
     }
     public static function checkData()
     {
+      //INITIALISATION DES VARIABLES
+       //&& (preg_match($patternString, $_POST['prenom'])) && (preg_match($patternDate, $_POST['dateOfBirth']))
       $bCheckOk;
-      $patternString = '^[a-zA-Zéèöüàä]+$';
+      $sSurname = $_POST['nom'];
+      $sName = $_POST['prenom'];
+      $sDateOfBirth = $_POST['dateOfBirth'];
+      $patternString = '^[a-zA-Z]+$';
       $patternDate = '\d{1,2}\.\d{1,2}\.\d{4}';
 
 
 
-      if((preg_match($patternString, $_POST['nom'])) && (preg_match($patternString, $_POST['prenom'])) /*&& (preg_match($patternDate, $_POST['dateOfBirth']))*/)
-      {
-        $bCheckOk = true;
-      }else
+      if(!preg_match($patternString, $sSurname))
       {
         $bCheckOk = false;
+      }else
+      {
+        $bCheckOk = true;
       }
       //RETOUR DES VALEURS POUR UTILISATION
       return $bCheckOk;
