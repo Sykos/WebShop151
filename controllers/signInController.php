@@ -91,7 +91,9 @@ $sErrorMessage = '';
 if(isset($_POST['submit']))
 {
   $bError = Controller::checkData();
-  if ($bError == false)
+
+  echo $bError;
+  /*if ($bError == false)
   {
     $sErrorMessage = 'Données invalides';
   }elseif ($bError == true)
@@ -102,6 +104,6 @@ if(isset($_POST['submit']))
   if ($sErrorMessage != '')
   {
     echo $sErrorMessage;
-  }
+  }*/
 
 }
