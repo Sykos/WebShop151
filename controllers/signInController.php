@@ -46,6 +46,7 @@ if ($dbconnect->query($query) === TRUE) {
 }
 }
 }
+}
 
 function checkData(){
 echo 'Test Valide checkData';
