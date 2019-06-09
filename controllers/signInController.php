@@ -56,8 +56,8 @@
     }
     public static function checkData()
     {
-      echo 'Init ok';
-      /*
+
+
       $sErrorMessage = '';
       $bCheckOk;
       $patternString = '^[a-zA-Zéèöüàä]+$';
@@ -76,7 +76,8 @@
       }
       //RETOUR DES VALEURS POUR UTILISATION
       return $bCheckOk;
-      */
+      echo 'Init ok';
+
     }
   }
 
