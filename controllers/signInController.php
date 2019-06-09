@@ -56,9 +56,6 @@
     }
     public static function checkData()
     {
-
-
-      $sErrorMessage = '';
       $bCheckOk;
       $patternString = '^[a-zA-Zéèöüàä]+$';
       $patternDate = '\d{1,2}\/\d{1,2}\/\d{4}';
@@ -68,15 +65,12 @@
       if((preg_match($patternString, $_POST['nom'])) && (preg_match($patternString, $_POST['prenom'])) && (preg_match($patternDate, $_POST['dateOfBirth'])))
       {
         $bCheckOk = true;
-        echo 'Test Valide checkData';
       }else
       {
         $bCheckOk = false;
-        echo 'You fucked up bro';
       }
       //RETOUR DES VALEURS POUR UTILISATION
       return $bCheckOk;
-      echo 'Init ok';
 
     }
   }
@@ -88,6 +82,13 @@
 ############################
 if(isset($_POST['submit']))
 {
-  Controller::checkData();
-  echo 'Test Valide';
+  $bError = Controller::checkData();
+  if ($bError == false)
+  {
+    $sErrorMessage = 'Données invalides';
+  }elseif ($bError == true)
+  {
+    $sErrorMessage = 'Données valides';
+  }
+  echo $sErrorMessage;
 }
