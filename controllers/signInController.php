@@ -64,7 +64,7 @@ function checkData(){
     echo 'You fucked up bro';
   }
   //RETOUR DES VALEURS POUR UTILISATION
-  return $bCheckOk;
+  //return $bCheckOk;
 }
 }
 if(isset($_POST['submit'])){
