@@ -62,4 +62,7 @@ function checkData(){
   return $bCheckOk;
 }
 }
-echo 'Test valide';
+if(isset($_POST['submit'])){
+  checkData();
+  echo 'Test Valide';
+}
