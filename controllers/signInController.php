@@ -59,7 +59,7 @@ function checkData(){
   if((preg_match($patternString, $_POST['nom'])) && (preg_match($patternString, $_POST['prenom'])) && (preg_match($patternDate, $_POST['dateOfBirth']))){
     $bCheckOk = true;
     echo 'Test Valide checkData';
-  }/*else{
+  }else{
     $bCheckOk = false;
     echo 'You fucked up bro';
   }
