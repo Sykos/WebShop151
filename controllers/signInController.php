@@ -47,7 +47,7 @@ if ($dbconnect->query($query) === TRUE) {
 }
 }
 
-function checkData(){
+/*function checkData(){
   $sErrorMessage = '';
   $bCheckOk;
   $patternString = '^[a-zA-Zéèöüàä]+$';
@@ -61,7 +61,7 @@ function checkData(){
   }
   //RETOUR DES VALEURS POUR UTILISATION
   return $bCheckOk;
-}
+}*/
 }
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
