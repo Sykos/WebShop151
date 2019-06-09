@@ -65,7 +65,7 @@ function checkData(){
   }
   //RETOUR DES VALEURS POUR UTILISATION
   return $bCheckOk;
-}*/
+}
 }
 if(isset($_POST['submit'])){
   checkData();
