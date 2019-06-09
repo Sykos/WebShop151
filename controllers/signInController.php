@@ -90,9 +90,9 @@ $sErrorMessage = '';
 //CHECK DES DONNÉES ET ENREGISTREMENT
 if(isset($_POST['submit']))
 {
-  $bError = Controller::checkData();
+  $bCheckOk = Controller::checkData();
 
-  echo $bError;
+  echo $bCheckOk;
   /*if ($bError == false)
   {
     $sErrorMessage = 'Données invalides';
