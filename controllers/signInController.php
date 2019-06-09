@@ -63,7 +63,7 @@
       $patternDate = '\d{1,2}\/\d{1,2}\/\d{4}';
 
 
-      if((preg_match($patternString, $_POST['nom'])) && (preg_match($patternString, $_POST['prenom'])) && (preg_match($patternDate, $_POST['dateOfBirth'])))
+      /*if((preg_match($patternString, $_POST['nom'])) && (preg_match($patternString, $_POST['prenom'])) && (preg_match($patternDate, $_POST['dateOfBirth'])))
       {
         $bCheckOk = true;
         echo 'Test Valide checkData';
@@ -74,6 +74,7 @@
       }
       //RETOUR DES VALEURS POUR UTILISATION
       return $bCheckOk;
+      */
     }
   }
 
@@ -82,7 +83,8 @@
 # TRAITEMENT DES DONNÉES   #
 #                          #
 ############################
-if(isset($_POST['submit'])){
+if(isset($_POST['submit']))
+{
   checkData();
   echo 'Test Valide';
 }
