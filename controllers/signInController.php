@@ -91,12 +91,12 @@ if(isset($_POST['submit']))
     $sErrorMessage = 'Données invalides';
   }elseif ($bError == true)
   {
-    //Controller::db();
-    echo 'Enregistrement ok'
+    Controller::db();
+    echo 'Enregistrement ok';
   }
-  /*if ($sErrorMessage != '')
+  if ($sErrorMessage != '')
   {
     echo $sErrorMessage;
-  }*/
+  }
 
 }
