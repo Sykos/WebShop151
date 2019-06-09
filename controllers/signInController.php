@@ -69,5 +69,6 @@ error_reporting(E_ALL);
 
 if(isset($_POST['submit'])){
   //checkData();
+  db();
   echo 'Test Valide';
 }
