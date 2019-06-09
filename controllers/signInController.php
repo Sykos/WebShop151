@@ -61,4 +61,5 @@ function checkData(){
   //RETOUR DES VALEURS POUR UTILISATION
   return $bCheckOk;
 }
+
 }
