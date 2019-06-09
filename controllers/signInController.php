@@ -54,17 +54,18 @@
         }
       }
     }
-    function checkData()
+    public static function checkData()
     {
-
+      echo 'Init ok';
+      /*
       $sErrorMessage = '';
       $bCheckOk;
       $patternString = '^[a-zA-Zéèöüàä]+$';
       $patternDate = '\d{1,2}\/\d{1,2}\/\d{4}';
-      echo 'Init ok';
 
 
-      /*if((preg_match($patternString, $_POST['nom'])) && (preg_match($patternString, $_POST['prenom'])) && (preg_match($patternDate, $_POST['dateOfBirth'])))
+
+      if((preg_match($patternString, $_POST['nom'])) && (preg_match($patternString, $_POST['prenom'])) && (preg_match($patternDate, $_POST['dateOfBirth'])))
       {
         $bCheckOk = true;
         echo 'Test Valide checkData';
@@ -86,6 +87,6 @@
 ############################
 if(isset($_POST['submit']))
 {
-  checkData();
+  Controller::checkData();
   echo 'Test Valide';
 }
