@@ -56,9 +56,9 @@ function checkData(){
   $patternDate = '\d{1,2}\/\d{1,2}\/\d{4}';
   echo 'Test Valide checkData';
 
-/*  if((preg_match($patternString, $_POST['nom'])) && (preg_match($patternString, $_POST['prenom'])) && (preg_match($patternDate, $_POST['dateOfBirth']))){
+  if((preg_match($patternString, $_POST['nom'])) && (preg_match($patternString, $_POST['prenom'])) && (preg_match($patternDate, $_POST['dateOfBirth']))){
     $bCheckOk = true;
-  }else{
+  }/*else{
     $bCheckOk = false;
     echo 'You fucked up bro';
   }
