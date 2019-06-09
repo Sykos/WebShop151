@@ -1,10 +1,8 @@
 <?php
 
-  class Controller extends mainController
-  {
+  class Controller extends mainController {
 
-    public function __construct()
-    {
+    public function __construct(){
 
       parent::__construct();
 
@@ -13,97 +11,63 @@
 
     }
 
-    public function render()
-    {
+    public function render(){
       parent::render();
 
     }
-    public static function db()
-    {
-      // Include config file
-        define('DB_SERVER', '127.0.0.1:49386');
-        define('DB_USERNAME', 'azure');
-        define('DB_PASSWORD', '6#vWHD_$');
-        define('DB_NAME', 'raclettev2');
+   function db(){
+    // Include config file
+define('DB_SERVER', '127.0.0.1:49386');
+define('DB_USERNAME', 'azure');
+define('DB_PASSWORD', '6#vWHD_$');
+define('DB_NAME', 'raclettev2');
 
-        // Attempt to connect to MySQL database
-        $dbconnect = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+// Attempt to connect to MySQL database
+$dbconnect = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
 
-        if (mysqli_connect_errno())
-        {
-          die("Database connection failed: " . mysqli_connect_error());
-        }
+if (mysqli_connect_errno()) {
+  die("Database connection failed: " . mysqli_connect_error());
+}
 
-        if(isset($_POST['submit']))
-        {
-        // checkData();
-          $nom=$_POST['nom'];
-          $prenom=$_POST['prenom'];
-          $email=$_POST['email'];
-          $password=$_POST['password'];
-          $user=$_POST['username'];
+if(isset($_POST['submit'])){
+  // checkData();
+  $nom=$_POST['nom'];
+ $prenom=$_POST['prenom'];
+ $email=$_POST['email'];
+ $password=$_POST['password'];
+ $user=$_POST['username'];
 
-          $query = "INSERT INTO `utilisateurs` (`UtilisateursNomDeFamille`, `UtilisateursPrenom`, `UtilisateursEmail`, `UtilisateursMotDePasse`,`UtilisateursUser`) VALUES ('$nom', '$prenom', '$email', '$password','$user')";
+   $query = "INSERT INTO `utilisateurs` (`UtilisateursNomDeFamille`, `UtilisateursPrenom`, `UtilisateursEmail`, `UtilisateursMotDePasse`,`UtilisateursUser`) VALUES ('$nom', '$prenom', '$email', '$password','$user')";
 
-          if ($dbconnect->query($query) === TRUE)
-          {
-              echo "New record created successfully";
-          } else
-          {
-          	die($dbconnect->error);
-          }
-        }
-    }
-    /public static function checkData()
-    {
-      //INITIALISATION DES VARIABLES
-       //&& (preg_match($patternString, $_POST['prenom'])) && (preg_match($patternDate, $_POST['dateOfBirth']))
-      $bCheckOk;
-      $sSurname = $_POST['nom'];
-      $sName = $_POST['prenom'];
-      $sDateOfBirth = $_POST['dateOfBirth'];
-      $patternString = '^[a-zA-Z]+$';
-      $patternDate = '\d{1,2}\.\d{1,2}\.\d{4}';
+if ($dbconnect->query($query) === TRUE) {
+    echo "New record created successfully";
+} else {
+	die($dbconnect->error);
+}
+}
+}
 
+/*function checkData(){
+  $sErrorMessage = '';
+  $bCheckOk;
+  $patternString = '^[a-zA-Zéèöüàä]+$';
+  $patternDate = '\d{1,2}\/\d{1,2}\/\d{4}';
 
-
-      if(!preg_match($patternString, $sSurname))
-      {
-        $bCheckOk = false;
-      }else
-      {
-        $bCheckOk = true;
-      }
-      //RETOUR DES VALEURS POUR UTILISATION
-      return $bCheckOk;
-
-    }
+  if((preg_match($patternString, $_POST['nom'])) && (preg_match($patternString, $_POST['prenom'])) && (preg_match($patternDate, $_POST['dateOfBirth']))){
+    $bCheckOk = true;
+  }else{
+    $bCheckOk = false;
+    echo 'You fucked up bro';
   }
+  //RETOUR DES VALEURS POUR UTILISATION
+  return $bCheckOk;
+}*/
+}
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
-############################
-#                          #
-# TRAITEMENT DES DONNÉES   #
-#                          #
-############################
-$sErrorMessage = '';
-
-//CHECK DES DONNÉES ET ENREGISTREMENT
-if(isset($_POST['submit']))
-{
-  $bCheckOk = Controller::checkData();
-
-  echo $bCheckOk;
-  /*if ($bError == false)
-  {
-    $sErrorMessage = 'Données invalides';
-  }elseif ($bError == true)
-  {
-    Controller::db();
-    echo 'Enregistrement ok';
-  }
-  if ($sErrorMessage != '')
-  {
-    echo $sErrorMessage;
-  }*/
-
+if(isset($_POST['submit'])){
+  //checkData();
+  echo 'Test Valide';
 }
