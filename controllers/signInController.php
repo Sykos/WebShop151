@@ -8,12 +8,12 @@
 
       $this->aContent['viewPath'] = './views/signInView.php';
       $this->aContent['pageTitle'] = 'Inscription';
-      
+
     }
 
     public function render(){
       parent::render();
-      
+
     }
    function db(){
     // Include config file
@@ -45,5 +45,20 @@ if ($dbconnect->query($query) === TRUE) {
 	die($dbconnect->error);
 }
 }
+}
+
+function checkData(){
+  $sErrorMessage = '';
+  $bCheckOk;
+  $patternString = '^[a-zA-Zéèöüàä]+$';
+  $patternDate = '\d{1,2}\/\d{1,2}\/\d{4}';
+
+  if((preg_match($patternString, $_POST['nom'])) && (preg_match($patternString, $_POST['prenom'])) && (preg_match($patternDate, $_POST['dateOfBirth']))){
+    $bCheckOk = true;
+  }else{
+    $bCheckOk = false;
+  }
+  //RETOUR DES VALEURS POUR UTILISATION
+  return $bCheckOk;
 }
 }
