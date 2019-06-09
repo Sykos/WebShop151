@@ -54,8 +54,7 @@
           }
         }
     }
-    /
-    public static function checkData()
+    /public static function checkData()
     {
       //INITIALISATION DES VARIABLES
        //&& (preg_match($patternString, $_POST['prenom'])) && (preg_match($patternDate, $_POST['dateOfBirth']))
@@ -78,7 +77,7 @@
       //RETOUR DES VALEURS POUR UTILISATION
       return $bCheckOk;
 
-    }*/
+    }
   }
 
 ############################
@@ -91,8 +90,8 @@ $sErrorMessage = '';
 //CHECK DES DONNÉES ET ENREGISTREMENT
 if(isset($_POST['submit']))
 {
- // $bCheckOk = Controller::checkData();
- $bCheckOk = Controller::db();
+  $bCheckOk = Controller::checkData();
+
   echo $bCheckOk;
   /*if ($bError == false)
   {
