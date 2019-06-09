@@ -47,14 +47,9 @@ if ($dbconnect->query($query) === TRUE) {
 }
 }
 
-<<<<<<< HEAD
 function checkData(){
 echo 'Test Valide checkData';
 /*  $sErrorMessage = '';
-=======
-/*function checkData(){
-  $sErrorMessage = '';
->>>>>>> 4c8eaca5bd105609f712a81e4356088390087a64
   $bCheckOk;
   $patternString = '^[a-zA-Zéèöüàä]+$';
   $patternDate = '\d{1,2}\/\d{1,2}\/\d{4}';
@@ -69,11 +64,7 @@ echo 'Test Valide checkData';
   return $bCheckOk;
 }*/
 }
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
 if(isset($_POST['submit'])){
-  //checkData();
+  checkData();
   echo 'Test Valide';
 }
