@@ -1,3 +1,9 @@
+<?php
+  if(isset($_POST['submit'])){
+    checkData();
+    echo 'Test Validé';
+  }
+?>
 <!DOCTYPE html>
 <html lang='en' dir='ltr'>
   <head>
