@@ -58,7 +58,7 @@
     {
       $bCheckOk;
       $patternString = '^[a-zA-Zéèöüàä]+$';
-      $patternDate = '\d{1,2}\/\d{1,2}\/\d{4}';
+      $patternDate = '\d{1,2}\.\d{1,2}\.\d{4}';
 
 
 
