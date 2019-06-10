@@ -54,18 +54,16 @@
             }
             
             while($row = mysql_fetch_assoc($retval)) {
+                //Test
                /*echo "NOM :{$row['ProduitNom']}  <br> ".
                   "PRIX : {$row['ProduitPrix']} <br> ".
                   " DESC : {$row['ProduitCartDesc']} <br> ".
                   "--------------------------------<br>";*/
 
-                   $prodName = $row["userid"];
-                   $prodPrix =$row["fullname"];
-                   $prodDesc =$row["userstatus"];
 
                    $result = mysql_query($sql); // This line executes the MySQL query that you typed above
 
-                     $yourArray = array(); // make a new array to hold all your data
+                    $yourArray = array(); // make a new array to hold all your data
 
 
                     $index = 0;
