@@ -67,8 +67,7 @@
             $patternString = '^[a-zA-Z]+$';
             $patternDate = '\d{1,2}\.\d{1,2}\.\d{4}';
 
-            var_dump($sSurname);
-            var_dump($sName);
+            return $sSurname;
             /*if(!preg_match($patternString, $sSurname))
             {
                 $bCheckOk = false;
