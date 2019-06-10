@@ -87,7 +87,7 @@
       <div class="col-md-2 col-lg-2 text-center mx-auto my-4">
 
         <!-- Social buttons -->
-        <h5 class="font-weight-bold text-uppercase mb-4">Suivez-nous !</h5>
+        <h5 class="font-weight-bold text-uppercase mb-3">Suivez-nous !</h5>
 
         <!-- Facebook -->
         <a type="button" class="btn-floating btn-fb">
