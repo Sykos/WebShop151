@@ -28,17 +28,18 @@
     ##########################
     session_start();
     include("config.php");
+    //$_SERVER["REQUEST_METHOD"] == "POST"
 
-    if($_SERVER["REQUEST_METHOD"] == "POST")
+    if(isset($_POST['submit']))
     {
 
         // username and password sent from form
 
-        $myusername = mysqli_real_escape_string($db,$_POST['UtilisateursNomDeFamille']);
+        $myusername = mysqli_real_escape_string($db,$_POST['UtilisateursUser']);
         $mypassword = mysqli_real_escape_string($db,$_POST['UtilisateursMotDePasse']);
 
 
-        $sql = "SELECT id FROM utilisateurs WHERE UtilisateursNomDeFamille = '$myusername' and UtilisateursMotDePasse = '$mypassword'";
+        $sql = "SELECT id FROM utilisateurs WHERE UtilisateursUser = '$myusername' and UtilisateursMotDePasse = '$mypassword'";
         $result = mysqli_query($db,$sql);
 
 
