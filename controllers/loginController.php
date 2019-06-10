@@ -37,9 +37,11 @@
         $myusername = mysqli_real_escape_string($db,$_POST['UtilisateursNomDeFamille']);
         $mypassword = mysqli_real_escape_string($db,$_POST['UtilisateursMotDePasse']);
 
-        echo 'Test validé';
-        /*$sql = "SELECT id FROM utilisateurs WHERE UtilisateursNomDeFamille = '$myusername' and UtilisateursMotDePasse = '$mypassword'";
+
+        $sql = "SELECT id FROM utilisateurs WHERE UtilisateursNomDeFamille = '$myusername' and UtilisateursMotDePasse = '$mypassword'";
         $result = mysqli_query($db,$sql);
+        echo 'Test validé';
+        /*
         $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
         $active = $row['active'];
 
