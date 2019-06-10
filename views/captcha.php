@@ -1,8 +1,4 @@
-The CAPTCHA  is a very very useful test to prevent abuse on the websites. When you create a web form like registration, login, contact us, blog comment etc..., We are suffering day by day with unwanted email or web spam abuse. So if you use CAPTCHA on your website forms, this can help in stopping Guestbook Spam, Blog Spam, Wiki Spam, Comment Spam, Feedback Form Spam, Other Types of Web Form Spam.
-
-The goal of this tutorial is to demonstrate how to make your own simple CAPTCHA protection using PHP. For this we needed to enabled gd library, you can create a captcha code for your registration form or any web forms using PHP.
-
-Create a one php page like: php-captcha.php & paste all the below PHP code in that file.
+<?php
 
 session_start();
 
@@ -46,3 +42,4 @@ $font='Arial.ttf';//setting the font path
 imagettftext($captcha_image,20,0,11,21,$captcha_text_colour,$font,$captcha_text);
 imagepng($captcha_image);
 imagedestroy($captcha_image);
+?>

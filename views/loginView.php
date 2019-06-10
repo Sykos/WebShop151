@@ -34,10 +34,15 @@
                   <!-- INSERT BODY -->
 
                <form action = "" method = "post">
+<<<<<<< HEAD
                   <label>UserName  :</label><input type = "text" name = "UtilisateursNomDeFamille" class = "box"/><br>
                   <label>Password  :</label><input type = "password" name = "UtilisateursMotDePasse" class = "box" /><br>
                   <img src="captcha.php">
 
+=======
+                  <label>UserName  :</label><input type = "text" name = "UtilisateursNomDeFamille" class = "box"/><br /><br />
+                  <label>Password  :</label><input type = "password" name = "UtilisateursMotDePasse" class = "box" /><br/><br />
+>>>>>>> c6ced08594b7b0015c89eb3554383ea917817617
                   <input type = "submit" value = " Submit "/><br />
                </form>
           </div>
