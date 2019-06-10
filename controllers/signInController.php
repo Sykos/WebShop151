@@ -77,7 +77,7 @@
             $patterUsername = '/^[a-zA-Z0-9]+([_ -]?[a-zA-Z0-9])*$/'//alpha numeric with some and characters like _-
 
             if((preg_match($patternString, $sNom) != 1) && (preg_match($patternString, $sPrenom) != 1) && (preg_match($patternDate, $sDateOfBirth) != 1) && (preg_match($patternEmail, $sEmail) != 1) && (preg_match($patternUsername,$sUsername) != 1) &&
-            (preg_match($patternUsername, $sUsername) != 1)
+            (preg_match($patternUsername, $sUsername) != 1))
             {
 
                 echo 'Ton truc fonctionne pas gros';
