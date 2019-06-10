@@ -47,7 +47,7 @@
                 die("Database connection failed: " . mysqli_connect_error());
             }
             $getinfo = "select ProduitNom, ProduitPrix, ProduitCartDesc from produits";
-            $query = mysql_query($getinfo, $db);
+            $query = mysql_query($getinfo, $dbconnect);
             
             while ($row = mysql_fetch_array($query)) {
                 $prodnom = $row['ProduitNom'];
