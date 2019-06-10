@@ -66,26 +66,24 @@
             //INITIALISATION DES VARIABLES
             $sNom = self::getSurname();
             $sPrenom = self::getName();
-            $patternString = '/^[a-zA-Z]+$/';
-            $patternDate = '/\d{1,2}\.\d{1,2}\.\d{4}/';
+            $sDateOfBirth = self::getDateOfBirth();
+            $sUsername = self::getUsername();
+            $sPassword = self::getPassword();
+            $patternString = '/^[a-zA-Z]+$/'; //ONLY ALPHA
+            $patternDate = '/\d{1,2}\.\d{1,2}\.\d{4}/';//DD.MM.YYYY
+            $patternEmail = '/\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,6}/'//SOMETHING@SOMETHING.SOMETHING
+            $patternPswd = '/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,15}/';//8 to 15 character string with at least one upper case letter, one lower case letter, and one digit
 
-            if((preg_match($patternString, $sNom) != 1) && (preg_match($patternString, $sPrenom) != 1)){
+            if((preg_match($patternString, $sNom) != 1) && (preg_match($patternString, $sPrenom) != 1) && (preg_match($patternDate, $sDateOfBirth) !=1) && (preg_match($patternEmail, $sEmail) != 1) && (preg_match($patternString, $sUsername) != 1) && (preg_match($patternPswd, $sPassword) != 1)){
+
                 echo 'Ton truc fonctionne pas gros';
             }
             else
             {
-                echo 'Bah tu vois quand tu veux !';
+                self::db();
+                echo 'Enregistrement ok';
             }
 
-            /*if(!preg_match($patternString, $sSurname))
-            {
-                $bCheckOk = false;
-            }else
-            {
-                $bCheckOk = true;
-            }
-            //RETOUR DES VALEURS POUR UTILISATION
-            return $bCheckOk;*/
 
         }
 
@@ -121,6 +119,11 @@
             $sUsername = htmlspecialchars($_POST['username']);
             return $sUsername;
         }
+        public static function getDateOfBirth()
+        {
+            $sDateOfBirth = htmlspecialchars($_POST['dateOfBirth']);
+            return $sDateOfBirth;
+        }
     }
 
 ############################
@@ -134,19 +137,4 @@ $sErrorMessage = '';
 if(isset($_POST['submit']))
 {
     Controller::checkData();
-    //Controller::db();
-
-    /*if ($bError == false)
-    {
-        $sErrorMessage = 'Données invalides';
-    }elseif ($bError == true)
-    {
-        Controller::db();
-        echo 'Enregistrement ok';
-    }
-    if ($sErrorMessage != '')
-    {
-        echo $sErrorMessage;
-    }*/
-
 }
