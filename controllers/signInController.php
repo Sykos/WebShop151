@@ -80,7 +80,7 @@
             }
             else
             {
-                self::db();
+                //self::db();
                 echo 'Enregistrement ok';
             }
 
