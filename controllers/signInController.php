@@ -69,7 +69,7 @@
             $patternString = '^[a-zA-Z]+$';
             $patternDate = '\d{1,2}\.\d{1,2}\.\d{4}';
 
-            if(preg_match($patternString, $sNom) != 1){
+            if(preg_match($patternString, $sNom) == 1){
                 echo 'Ton truc fonctionne pas gros';
             }
             else
