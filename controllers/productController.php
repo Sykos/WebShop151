@@ -82,14 +82,14 @@
         
         }
 
-        public static function createProduct()
+        /*public static function createProduct()
         {
             //-- RÉCUPÉRATION DES DONNÉS DE L'ARTICLE --
             self::getProductData();
             $x = 0;
            
 
-           /* while ($x <= count($yourArray))
+            while ($x <= count($yourArray))
             {
                 echo '<div class "cardProduct">
                     <img src="../public/images/'.Nom du produit = nom image.' alt="'.Nom produit.'" style="width=100%">
@@ -103,4 +103,4 @@
 
         }*/
     }
-   Controller::getProductData();
+   self::getProductData();
