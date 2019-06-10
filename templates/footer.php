@@ -91,19 +91,15 @@
 
         <!-- Facebook -->
         <a type="button" class="btn-floating btn-fb">
-          <i class="fab fa-facebook-f"></i>
+          <img src="../public/images/logoFB.png">
         </a>
         <!-- Twitter -->
         <a type="button" class="btn-floating btn-tw">
-          <i class="fab fa-twitter"></i>
+          <img src="../public/images/logoinsta.png">
         </a>
         <!-- Google +-->
         <a type="button" class="btn-floating btn-gplus">
-          <i class="fab fa-google-plus-g"></i>
-        </a>
-        <!-- Dribbble -->
-        <a type="button" class="btn-floating btn-dribbble">
-          <i class="fab fa-dribbble"></i>
+          <img src="../public/images/logoSNAP.png">
         </a>
 
       </div>

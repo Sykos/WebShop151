@@ -38,7 +38,7 @@
       <br>
       Mot de Passe: <input type='password' name='password' required>
       <br>
-      <input type='checkbox' name='legalAgreement'>J'accepte les mentions légales ta mère la pute <br>
+      <input type='checkbox' name='legalAgreement'>J'accepte les mentions légales stp <br>
       <input type='submit' name='submit' value='Inscription'>
 
     </form>
