@@ -32,56 +32,35 @@
         public static function getProductData()
         {
             //RÉCUPÉRATION DES DONNÉES RELATIVES AU PRODUIT À AFFICHER
+    
+            $dbhost = '127.0.0.1:49386';
+            $dbuser = 'azure';
+            $dbpass = '6#vWHD_$';
             
-            // Include config file
-            define('DB_SERVER', '127.0.0.1:49386');
-            define('DB_USERNAME', 'azure');
-            define('DB_PASSWORD', '6#vWHD_$');
+            $conn = mysql_connect($dbhost, $dbuser, $dbpass);
             
-
-            // Attempt to connect to MySQL database
-            $dbconnect = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD);
-
-            if(! $dbconnect ) {
-                die('Could not connect: ' . mysql_error());
-             }
-             
-             $sql = 'SELECT ProduitNom, ProduitPrix, ProduitDescriptionCourte FROM produits';
-             mysql_select_db('raclettev2');
-             $retval = mysql_query( $sql, $dbconnect );
-             
-             if(! $retval ) {
-                die('Could not get data: ' . mysql_error());
-             }
-             
-             while($row = mysql_fetch_array($retval, MYSQL_ASSOC)) {
-                echo "NOM :{$row['ProduitNom']}  <br> ".
-                   "PRIX : {$row['ProduitPrix']} <br> ".
-                   "DESC : {$row['ProduitDescriptionCourte']} <br> ".
-                   "--------------------------------<br>";
-             }
-             
-             echo "Fetched data successfully\n";
-             
-             mysql_close($dbconnect);
-          
+            if(! $conn ) {
+               die('Could not connect: ' . mysql_error());
+            }
             
-
-
-                //$prix = "SELECT ProduitPrix FROM produits";
-                //$desc = "SELECT ProduitCartDesc FROM produits";
-
-          
-                if ($dbconnect->query($nom) === TRUE)
-                {
-                    echo "Data fetched";
-                    var_dump($nom);
-                   // var_dump($prix);
-                    //var_dump($desc);
-                }else
-                {
-          	        die($dbconnect->error);
-                }
+            $sql = 'SELECT ProduitNom, ProduitPrix, ProduitCartDesc FROM produits';
+            mysql_select_db('raclettev2');
+            $retval = mysql_query( $sql, $conn );
+            
+            if(! $retval ) {
+               die('Could not get data: ' . mysql_error());
+            }
+            
+            while($row = mysql_fetch_assoc($retval)) {
+               echo "EMP ID :{$row['ProduitNom']}  <br> ".
+                  "EMP NAME : {$row['ProduitPrix']} <br> ".
+                  "EMP SALARY : {$row['ProduitCartDesc']} <br> ".
+                  "--------------------------------<br>";
+            }
+            
+            echo "Fetched data successfully\n";
+            
+            mysql_close($conn);
             
         
         }
