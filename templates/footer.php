@@ -28,22 +28,22 @@
         <ul class="list-unstyled">
           <li>
             <p>
-              <a href="#!">PROJECTS</a>
+              <a href="https://fr.wikipedia.org/wiki/Raclette">Wikipédia</a>
             </p>
           </li>
           <li>
             <p>
-              <a href="#!">ABOUT US</a>
+              <a href="https://www.bagnesraclette.ch/">Capital de la raclette</a>
             </p>
           </li>
           <li>
             <p>
-              <a href="#!">BLOG</a>
+              <a href="https://www.aufeminin.com/cuisine-de-fetes/la-raclette-s651785.html">Recettes</a>
             </p>
           </li>
           <li>
             <p>
-              <a href="#!">AWARDS</a>
+              <a href="https://www.youtube.com/watch?v=1YdB1q3c2C0">Trop marrant</a>
             </p>
           </li>
         </ul>
@@ -87,7 +87,7 @@
       <div class="col-md-2 col-lg-2 text-center mx-auto my-4">
 
         <!-- Social buttons -->
-        <h5 class="font-weight-bold text-uppercase mb-4">Suivez-nous !</h5>
+        <h5 class="font-weight-bold text-uppercase mb-3">Suivez-nous !</h5>
 
         <!-- Facebook -->
         <a type="button" class="btn-floating btn-fb">
