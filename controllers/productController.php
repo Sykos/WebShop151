@@ -38,7 +38,9 @@
             $dbpass = '6#vWHD_$';
             
             $conn = mysql_connect($dbhost, $dbuser, $dbpass);
-            
+            $prodName = array();
+            $prodPrix = array();
+            $prodDesc = array();
             if(! $conn ) {
                die('Could not connect: ' . mysql_error());
             }
@@ -52,10 +54,25 @@
             }
             
             while($row = mysql_fetch_assoc($retval)) {
-               echo "EMP ID :{$row['ProduitNom']}  <br> ".
-                  "EMP NAME : {$row['ProduitPrix']} <br> ".
-                  "EMP SALARY : {$row['ProduitCartDesc']} <br> ".
-                  "--------------------------------<br>";
+                //Test
+               /*echo "NOM :{$row['ProduitNom']}  <br> ".
+                  "PRIX : {$row['ProduitPrix']} <br> ".
+                  " DESC : {$row['ProduitCartDesc']} <br> ".
+                  "--------------------------------<br>";*/
+
+
+                   $result = mysql_query($sql); // This line executes the MySQL query that you typed above
+
+                    $yourArray = array(); // make a new array to hold all your data
+
+
+                    $index = 0;
+                    while($row = mysql_fetch_assoc($result)){ // loop to store the data in an associative array.
+                     $yourArray[$index] = $row;
+                     $index++;
+                    return $yourArray;
+}
+                  
             }
             
             echo "Fetched data successfully\n";
@@ -65,15 +82,17 @@
         
         }
 
-        /*public static function createProduct()
+        public static function createProduct()
         {
             //-- RÉCUPÉRATION DES DONNÉS DE L'ARTICLE --
+            self::getProductData();
+            $x = 0;
+           
 
-
-            while (Tant que ça n'est pas le dernier enregistrement dans la db)
+           /* while ($x <= count($yourArray))
             {
                 echo '<div class "cardProduct">
-                        <img src="../public/images/'.Nom du produit = nom image.' alt="'.Nom produit.'" style="width=100%">
+                    <img src="../public/images/'.Nom du produit = nom image.' alt="'.Nom produit.'" style="width=100%">
                         <h1>'.Nom produit.'</h1>
                         <p class="price">'.Prix de l'article.'</p>
                         <p>'.Description article.'</p>
