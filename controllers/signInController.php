@@ -54,6 +54,12 @@
                 if ($dbconnect->query($query) === TRUE)
                 {
                     echo "New record created successfully";
+                    var_dump($sNom);
+                    var_dump($sPrenom);
+                    var_dump($sEmail);
+                    var_dump($sPassword);
+                    var_dump($sUsername);
+
                 }else
                 {
           	        die($dbconnect->error);
