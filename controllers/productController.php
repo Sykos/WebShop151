@@ -34,23 +34,23 @@
             //RÉCUPÉRATION DES DONNÉES RELATIVES AU PRODUIT À AFFICHER
         }
 
-        public static function createProduct()
+        /*public static function createProduct()
         {
             //-- RÉCUPÉRATION DES DONNÉS DE L'ARTICLE --
 
 
-            while (/*Tant que ça n'est pas le dernier enregistrement dans la db*/)
+            while (Tant que ça n'est pas le dernier enregistrement dans la db)
             {
                 echo '<div class "cardProduct">
-                        <img src="../public/images/'./*Nom du produit = nom image*/.' alt="'./*Nom produit*/.'" style="width=100%">
-                        <h1>'./*Nom produit*/.'</h1>
-                        <p class="price">'./*Prix de l'article*/.'</p>
-                        <p>'./*Description article*/.'</p>
+                        <img src="../public/images/'.Nom du produit = nom image.' alt="'.Nom produit.'" style="width=100%">
+                        <h1>'.Nom produit.'</h1>
+                        <p class="price">'.Prix de l'article.'</p>
+                        <p>'.Description article.'</p>
                         <p><button>Ajouter au panier</button></p>
                     </div>';
-                /*variable incrément ++*/
+                variable incrément ++
             }
 
-        }
+        }*/
 
     }
