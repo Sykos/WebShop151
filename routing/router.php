@@ -13,8 +13,9 @@
 
     //RÉCUPÈRE	LE NOM DE LA PAGE À AFFICHER
 
-    if(isset($_GET['page'])){
-      $sPageToLoad = $_GET['page'];
+    if(isset($_GET['page']))
+    {
+        $sPageToLoad = $_GET['page'];
     }
 
 
@@ -23,24 +24,25 @@
 
     //REDIRECTION VERS LE BON CONTROLLER
 
-      switch($sPageToLoad){
+    switch($sPageToLoad)
+    {
         default:
         case 'home':
             $controllerToLoad = 'home';
-          break;
+            break;
         case 'product':
             $controllerToLoad = 'product';
-        break;
+            break;
         case 'testForm':
             $controllerToLoad = 'testForm';
-        break;
+            break;
         case 'login':
             $controllerToLoad = 'login';
-        break;
+            break;
         case 'signIn':
             $controllerToLoad = 'signIn';
-        break;
-      }
+            break;
+    }
 
     //APPEL DU MAINCONTROLLER ET DU CONTROLLER AD HOC
     require_once('./controllers/mainController.php');

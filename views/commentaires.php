@@ -22,5 +22,8 @@
 </form>
 
 <?php
-  if(isset($c_erreur)) {echo "Erreur".$c_erreur;}
+  if(isset($c_erreur))
+  {
+      echo "Erreur".$c_erreur;
+  }
 ?>
