@@ -48,7 +48,7 @@
             }
 
                 $nom = "SELECT * FROM produits";
-                var_dump($nom);
+                echo($nom);
 
                 //$prix = "SELECT ProduitPrix FROM produits";
                 //$desc = "SELECT ProduitCartDesc FROM produits";
