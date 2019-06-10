@@ -48,16 +48,16 @@
             }
 
                 $nom = "SELECT ProduitNom FROM produits";
-                $prix = "SELECT ProduitPrix FROM produits";
-                $desc = "SELECT ProduitCartDesc FROM produits";
+                //$prix = "SELECT ProduitPrix FROM produits";
+                //$desc = "SELECT ProduitCartDesc FROM produits";
 
           
                 if ($dbconnect->query($nom) === TRUE)
                 {
                     echo "Data fetched";
                     var_dump($nom);
-                    var_dump($prix);
-                    var_dump($desc);
+                   // var_dump($prix);
+                    //var_dump($desc);
                 }else
                 {
           	        die($dbconnect->error);
