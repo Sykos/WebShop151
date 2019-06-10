@@ -38,11 +38,11 @@
             if(isset($_POST['submit']))
             {
                 // checkData();
-                $nom = htmlspecialchars($_POST['nom']);
-                $prenom = getName();
-                $email = getEmail();
-                $password = getPassword();
-                $user = getUsername();
+                $nom = $_POST['nom'];
+                $prenom = $_POST['prenom'];
+                $email = $_POST['email'];
+                $password = $_POST['password'];
+                $user = $_POST['user'];
 
                 $query = "INSERT INTO `utilisateurs` (`UtilisateursNomDeFamille`, `UtilisateursPrenom`, `UtilisateursEmail`, `UtilisateursMotDePasse`,`UtilisateursUser`) VALUES ('$nom', '$prenom', '$email', '$password','$user')";
 
