@@ -47,7 +47,7 @@
              }
              
              $sql = 'SELECT ProduitNom, ProduitPrix, ProduitDescriptionCourte FROM employee';
-             mysql_select_db('test_db');
+             mysql_select_db('raclettev2');
              $retval = mysql_query( $sql, $dbconnect );
              
              if(! $retval ) {
