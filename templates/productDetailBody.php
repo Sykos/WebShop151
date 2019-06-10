@@ -5,6 +5,6 @@
     <h1>Ici se trouvera la description des produits</h1>
 </div>
 <div class="commentaires">
-    <h1><?php  include('commentaires.php'); echo"chat";?></h1>
+    <h1><?php  require('commentaires.php'); echo"minou";?></h1>
 
 </div>
