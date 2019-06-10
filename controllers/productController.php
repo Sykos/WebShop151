@@ -70,7 +70,7 @@
                     while($row = mysql_fetch_assoc($result)){ // loop to store the data in an associative array.
                      $yourArray[$index] = $row;
                      $index++;
-                     var_dump($yourArray);
+                    return $yourArray;
 }
                   
             }
@@ -82,12 +82,17 @@
         
         }
 
-        /*public static function createProduct()
+        public static function createProduct()
         {
             //-- RÉCUPÉRATION DES DONNÉS DE L'ARTICLE --
+            self::getProductData();
+            $x = 0;
+            extract($yourArray, EXTR_PREFIX_SAME, "wddx");
+
+            echo "$ProduitNom\n";
 
 
-            while (Tant que ça n'est pas le dernier enregistrement dans la db)
+            while ($x <= count($yourArray))
             {
                 echo '<div class "cardProduct">
                         <img src="../public/images/'.Nom du produit = nom image.' alt="'.Nom produit.'" style="width=100%">
@@ -99,6 +104,6 @@
                 variable incrément ++
             }
 
-        }*/
+        }
     }
    Controller::getProductData();
