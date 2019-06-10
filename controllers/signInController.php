@@ -74,7 +74,7 @@
             $patternEmail = '/\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,6}/'//SOMETHING@SOMETHING.SOMETHING
             $patternPswd = '/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,15}/';//8 to 15 character string with at least one upper case letter, one lower case letter, and one digit
 
-            if((preg_match($patternString, $sNom) != 1) && (preg_match($patternString, $sPrenom) != 1) && (preg_match($patternDate, $sDateOfBirth) !=1) && (preg_match($patternEmail, $sEmail) != 1) && (preg_match($patternString, $sUsername) != 1) && (preg_match($patternPswd, $sPassword) != 1)){
+            if((preg_match($patternString, $sNom) != 1) && (preg_match($patternString, $sPrenom) != 1) && (preg_match($patternDate, $sDateOfBirth) !=1) && (preg_match($patternEmail, $sEmail) != 1) && (preg_match($patternString, $sUsername) != 1){
 
                 echo 'Ton truc fonctionne pas gros';
             }
