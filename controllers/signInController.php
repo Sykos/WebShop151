@@ -38,11 +38,16 @@
             if(isset($_POST['submit']))
             {
                 // checkData();
-                $nom = $_POST['nom'];
+                $sNom = self::getSurname();
+                $sPrenom = self::getName();
+                $sEmail = self::getEmail();
+                $sPassword = self::getPassword();
+                $sUsername = self::getUsername();
+                /*$nom = $_POST['nom'];
                 $prenom = $_POST['prenom'];
                 $email = $_POST['email'];
                 $password = $_POST['password'];
-                $user = $_POST['user'];
+                $user = $_POST['user'];*/
 
                 $query = "INSERT INTO `utilisateurs` (`UtilisateursNomDeFamille`, `UtilisateursPrenom`, `UtilisateursEmail`, `UtilisateursMotDePasse`,`UtilisateursUser`) VALUES ('$nom', '$prenom', '$email', '$password','$user')";
 
@@ -61,9 +66,16 @@
             //INITIALISATION DES VARIABLES
             $sNom = self::getSurname();
             $sPrenom = self::getName();
+            $patternString = '^[a-zA-Z]+$';
+            $patternDate = '\d{1,2}\.\d{1,2}\.\d{4}';
 
-            var_dump($sNom);
-            var_dump($sPrenom);
+            if(!preg_match($patternString, $sNom)){
+                echo 'Ton truc fonctionne pas gros';
+            }
+            else
+            {
+                echo 'Bah tu vois quand tu veux !';
+            }
 
             /*if(!preg_match($patternString, $sSurname))
             {
