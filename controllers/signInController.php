@@ -68,8 +68,7 @@
             $patternDate = '\d{1,2}\.\d{1,2}\.\d{4}';
 
 
-
-            if(!preg_match($patternString, $sSurname))
+            /*if(!preg_match($patternString, $sSurname))
             {
                 $bCheckOk = false;
             }else
@@ -77,7 +76,7 @@
                 $bCheckOk = true;
             }
             //RETOUR DES VALEURS POUR UTILISATION
-            return $bCheckOk;
+            return $bCheckOk;*/
 
         }
 
