@@ -29,9 +29,10 @@
     session_start();
     include("config.php");
 
-    /*if($_SERVER["REQUEST_METHOD"] == "POST")
+    if($_SERVER["REQUEST_METHOD"] == "POST")
     {
-        // username and password sent from form
+        echo 'Test validé';
+        /*// username and password sent from form
 
         $myusername = mysqli_real_escape_string($db,$_POST['UtilisateursNomDeFamille']);
         $mypassword = mysqli_real_escape_string($db,$_POST['UtilisateursMotDePasse']);
@@ -54,5 +55,5 @@
         }else
         {
             $error = "Your Login Name or Password is invalid";
-        }
-    }*/
+        }*/
+    }
