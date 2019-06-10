@@ -52,7 +52,7 @@
                 $desc = "SELECT * FROM `produits` (`ProduitCartDesc`)";
 
           
-                if ($dbconnect->query($nom) === TRUE AND $dbconnect->query($prix) === TRUE AND $dbconnect->query($desc) === TRUE )
+                if ($dbconnect->query($nom) === TRUE)
                 {
                     echo "Data fetched";
                     var_dump($nom);
