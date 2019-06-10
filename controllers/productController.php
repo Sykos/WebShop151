@@ -62,7 +62,18 @@
                    $prodName = $row["userid"];
                    $prodPrix =$row["fullname"];
                    $prodDesc =$row["userstatus"];
-                   var_dump($prodName);
+
+                   $result = mysql_query($sql); // This line executes the MySQL query that you typed above
+
+                     $yourArray = array(); // make a new array to hold all your data
+
+
+                    $index = 0;
+                    while($row = mysql_fetch_assoc($result)){ // loop to store the data in an associative array.
+                     $yourArray[$index] = $row;
+                     $index++;
+                     var_dump($yourArray);
+}
                   
             }
             
