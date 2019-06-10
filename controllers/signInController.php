@@ -124,10 +124,8 @@ $sErrorMessage = '';
 //CHECK DES DONNÉES ET ENREGISTREMENT
 if(isset($_POST['submit']))
 {
-    $bCheckOk = Controller::checkData();
     //Controller::db();
 
-    echo $bCheckOk;
     /*if ($bError == false)
     {
         $sErrorMessage = 'Données invalides';
