@@ -23,7 +23,7 @@
       <div class="col-md-2 col-lg-2 mx-auto my-md-4 my-0 mt-4 mb-1">
 
         <!-- Links -->
-        <h5 class="font-weight-bold text-uppercase mb-4">About</h5>
+        <h5 class="font-weight-bold text-uppercase mb-4">A propos</h5>
 
         <ul class="list-unstyled">
           <li>
