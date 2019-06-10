@@ -26,9 +26,10 @@
     # TRAITEMENT DES DONNÉES #
     #                        #
     ##########################
-    include("config.php");
     session_start();
-    if($_SERVER["REQUEST_METHOD"] == "POST")
+    include("config.php");
+
+    /*if($_SERVER["REQUEST_METHOD"] == "POST")
     {
         // username and password sent from form
 
@@ -54,4 +55,4 @@
         {
             $error = "Your Login Name or Password is invalid";
         }
-    }
+    }*/
