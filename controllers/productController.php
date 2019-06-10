@@ -38,7 +38,9 @@
             $dbpass = '6#vWHD_$';
             
             $conn = mysql_connect($dbhost, $dbuser, $dbpass);
-            
+            $prodName = array();
+            $prodPrix = array();
+            $prodDesc = array();
             if(! $conn ) {
                die('Could not connect: ' . mysql_error());
             }
@@ -52,10 +54,15 @@
             }
             
             while($row = mysql_fetch_assoc($retval)) {
-               echo "NOM :{$row['ProduitNom']}  <br> ".
+               /*echo "NOM :{$row['ProduitNom']}  <br> ".
                   "PRIX : {$row['ProduitPrix']} <br> ".
                   " DESC : {$row['ProduitCartDesc']} <br> ".
-                  "--------------------------------<br>";
+                  "--------------------------------<br>";*/
+
+                   $prodName = $row["userid"];
+                   $prodPrix =$row["fullname"];
+                   $prodDesc =$row["userstatus"];
+                  
             }
             
             echo "Fetched data successfully\n";
