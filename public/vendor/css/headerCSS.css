@@ -12,8 +12,8 @@ center {
 button{
   padding:6px 0 6px 0;
 	font:bold 13px Arial;
-	background: black;
-	color:#555;
+	background:#e3804a;
+	/*color:#e5ecaa;*/
 	border-radius:2px;
 	width:100px;
 	border:1px solid #ccc;
