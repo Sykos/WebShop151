@@ -46,7 +46,7 @@
                 die('Could not connect: ' . mysql_error());
              }
              
-             $sql = 'SELECT ProduitNom, ProduitPrix, ProduitDescriptionCourte FROM employee';
+             $sql = 'SELECT ProduitNom, ProduitPrix, ProduitDescriptionCourte FROM produits';
              mysql_select_db('raclettev2');
              $retval = mysql_query( $sql, $dbconnect );
              
