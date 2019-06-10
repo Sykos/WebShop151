@@ -32,6 +32,40 @@
         public static function getProductData()
         {
             //RÉCUPÉRATION DES DONNÉES RELATIVES AU PRODUIT À AFFICHER
+            
+            // Include config file
+            define('DB_SERVER', '127.0.0.1:49386');
+            define('DB_USERNAME', 'azure');
+            define('DB_PASSWORD', '6#vWHD_$');
+            define('DB_NAME', 'raclettev2');
+
+            // Attempt to connect to MySQL database
+            $dbconnect = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+
+            if (mysqli_connect_errno())
+            {
+                die("Database connection failed: " . mysqli_connect_error());
+            }
+
+                $nom = "SELECT * FROM produits";
+                var_dump($nom);
+
+                //$prix = "SELECT ProduitPrix FROM produits";
+                //$desc = "SELECT ProduitCartDesc FROM produits";
+
+          
+                if ($dbconnect->query($nom) === TRUE)
+                {
+                    echo "Data fetched";
+                    var_dump($nom);
+                   // var_dump($prix);
+                    //var_dump($desc);
+                }else
+                {
+          	        die($dbconnect->error);
+                }
+            
+        
         }
 
         /*public static function createProduct()
@@ -53,3 +87,4 @@
 
         }*/
     }
+   Controller::getProductData();

@@ -38,11 +38,11 @@
             if(isset($_POST['submit']))
             {
                 // checkData();
-                $nom = getSurname();
-                $prenom = getName();
-                $email = getEmail();
-                $password = getPassword();
-                $user = getUsername();
+                $nom = $_POST['nom'];
+                $prenom = $_POST['prenom'];
+                $email = $_POST['email'];
+                $password = $_POST['password'];
+                $user = $_POST['user'];
 
                 $query = "INSERT INTO `utilisateurs` (`UtilisateursNomDeFamille`, `UtilisateursPrenom`, `UtilisateursEmail`, `UtilisateursMotDePasse`,`UtilisateursUser`) VALUES ('$nom', '$prenom', '$email', '$password','$user')";
 
@@ -86,7 +86,7 @@
         # CONTRE L'INJECTION                     #
         #                                        #
         ##########################################
-
+/*
         public function getSurname()
         {
             $sSurname = htmlspecialchars($_POST['nom']);
@@ -111,7 +111,7 @@
         {
             $sUsername = htmlspecialchars($_POST['username']);
             return $sUsername;
-        }
+        }*/
     }
 
 ############################
@@ -127,7 +127,7 @@ if(isset($_POST['submit']))
     //$bCheckOk = Controller::checkData();
     $bCheckOk = Controller::db();
 
-    echo $bCheckOk;
+    echo $bCheckOk; 
     /*if ($bError == false)
     {
         $sErrorMessage = 'Données invalides';
