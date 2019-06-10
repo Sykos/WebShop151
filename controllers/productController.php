@@ -62,6 +62,7 @@
                    $prodName = $row["userid"];
                    $prodPrix =$row["fullname"];
                    $prodDesc =$row["userstatus"];
+                   var_dump($prodName);
                   
             }
             
