@@ -74,7 +74,7 @@
             $patternDate = '/\d{1,2}\.\d{1,2}\.\d{4}/';//DD.MM.YYYY
             $patternEmail = '/\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,6}/';//SOMETHING@SOMETHING.SOMETHING
             $patternPswd = '/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,15}/';//8 to 15 character string with at least one upper case letter, one lower case letter, and one digit
-            $patterUsername = '/^[a-zA-Z0-9]+([_ -]?[a-zA-Z0-9])*$/'//alpha numeric with some and characters like _-
+            $patterUsername = '/^[a-zA-Z0-9]+([_ -]?[a-zA-Z0-9])*$/';//alpha numeric with some and characters like _-
 
             if((preg_match($patternString, $sNom) != 1) && (preg_match($patternString, $sPrenom) != 1) && (preg_match($patternDate, $sDateOfBirth) != 1) && (preg_match($patternEmail, $sEmail) != 1) && (preg_match($patternUsername,$sUsername) != 1) &&
             (preg_match($patternUsername, $sUsername) != 1))
