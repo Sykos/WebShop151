@@ -34,8 +34,8 @@
                   <!-- INSERT BODY -->
 
                <form action = "" method = "post">
-                  <label>UserName  :</label><input type = "text" name = "UtilisateursNomDeFamille" class = "box"/><br /><br />
-                  <label>Password  :</label><input type = "password" name = "UtilisateursMotDePasse" class = "box" /><br/><br />
+                  <label>UserName  :</label><input type = "text" name = "UtilisateursNomDeFamille" class = "box"/><br>
+                  <label>Password  :</label><input type = "password" name = "UtilisateursMotDePasse" class = "box" /><br>
                   <img src="captcha.php">
 
                   <input type = "submit" value = " Submit "/><br />
