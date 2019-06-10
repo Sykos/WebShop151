@@ -5,5 +5,5 @@
     <h1>Ici se trouvera la description des produits</h1>
 </div>
 <div class="commentaires">
-    <h1><?php  include("commentaires.php")?></h1>
+    <h1><?php  include("commentaires.php");?></h1>
 </div>
