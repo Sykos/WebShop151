@@ -38,7 +38,7 @@
             $dbpass = '6#vWHD_$';
             
             $conn = mysql_connect($dbhost, $dbuser, $dbpass);
-           
+
             if(! $conn ) {
                die('Could not connect: ' . mysql_error());
             }
@@ -101,4 +101,4 @@
 
         }*/
     }
-   self::getProductData();
+   Controller::getProductData();
