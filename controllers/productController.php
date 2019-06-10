@@ -50,8 +50,9 @@
             $query = mysql_query($getinfo, $db);
             
             while ($row = mysql_fetch_array($query)) {
-                $firstname = $row['nom'];
-                $lastname = $row['prix'];
+                $prodnom = $row['ProduitNom'];
+                $prodprix = $row['ProduitPrix'];
+                echo $prodnom;
             }
 
                 //$prix = "SELECT ProduitPrix FROM produits";
