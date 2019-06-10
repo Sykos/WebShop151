@@ -38,9 +38,7 @@
             $dbpass = '6#vWHD_$';
             
             $conn = mysql_connect($dbhost, $dbuser, $dbpass);
-            $prodName = array();
-            $prodPrix = array();
-            $prodDesc = array();
+           
             if(! $conn ) {
                die('Could not connect: ' . mysql_error());
             }
