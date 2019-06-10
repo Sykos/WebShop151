@@ -67,7 +67,8 @@
             $patternString = '^[a-zA-Z]+$';
             $patternDate = '\d{1,2}\.\d{1,2}\.\d{4}';
 
-
+            var_dump($sSurname);
+            var_dump($sName);
             /*if(!preg_match($patternString, $sSurname))
             {
                 $bCheckOk = false;
@@ -124,10 +125,10 @@ $sErrorMessage = '';
 //CHECK DES DONNÉES ET ENREGISTREMENT
 if(isset($_POST['submit']))
 {
-    //$bCheckOk = Controller::checkData();
-    $bCheckOk = Controller::db();
+    $bCheckOk = Controller::checkData();
+    //Controller::db();
 
-    echo $bCheckOk; 
+    echo $bCheckOk;
     /*if ($bError == false)
     {
         $sErrorMessage = 'Données invalides';
