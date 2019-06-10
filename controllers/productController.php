@@ -46,11 +46,14 @@
             {
                 die("Database connection failed: " . mysqli_connect_error());
             }
-                $nom = array();
-                $nom = mysql_query("SELECT ProduitNom FROM produits ");
-                $result = mysql_fetch_array($nom);
-
-                echo $result[''];
+            $getinfo = "select ProduitNom, ProduitPrix, ProduitCartDesc from produits";
+            $query = mysql_query($getinfo, $db);
+            
+            while ($row = mysql_fetch_array($query)) {
+                $prodnom = $row['ProduitNom'];
+                $prodprix = $row['ProduitPrix'];
+                echo $prodnom;
+            }
 
                 //$prix = "SELECT ProduitPrix FROM produits";
                 //$desc = "SELECT ProduitCartDesc FROM produits";
