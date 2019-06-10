@@ -59,8 +59,8 @@
         public static function checkData()
         {
             //INITIALISATION DES VARIABLES
-            $sNom = getSurname();
-            $sPrenom = getName();
+            $sNom = self::getSurname();
+            $sPrenom = self::getName();
 
             var_dump($sNom);
             var_dump($sPrenom);
@@ -84,27 +84,27 @@
         #                                        #
         ##########################################
 
-        public function getSurname()
+        public static function getSurname()
         {
             $sSurname = htmlspecialchars($_POST['nom']);
             return $sSurname;
         }
-        public function getName()
+        public static function getName()
         {
             $sName = htmlspecialchars($_POST['prenom']);
             return $sName;
         }
-        public function getEmail()
+        public static function getEmail()
         {
             $sEmail = htmlspecialchars($_POST['email']);
             return $sEmail;
         }
-        public function getPassword()
+        public static function getPassword()
         {
             $sPassword = htmlspecialchars($_POST['password']);
             return $sPassword;
         }
-        public function getUsername()
+        public static function getUsername()
         {
             $sUsername = htmlspecialchars($_POST['username']);
             return $sUsername;
@@ -121,7 +121,7 @@ $sErrorMessage = '';
 //CHECK DES DONNÉES ET ENREGISTREMENT
 if(isset($_POST['submit']))
 {
-
+    Controller::checkData();
     //Controller::db();
 
     /*if ($bError == false)
