@@ -42,18 +42,31 @@
             // Attempt to connect to MySQL database
             $dbconnect = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
 
-            if (mysqli_connect_errno())
-            {
-                die("Database connection failed: " . mysqli_connect_error());
-            }
-            $getinfo = "select ProduitNom, ProduitPrix, ProduitCartDesc from produits";
-            $query = mysql_query($getinfo, $dbconnect);
+            if(! $dbconnect ) {
+                die('Could not connect: ' . mysql_error());
+             }
+             
+             $sql = 'SELECT ProduitNom, ProduitPrix, ProduitDescriptionCourte FROM employee';
+             mysql_select_db('test_db');
+             $retval = mysql_query( $sql, $dbconnect );
+             
+             if(! $retval ) {
+                die('Could not get data: ' . mysql_error());
+             }
+             
+             while($row = mysql_fetch_array($retval, MYSQL_ASSOC)) {
+                echo "NOM :{$row['ProduitNom']}  <br> ".
+                   "PRIX : {$row['ProduitPrix']} <br> ".
+                   "DESC : {$row['ProduitDescriptionCourte']} <br> ".
+                   "--------------------------------<br>";
+             }
+             
+             echo "Fetched data successfully\n";
+             
+             mysql_close($dbconnect);
+          
             
-            while ($row = mysql_fetch_array($query)) {
-                $prodnom = $row['ProduitNom'];
-                $prodprix = $row['ProduitPrix'];
-                echo $prodnom;
-            }
+
 
                 //$prix = "SELECT ProduitPrix FROM produits";
                 //$desc = "SELECT ProduitCartDesc FROM produits";
