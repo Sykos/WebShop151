@@ -14,7 +14,7 @@
                     <li><a href="?page=product">Fromages</a></li>
                     <li><a href="#">Three</a></li>
                     <li><a href="#">Four</a></li>
-                    <li><a href="?page=testForm">Test Formulaire</a></li>
+                    <li><a href="?page=admin">Administration</a></li>
       </ul>
 
   </nav>
