@@ -47,7 +47,7 @@
                 die("Database connection failed: " . mysqli_connect_error());
             }
 
-                $nom = "SELECT 'ProduitNom' FROM '*'";
+                $nom = "SELECT * FROM produits";
                 //$prix = "SELECT ProduitPrix FROM produits";
                 //$desc = "SELECT ProduitCartDesc FROM produits";
 
