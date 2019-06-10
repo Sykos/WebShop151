@@ -11,7 +11,7 @@
       $this->aContent['viewPath'] = './views/productView.php';
       $this->aContent['pageTitle'] = 'Produit';
       $this->aContent['css'][] = './public/vendor/css/productView.css';
-
+      $this->aContent['css'][] = './public/vendor/css/productCard.css';
 
       //$this->sProduct = $_GET['product'];
     }
