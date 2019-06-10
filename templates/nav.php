@@ -12,7 +12,7 @@
       <ul id="menu">
                     <li><a href="?page=home">Home</a></li>
                     <li><a href="?page=product">Fromages</a></li>
-                    <li><a href="#">Three</a></li>
+                    <li><a href="#">Vin</a></li>
                     <li><a href="#">Four</a></li>
                     <li><a href="?page=admin">Administration</a></li>
       </ul>
