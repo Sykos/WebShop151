@@ -52,9 +52,9 @@
             }
             
             while($row = mysql_fetch_assoc($retval)) {
-               echo "EMP ID :{$row['ProduitNom']}  <br> ".
-                  "EMP NAME : {$row['ProduitPrix']} <br> ".
-                  "EMP SALARY : {$row['ProduitCartDesc']} <br> ".
+               echo "NOM :{$row['ProduitNom']}  <br> ".
+                  "PRIX : {$row['ProduitPrix']} <br> ".
+                  " DESC : {$row['ProduitCartDesc']} <br> ".
                   "--------------------------------<br>";
             }
             
