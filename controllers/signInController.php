@@ -38,7 +38,7 @@
             if(isset($_POST['submit']))
             {
                 // checkData();
-                $nom = getSurname();
+                $nom = htmlspecialchars($_POST['nom']);
                 $prenom = getName();
                 $email = getEmail();
                 $password = getPassword();
@@ -87,7 +87,7 @@
         # CONTRE L'INJECTION                     #
         #                                        #
         ##########################################
-
+/*
         public function getSurname()
         {
             $sSurname = htmlspecialchars($_POST['nom']);
@@ -112,7 +112,7 @@
         {
             $sUsername = htmlspecialchars($_POST['username']);
             return $sUsername;
-        }
+        }*/
     }
 
 ############################
