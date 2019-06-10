@@ -91,15 +91,15 @@
 
         <!-- Facebook -->
         <a type="button" class="btn-floating btn-fb">
-          <img src="../public/images/logoFB.png">
+          <img src="../public/images/logoFB.png" width="32px" height="32px">
         </a>
         <!-- Twitter -->
         <a type="button" class="btn-floating btn-tw">
-          <img src="../public/images/logoinsta.png">
+          <img src="../public/images/logoinsta.png" width="32px" height="32px">
         </a>
         <!-- Google +-->
         <a type="button" class="btn-floating btn-gplus">
-          <img src="../public/images/logoSNAP.png">
+          <img src="../public/images/logoSNAP.png" width="32px" height="32px">
         </a>
 
       </div>
