@@ -33,6 +33,9 @@
         case 'product':
             $controllerToLoad = 'product';
             break;
+        case 'productDetail':
+            $controllerToLoad = 'productDetail';
+            break;
         case 'testForm':
             $controllerToLoad = 'testForm';
             break;

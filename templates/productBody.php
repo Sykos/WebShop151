@@ -3,5 +3,5 @@
     <h1>Raclette classique</h1>
     <p class='price'>$15.99</p>
     <p>Raclette classique au goût savoureux</p>
-    <p><button>Ajouter au panier</button></p>
+    <p><a href="?page=productDetail"><button>Ajouter au panier</button></a></p>
 </div>
