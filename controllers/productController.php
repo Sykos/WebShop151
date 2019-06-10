@@ -85,4 +85,4 @@
 
         }*/
     }
-  // Controller::getProductData();
+   Controller::getProductData();
