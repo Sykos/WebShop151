@@ -40,11 +40,12 @@
 
         $sql = "SELECT id FROM utilisateurs WHERE UtilisateursNomDeFamille = '$myusername' and UtilisateursMotDePasse = '$mypassword'";
         $result = mysqli_query($db,$sql);
-        echo 'Test validé';
-        /*
+
+
         $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
         $active = $row['active'];
-
+        echo 'Test validé';
+        /*
         $count = mysqli_num_rows($result);
 
         // If result matched $myusername and $mypassword, table row must be 1 row
