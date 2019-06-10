@@ -79,12 +79,15 @@
             if((preg_match($patternString, $sNom) != 1) && (preg_match($patternString, $sPrenom) != 1) && (preg_match($patternDate, $sDateOfBirth) != 1) && (preg_match($patternEmail, $sEmail) != 1) && (preg_match($patternUsername,$sUsername) != 1) &&
             (preg_match($patternPswd, $sPassword) != 1))
             {
-
-                echo 'Ton truc fonctionne pas gros';
+                echo 'Données invalides ! Le nom et le prénom ne doivent contenir que des lettres ! <br>
+                     La date de naissance doit respecter la forme jj.mm.aaaa ! <br>
+                     L\'adresse mail doit respecter la forme d\'une adresse mail ! <br>
+                     Le nom d\'utilisateur n\'accepte comme caractères spéciaux que "-" et "_" ! <br>
+                     Le mot de passe doit contenir entre 8 et 15 caractères, au moins une majuscule, une minuscule et un chiffre !';
             }
             else
             {
-                //self::db();
+                self::db();
                 echo 'Enregistrement ok';
             }
 
