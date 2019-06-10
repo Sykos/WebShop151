@@ -38,11 +38,11 @@
             if(isset($_POST['submit']))
             {
                 // checkData();
-                $nom=$_POST['nom'];
-                $prenom=$_POST['prenom'];
-                $email=$_POST['email'];
-                $password=$_POST['password'];
-                $user=$_POST['username'];
+                $nom = getSurname();
+                $prenom = getName();
+                $email = getEmail();
+                $password = getPassword();
+                $user = getUsername();
 
                 $query = "INSERT INTO `utilisateurs` (`UtilisateursNomDeFamille`, `UtilisateursPrenom`, `UtilisateursEmail`, `UtilisateursMotDePasse`,`UtilisateursUser`) VALUES ('$nom', '$prenom', '$email', '$password','$user')";
 
@@ -61,8 +61,8 @@
             //INITIALISATION DES VARIABLES
             //&& (preg_match($patternString, $_POST['prenom'])) && (preg_match($patternDate, $_POST['dateOfBirth']))
             $bCheckOk;
-            $sSurname = $_POST['nom'];
-            $sName = $_POST['prenom'];
+            $sSurname = getSurname();
+            $sName = getName();
             $sDateOfBirth = $_POST['dateOfBirth'];
             $patternString = '^[a-zA-Z]+$';
             $patternDate = '\d{1,2}\.\d{1,2}\.\d{4}';
@@ -79,6 +79,39 @@
             //RETOUR DES VALEURS POUR UTILISATION
             return $bCheckOk;
 
+        }
+
+        ##########################################
+        #                                        #
+        # RÉCUPÉRATION DES ENTRÉES ET PROTECTION #
+        # CONTRE L'INJECTION                     #
+        #                                        #
+        ##########################################
+
+        public function getSurname()
+        {
+            $sSurname = htmlspecialchars($_POST['nom']);
+            return $sSurname;
+        }
+        public function getName()
+        {
+            $sName = htmlspecialchars($_POST['prenom']);
+            return $sName;
+        }
+        public function getEmail()
+        {
+            $sEmail = htmlspecialchars($_POST['email']);
+            return $sEmail;
+        }
+        public function getPassword()
+        {
+            $sPassword = htmlspecialchars($_POST['password']);
+            return $sPassword;
+        }
+        public function getUsername()
+        {
+            $sUsername = htmlspecialchars($_POST['username']);
+            return $sUsername;
         }
     }
 

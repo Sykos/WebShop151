@@ -31,6 +31,8 @@ error_reporting(E_ALL);
         <option>Mme</option>
       </select>
       <br>
+      Nom d'utilisateur: <input type="text" name="username">
+      <br>
       Nom: <input type='text' name='nom' required>
       <br>
       Prénom: <input type='text' name='prenom' required>
