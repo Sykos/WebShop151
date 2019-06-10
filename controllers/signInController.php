@@ -59,8 +59,8 @@
         public static function checkData()
         {
             //INITIALISATION DES VARIABLES
-            $sNom = getSurname();
-            $sPrenom = getName();
+            $sNom = $this->getSurname();
+            $sPrenom = $this->getName();
 
             var_dump($sNom);
             var_dump($sPrenom);
