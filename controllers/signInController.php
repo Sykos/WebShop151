@@ -59,15 +59,12 @@
         public static function checkData()
         {
             //INITIALISATION DES VARIABLES
-            //&& (preg_match($patternString, $_POST['prenom'])) && (preg_match($patternDate, $_POST['dateOfBirth']))
-            $bCheckOk;
-            $sSurname = getSurname();
-            $sName = getName();
-            $sDateOfBirth = $_POST['dateOfBirth'];
-            $patternString = '^[a-zA-Z]+$';
-            $patternDate = '\d{1,2}\.\d{1,2}\.\d{4}';
+            $sNom = getSurname();
+            $sPrenom = getName();
 
-            return $sSurname;
+            var_dump($sNom);
+            var_dump($sPrenom);
+
             /*if(!preg_match($patternString, $sSurname))
             {
                 $bCheckOk = false;
@@ -86,7 +83,7 @@
         # CONTRE L'INJECTION                     #
         #                                        #
         ##########################################
-/*
+
         public function getSurname()
         {
             $sSurname = htmlspecialchars($_POST['nom']);
@@ -111,7 +108,7 @@
         {
             $sUsername = htmlspecialchars($_POST['username']);
             return $sUsername;
-        }*/
+        }
     }
 
 ############################
@@ -124,6 +121,7 @@ $sErrorMessage = '';
 //CHECK DES DONNÉES ET ENREGISTREMENT
 if(isset($_POST['submit']))
 {
+
     //Controller::db();
 
     /*if ($bError == false)
