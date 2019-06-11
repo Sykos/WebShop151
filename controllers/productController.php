@@ -83,20 +83,47 @@
 
         public static function createProduct()
         {
-            include('connection.php');
-  
-            $sql = "SELECT * FROM produits ORDER BY ProduitNom";  
-            $rs_result = mysqli_query($conn, $sql);    
-
-            while ($row = mysqli_fetch_assoc($rs_result)) {
-                
-                echo '<div class="clearfix card" style="width: 20rem;">';
-	            echo '<img class="card-img-top" src="http://placehold.it/150x100" alt="">';
-	            echo '<div class="card-body">';
-                echo '<h4 class="card-title">';
-                echo $row['productName']; 
-
-
+            session_start();
+            include('db.php');
+            $status="";
+            if (isset($_POST['code']) && $_POST['code']!=""){
+            $code = $_POST['code'];
+            $result = mysqli_query(
+            $con,
+            "SELECT * FROM `products` WHERE `code`='$code'"
+            );
+            $row = mysqli_fetch_assoc($result);
+            $name = $row['name'];
+            $code = $row['code'];
+            $price = $row['price'];
+            $image = $row['image'];
+             
+            $cartArray = array(
+                $code=>array(
+                'name'=>$name,
+                'code'=>$code,
+                'price'=>$price,
+                'quantity'=>1,
+                'image'=>$image)
+            );
+             
+            if(empty($_SESSION["shopping_cart"])) {
+                $_SESSION["shopping_cart"] = $cartArray;
+                $status = "<div class='box'>Product is added to your cart!</div>";
+            }else{
+                $array_keys = array_keys($_SESSION["shopping_cart"]);
+                if(in_array($code,$array_keys)) {
+                $status = "<div class='box' style='color:red;'>
+                Product is already added to your cart!</div>";	
+                } else {
+                $_SESSION["shopping_cart"] = array_merge(
+                $_SESSION["shopping_cart"],
+                $cartArray
+                );
+                $status = "<div class='box'>Product is added to your cart!</div>";
+                }
+             
+                }
             }
 
         }
