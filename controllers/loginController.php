@@ -18,6 +18,7 @@
             parent::render();
         }
 
+        //NE FONCTIONNE QUE PARTIELLEMENT
         public static function login()
         {
             session_start();
