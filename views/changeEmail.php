@@ -20,12 +20,12 @@
                 <div class="col-md-12">
                     <div class="wrapper">
                         <h2>Changement d'Email</h2>
-                        <div class="form-group">
                             <form action="?page=member" method="post">
-                                <label>Mail :</label>
-                                <input type="text" name="newmail" placeholder="Mail" value="<?php echo $user['mail']; ?>" class="form-control" />
+                                <div class="form-group">
+                                    <label>Mail :</label>
+                                    <input type="text" name="newmail" placeholder="Mail" value="<?php echo $user['mail']; ?>" class="form-control" />
+                                </div>
                             </form>
-                        </div>
                         <div class="form-group">
                             <input type="submit" class="btn btn-primary" name="submit" value="Valider">
                             <a href="?page=member"<button type="button" class="btn btn-primary" name="retour">Retour</button></a>

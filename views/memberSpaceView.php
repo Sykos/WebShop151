@@ -34,6 +34,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <a href="./views/changeEmail.php"><button class="btn btn-primary">Changer Email</button></a>
+                    <a href="./views/changePassword.php"><button class="btn btn-primary">Changer Mot de Passe</button></a>
                     <!--<div class="wrapper">
                         <div align="center">
                            <h2>Edition de mon profil</h2>
