@@ -14,12 +14,12 @@ error_reporting(E_ALL);
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
-                    <?php require_once './templates/header.php'; ?>
+                    <?php require_once '../templates/header.php'; ?>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <?php require_once './templates/nav.php'; ?>
+                    <?php require_once '../templates/nav.php'; ?>
                 </div>
             </div>
             <div class="row">
