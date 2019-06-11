@@ -34,19 +34,14 @@
                   <!-- INSERT BODY -->
 
                <form action = "?page=login" method = "post">
-                   <div class="form-group <?php echo (!empty($usernameErr)) ? 'has-error' : ''; ?>">
+
                        <label>UserName  :</label>
-                       <input type = "text" name = "username" value="<?php echo $username; ?>" class = "box"/><br /><br />
-                       <span class="help-block"><?php echo $usernameErr; ?></span>
-                   </div>
-                   <div class="form-group <?php echo (!empty($passwordErr;)) ? 'has-error' : ''; ?>">
+                       <input type = "text" name = "username" class = "box"/><br /><br />
+
                        <label>Password  :</label>
                        <input type = "password" name = "password" class = "box" /><br/><br />
-                       <span class="help-block"><?php echo $passwordErr; ?></span>
-                   </div>
-                   <div class="form-group">
-                       <input type = "submit" class="btn btn-primary" name="submit" value = "Login"/><br />
-                   </div>  
+
+                       <input type = "submit" class="btn btn-primary" name="submit" value = "Login"/><br /> 
                </form>
           </div>
           </div>
