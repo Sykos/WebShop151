@@ -85,9 +85,9 @@
             //-- RÉCUPÉRATION DES DONNÉS DE L'ARTICLE --
             self::getProductData();
             foreach($yourArray as $key => $value){
-                ${'something'.$key} = $value;
+                ${something.$key} = $value;
                 }
-            
+          
             echo $something1;
            /*while ($x <= count($yourArray))
             {
