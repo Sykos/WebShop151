@@ -36,11 +36,11 @@
                       <p>Entrez vos informations pour vous connecter</p>
                       <form action = "?page=login" method = "post">
                           <div>
-                              <label>UserName : </label>
+                              <label>Nom d'utilisateur : </label>
                               <input type = "text" name = "username" class = "form-control"/>
                           </div>
                           <div>
-                              <label>Password : </label>
+                              <label>Mot de passe : </label>
                               <input type = "password" name = "password" class = "form-control" />
                           </div>
                           <div>
