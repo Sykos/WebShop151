@@ -32,47 +32,9 @@
 
         public static function getProductData()
         {
-            //RÉCUPÉRATION DES DONNÉES RELATIVES AU PRODUIT À AFFICHER
     
-            $dbhost = '127.0.0.1:49386';
-            $dbuser = 'azure';
-            $dbpass = '6#vWHD_$';
-            
-            $conn = mysql_connect($dbhost, $dbuser, $dbpass);
-
-            if(! $conn ) {
-               die('Could not connect: ' . mysql_error());
-            }
-            
-            $sql = 'SELECT ProduitNom, ProduitPrix, ProduitCartDesc FROM produits';
-            mysql_select_db('raclettev2');
-            $retval = mysql_query( $sql, $conn );
-            
-            if(! $retval ) {
-               die('Could not get data: ' . mysql_error());
-            }
-            
-            while($row = mysql_fetch_assoc($retval)) {
-                //Test
-               /*echo "NOM :{$row['ProduitNom']}  <br> ".
-                  "PRIX : {$row['ProduitPrix']} <br> ".
-                  " DESC : {$row['ProduitCartDesc']} <br> ".
-                  "--------------------------------<br>";*/
-
-
-                   $result = mysql_query($sql); // This line executes the MySQL query that you typed above
-
-                    $yourArray = array(); // make a new array to hold all your data
-                    
-
-                    $index = 0;
-                    while($row = mysql_fetch_assoc($result)){ // loop to store the data in an associative array.
-                     $yourArray[$index] = $row;
-                     $index++;
-                    return $yourArray;
-}
                   
-            }
+     }
             
             echo "Fetched data successfully\n";
             
@@ -83,7 +45,46 @@
 
         public static function createProduct()
         {
-           
+                  //RÉCUPÉRATION DES DONNÉES RELATIVES AU PRODUIT À AFFICHER
+    
+                  $dbhost = '127.0.0.1:49386';
+                  $dbuser = 'azure';
+                  $dbpass = '6#vWHD_$';
+                  
+                  $conn = mysql_connect($dbhost, $dbuser, $dbpass);
+      
+                  if(! $conn ) {
+                     die('Could not connect: ' . mysql_error());
+                  }
+                  
+                  $sql = 'SELECT ProduitNom, ProduitPrix, ProduitCartDesc FROM produits';
+                  mysql_select_db('raclettev2');
+                  $retval = mysql_query( $sql, $conn );
+                  
+                  if(! $retval ) {
+                     die('Could not get data: ' . mysql_error());
+                  }
+                  
+                  while($row = mysql_fetch_assoc($retval)) {
+                      //Test
+                     echo "NOM :{$row['ProduitNom']}  <br> ".
+                        "PRIX : {$row['ProduitPrix']} <br> ".
+                        " DESC : {$row['ProduitCartDesc']} <br> ".
+                        "--------------------------------<br>";
+      
+      
+                         $result = mysql_query($sql); // This line executes the MySQL query that you typed above
+      
+                          $yourArray = array(); // make a new array to hold all your data
+                          
+      
+                          $index = 0;
+                          while($row = mysql_fetch_assoc($result)){ // loop to store the data in an associative array.
+                           $yourArray[$index] = $row;
+                           $index++;
+                          return $yourArray;
+
+      }
             
         }
     }
