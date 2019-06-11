@@ -45,7 +45,6 @@
                    $newmail = htmlspecialchars($_POST['newmail']);
                    $insertmail = $bdd->prepare("UPDATE utilisateurs SET UtilisateursEmail = ? WHERE UtilisateursID = ?");
                    $insertmail->execute(array($newmail, $_SESSION['id']));
-                   header('Location: profil.php?id='.$_SESSION['id']);
                 }
             }
 
@@ -63,7 +62,6 @@
                    {
                       $insertmdp = $bdd->prepare("UPDATE utilisateurs SET UtilisateursMotDePasse = ? WHERE UtilisateursID = ?");
                       $insertmdp->execute(array($mdp1, $_SESSION['id']));
-                      header('Location: profil.php?id='.$_SESSION['id']);
                   }else
                    {
                       $msg = "Vos deux mdp ne correspondent pas !";
