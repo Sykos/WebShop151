@@ -18,7 +18,7 @@
             parent::render();
         }
 
-        
+
 
 
 
@@ -45,7 +45,7 @@
     include('./views/config.php');
 
     //DÉFINITONS DES VARIABLES ET INIT VIDE
-    $username = 'Coucou';
+    $username = '';
     $password = '';
     $usernameErr = '';
     $passwordErr = '';
