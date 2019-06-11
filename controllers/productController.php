@@ -103,4 +103,4 @@
 
         }
     }
-    Controller::getProductData();
+    Controller::createProduct();
