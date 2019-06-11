@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
+        <link rel="stylesheet" href='../public/vendor/css/bootstrap.css'>
         <title>Espace Membre</title>
     </head>
     <body>
