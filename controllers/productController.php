@@ -80,14 +80,16 @@
         
         }
 
-        /*public static function createProduct()
+        public static function createProduct()
         {
             //-- RÉCUPÉRATION DES DONNÉS DE L'ARTICLE --
             self::getProductData();
             $x = 0;
-           
+            while($info = mysql_fetch_array( $result ))
 
-            while ($x <= count($yourArray))
+            { $name = $info['ProduitNom']; $description = $info['ProduiPrix']; $upcNumber = $info['ProduitCartDesc'];
+
+          /* while ($x <= count($yourArray))
             {
                 echo '<div class "cardProduct">
                     <img src="../public/images/'.Nom du produit = nom image.' alt="'.Nom produit.'" style="width=100%">
@@ -97,8 +99,9 @@
                         <p><button>Ajouter au panier</button></p>
                     </div>';
                 variable incrément ++
-            }
+            }*/
 
-        }*/
+        }
+        Controller::getProductData();
     }
-   Controller::getProductData();
+}
