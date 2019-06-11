@@ -84,8 +84,11 @@
         {
             //-- RÉCUPÉRATION DES DONNÉS DE L'ARTICLE --
             self::getProductData();
-            $x = 0;
-         
+            foreach($yourArray as $key => $value){
+                ${'something'.$key} = $value;
+                }
+            
+            echo $something1;
           /* while ($x <= count($yourArray))
             {
                 echo '<div class "cardProduct">
