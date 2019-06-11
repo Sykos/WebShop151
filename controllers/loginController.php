@@ -26,6 +26,10 @@
     # TRAITEMENT DES DONNÉES #
     #                        #
     ##########################
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
+
 
     session_start();
     //SI L'UTILISATEUR EST CONNECTÉ REDIRECTION VERS LA HOMEPAGE
@@ -52,6 +56,77 @@
         {
             $username = trim($_POST['username']);
         }
+
+        //SI MDP VIDE
+        if(empty(trim($_POST['password'])))
+        {
+            $passwordErr = 'Entrez votre mot de passe';
+        }else
+        {
+            $password = trim($_POST['password']);
+        }
+
+        //VALIDATION CREDENTIALS
+        if(empty($usernameErr) && empty($passwordErr))
+        {
+            $sql = 'SELECT UtilisateursID, UtilisateursUser, UtilisateursMotDePasse FROM utilisateurs WHERE UtilisateursUser = ?';
+
+            if($stmt = mysqli_prepare($dbconnect, $sql))
+            {
+                //LIAISON DES VARIABLES AVEC LA REQUÊTE COMME PARAMÈTRE
+                mysqli_stmt_bind_param($stmt, 's', $param_username);
+
+                //SET DU PARAMÈTRE
+                $param_username =  $username;
+
+                //ESSAI D'EXÉCUTION DE LA REQUÊTE
+                if(mysqli_stmt_execute($stmt))
+                {
+                    //ENREGISTRE LE RESULTAT
+                    mysqli_stmt_store_result($stmt);
+
+                    //VÉRIFIE SI LE USERNAME EXISTE, SI OUI -> CHECK MOT DE PASSE
+                    if(mysqli_stmt_num_rows($stmt) == 1)
+                    {
+                        //LIAISON DES VARIABLES RENVOYÉES
+                        mysqli_stmt_bind_result($stmt, $id, $username, $hashed_password);
+
+                        if(mysqli_stmt_fetch($stmt))
+                        {
+                            if(password_verify($password, $hashed_password))
+                            {
+                                //MDP OK DONC NOUVELLE SESSION
+                                session_start();
+
+                                //ENREGISTREMENT DES DATAS DANS LES VARIABLES SESSION
+                                $_SESSION['loggedin'] = true;
+                                $_SESSION['id'] = $id;
+                                $_SESSION['username'] = $username;
+
+                                //REDIRECTION VERS LA HOMEPAGE
+                                header('location:?page=home');
+                            }else
+                            {
+                                //MESSAGE D'ERREUR SI MDP FAUX
+                                $passwordErr = 'Le mot de passe n\'est pas valide';
+                            }
+                        }
+                    }else
+                    {
+                        $usernameErr = 'Le nom d\'utilisateur est incorrect';
+                    }
+                }else
+                {
+                    echo 'Oups ! ça n\'a pas fonctionné ! Veuillez réessayer plus tard';
+                }
+            }
+
+            //FIN DE LA REQUÊTE
+            mysqli_stmt_close($stmt);
+        }
+
+        //FIN DE LA CONNEXION
+        mysqli_close($dbconnect);
     }
 
 
