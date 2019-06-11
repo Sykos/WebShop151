@@ -102,5 +102,6 @@
             }*/
 
         }
+        Controller::getProductData();
     }
-   slef::getProductData();
+}
