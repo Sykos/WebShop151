@@ -39,7 +39,7 @@
     }
 
     //FICHIER DE CONFIG DE LA DB
-    include('config.php');
+    include('./web/config.php');
 
     //DÉFINITONS DES VARIABLES ET INIT VIDE
     $username = $password = '';
