@@ -30,9 +30,11 @@
     session_start();
 
     if(isset($_SESSION['loggedin']) && $_SESSION === true){
-        header('?page=home');
+        header('location:?page=home');
         exit;
     }
+
+    include('config.php');
 
 
 
