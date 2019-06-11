@@ -81,10 +81,22 @@
                            $yourArray[$index] = $row;
                            $index++;
                           return $yourArray;
-
+                        
+                          ?>
+                          <!doctype html>
                           <html lang="en">
-                          <p>test</p>
+                          <body>
+                          <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <h5 class="card-title">{{$nom['ProduitNom']}}</h5>
+                        </div>
+                        <div class="col-md-5 text-right">
+                            <p class="card-text">Price ${{$prix['ProduitPrix']}}</p>
+                        </div>
+                          </body>
                           </html>
+                          <?php
 
          }           
      }
