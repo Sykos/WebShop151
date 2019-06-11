@@ -15,7 +15,7 @@
         die("Database connection failed: " . mysqli_connect_error());
     }
 
-    if(isset($_POST['submit']))
+    /*if(isset($_POST['submit']))
     {
         // checkData();
         $nom=$_POST['nom'];
@@ -33,4 +33,4 @@
         {
 	           die($dbconnect->error);
         }
-    }
+    }*/
