@@ -5,8 +5,6 @@
 
  <head>
    <meta charset="utf-8">
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
     <title><?php echo $this->aContent['pageTitle']; ?></title>
     <?php
     //CHARGE TOUTES LES PAGES JS
@@ -25,12 +23,27 @@
     ?>
   </head>
   <body>
-    <?php
-        //APPEL DE TOUTES LES PARTIES DE LA PAGE
-        require_once('./templates/header.php');
-        require_once('./templates/nav.php');
-        require_once('./templates/homeBody.php');
-        require_once('./templates/footer.php');
-    ?>
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                  <?php require_once './templates/header.php'; ?>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                  <?php require_once './templates/nav.php'; ?>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                  <?php require_once './templates/homeBody.php'; ?>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                  <?php require_once './templates/footer.php'; ?>
+              </div>
+          </div>
+      </div>
   </body>
 </html>

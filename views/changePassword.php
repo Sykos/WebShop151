@@ -22,17 +22,17 @@ error_reporting(E_ALL);
     <body>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                     <?php require_once './templates/header.php'; ?>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                     <?php require_once './templates/nav.php'; ?>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                     <div class="wrapper">
                         <h2>Changement du mot de passe</h2>
                         <form action="?page=member" method="post">
@@ -50,6 +50,11 @@ error_reporting(E_ALL);
                             </div>
                         </form>
                     </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <?php require_once './templates/footer.php'; ?>
                 </div>
             </div>
         </div>

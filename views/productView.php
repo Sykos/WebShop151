@@ -15,15 +15,28 @@
     }
      ?>
   </head>
-  
   <body>
-  
-    <?php
-        require_once('./templates/header.php');
-        require_once('./templates/nav.php');
-        require_once('./templates/productBody.php');
-        require_once('./templates/footer.php');
-    ?>
-
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                  <?php require_once './templates/header.php'; ?>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                  <?php require_once './templates/nav.php'; ?>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                  <?php require_once './templates/productBody.php'; ?>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                  <?php require_once './templates/footer.php'; ?>
+              </div>
+          </div>
+      </div>
   </body>
 </html>

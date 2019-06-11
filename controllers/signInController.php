@@ -65,6 +65,59 @@
 
         public static function checkData()
         {
+            /*//INTIALISATION DES VARIABLES
+            $aErrorMessage = array();
+            $sNom = self::getSurname();
+            $sPrenom = self::getName();
+            $sDateOfBirth = self::getDateOfBirth();
+            $sEmail = self::getEmail();
+            $sUsername = self::getUsername();
+            $sPassword = self::getPassword();
+            $sConfirmPassword = self::getConfirmPassword();
+            $patternString = '/^[a-zA-Z]+$/'; //ONLY ALPHA
+            $patternDate = '/\d{1,2}\.\d{1,2}\.\d{4}/';//DD.MM.YYYY
+            $patternEmail = '/\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,6}/';//SOMETHING@SOMETHING.SOMETHING
+            $patternPswd = '/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,15}/';//8 to 15 character string with at least one upper case letter, one lower case letter, and one digit
+            $patterUsername = '/^[a-zA-Z0-9]+([_ -]?[a-zA-Z0-9])*$/';//alpha numeric with some and characters like _-
+
+            if($_SERVER['REQUEST_METHOD'] == 'POST')
+            {
+                //VÉRIFICATION DES CHAMPS
+                if($sPassword != $sConfirmPassword)
+                {
+                    $aErrorMessage[] = 'Les mots de passe ne sont pas identiques';
+                }
+                if(!preg_match($patternString, $sNom))
+                {
+                    $aErrorMessage[] = 'Le nom ne peut contenir que des lettres';
+                }
+                if(!preg_match($patternString, $sPrenom))
+                {
+                    $aErrorMessage[] = 'Le prénom ne peut contenir que des lettres';
+                }
+                if(!preg_match($patternDate, $sDateOfBirth))
+                {
+                    $aErrorMessage[] = 'La date de naissance est incorrecte';
+                }
+                if(!preg_match($patternEmail, $sEmail))
+                {
+                    $aErrorMessage[] = 'L\'addresse e-mail est invalide';
+                }
+                if(!preg_match($patternUsername, $sUsername))
+                {
+                    $aErrorMessage[] = 'Le nom d\'utilisateur est invalide'
+                }
+                if(!preg_match($patternPswd, $sPassword))
+                {
+                    $aErrorMessage[] = 'Le mot de passe ne respecte pas les conditions de sécurité';
+                }
+
+                //SI PAS D'ERREUR TRAITEMENT
+                if(!empty($aErrorMessage))
+                {
+
+                }
+            }*/
             $salt = 'i;151-120#';//Pour l'ajouter au mot de passe avant l'enregistrement dans la db
             //INITIALISATION DES VARIABLES
             $sNom = self::getSurname();
@@ -105,36 +158,41 @@
         #                                        #
         ##########################################
 
-        /*public static function getSurname()
+        public static function getSurname()
         {
-            $sSurname = htmlspecialchars($_POST['nom']);
+            $sSurname = htmlspecialchars(trim($_POST['nom']));
             return $sSurname;
         }
         public static function getName()
         {
-            $sName = htmlspecialchars($_POST['prenom']);
+            $sName = htmlspecialchars(trim($_POST['prenom']));
             return $sName;
         }
         public static function getEmail()
         {
-            $sEmail = htmlspecialchars($_POST['email']);
+            $sEmail = htmlspecialchars(trim($_POST['email']));
             return $sEmail;
         }
         public static function getPassword()
         {
-            $sPassword = htmlspecialchars($_POST['password']);
+            $sPassword = htmlspecialchars(trim($_POST['password']));
             return $sPassword;
         }
         public static function getUsername()
         {
-            $sUsername = htmlspecialchars($_POST['username']);
+            $sUsername = htmlspecialchars(trim($_POST['username']));
             return $sUsername;
         }
         public static function getDateOfBirth()
         {
-            $sDateOfBirth = htmlspecialchars($_POST['dateOfBirth']);
+            $sDateOfBirth = htmlspecialchars(trim($_POST['dateDeNaissance']));
             return $sDateOfBirth;
-        }*/
+        }
+        public static function getConfirmPassword()
+        {
+            $sConfirmPassword = htmlspecialchars(trim($_POST['confirmPassword']));
+            return $sConfirmPassword;
+        }
     }
 
 ############################

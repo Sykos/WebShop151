@@ -21,17 +21,17 @@
     <body>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                     <?php require_once './templates/header.php'; ?>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                     <?php require_once './templates/nav.php'; ?>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-12">
+                <div class="ccol-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                     <a href="?page=adminArticles"><button class="btn btn-primary">Articles</button></a>
                     <a href="?page=adminCommandes"><button class="btn btn-primary">Commandes</button></a>
                     <a href="?page=adminClients"><button class="btn btn-primary">Clients</button></a>
@@ -39,7 +39,7 @@
 
             </div>
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                     <?php require_once './templates/footer.php' ?>
                 </div>
             </div>
