@@ -35,7 +35,7 @@
                       <h2>Login</h2>
                       <p>Entrez vos informations pour vous connecter</p>
                       <form action = "?page=login" method = "post">
-                          <div class="form-group <?php //echo($usernameErr) ? 'has-error' : ''; ?>">
+                          <div class="form-group <?php echo($usernameErr) ? 'has-error' : ''; ?>">
                               <label>Nom d'utilisateur : </label>
                               <input type = "text" name = "username" class = "form-control" value="<?php //if($username != ''){echo $username;} ?>"/>
                               <span class="help-block"><?php if($usernameErr != ''){echo $usernameErr;} ?></span>
