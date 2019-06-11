@@ -61,10 +61,14 @@
                   
                   while($row = mysql_fetch_assoc($retval)) {
                       //Test
-                     echo "NOM :{$row['ProduitNom']}  <br> ".
+                    /* echo "NOM :{$row['ProduitNom']}  <br> ".
                         "PRIX : {$row['ProduitPrix']} <br> ".
                         " DESC : {$row['ProduitCartDesc']} <br> ".
-                        "--------------------------------<br>";
+                        "--------------------------------<br>";*/
+                        $nom = $row['ProduitNom'];
+                        $prix = $row['ProduitPrix'];
+                        $desc = $row['ProduitCartDesc'];
+                      
       
       
                          $result = mysql_query($sql); // This line executes the MySQL query that you typed above
@@ -77,10 +81,25 @@
                            $yourArray[$index] = $row;
                            $index++;
                           return $yourArray;
+                        
+                          ?>
+                          <!doctype html>
+                          <html lang="en">
+                          <body>
+                          <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <h5 class="card-title">{{$nom['ProduitNom']}}</h5>
+                        </div>
+                        <div class="col-md-5 text-right">
+                            <p class="card-text">Price ${{$prix['ProduitPrix']}}</p>
+                        </div>
+                          </body>
+                          </html>
+                          <?php
 
-       }           
-      }
-    }
-
+         }           
+     }
+  }
 }
     Controller::createProduct();
