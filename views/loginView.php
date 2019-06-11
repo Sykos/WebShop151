@@ -35,15 +35,15 @@
                       <h2>Login</h2>
                       <p>Entrez vos informations pour vous connecter</p>
                       <form action = "?page=login" method = "post">
-                          <div class="form-group <?php echo(!empty($usernameErr)) ? 'has-error' : ''; ?>">
+                          <div class="form-group <?php echo($usernameErr) ? 'has-error' : ''; ?>">
                               <label>Nom d'utilisateur : </label>
-                              <input type = "text" name = "username" class = "form-control" value="<?php //if($username != ''){echo $username;} ?>"/>
-                              <span class="help-block"><?php //if($usernameErr != ''){echo $usernameErr;} ?></span>
+                              <input type = "text" name = "username" class = "form-control" value="<?php if($username != ''){echo $username;} ?>"/>
+                              <span class="help-block"><?php if($usernameErr != ''){echo $usernameErr;} ?></span>
                           </div>
-                          <div class="form-group <?php echo(!empty($passwordErr)) ? 'has-error' : '' ?>">
+                          <div class="form-group <?php echo(!empty($passwordErr)) ? 'has-error' : ''; ?>">
                               <label>Mot de passe : </label>
                               <input type = "password" name = "password" class = "form-control"/>
-                              <span class="help-block"><?php //if($passwordErr != ''){echo $passwordErr;} ?></span>
+                              <span class="help-block"><?php if($passwordErr != ''){echo $passwordErr;} ?></span>
                           </div>
                           <div class="form-group">
                             <input type = "submit" class="btn btn-primary" name="submit" value = "Login"/>

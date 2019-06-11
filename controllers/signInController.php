@@ -142,10 +142,123 @@
 # TRAITEMENT DES DONNÉES   #
 #                          #
 ############################
-$sErrorMessage = '';
+
+//FICHIER DE CONFIG DB
+include('./views/config.php');
+
+//DÉFINITION DES VARIABLES ET INIT
+$username = $password = $confirm_password = '';
+$usernameErr = $passwordErr = $confirm_password_err = '';
+$patternString = '/^[a-zA-Z]+$/'; //ONLY ALPHA
+$patternDate = '/\d{1,2}\.\d{1,2}\.\d{4}/';//DD.MM.YYYY
+$patternEmail = '/\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,6}/';//SOMETHING@SOMETHING.SOMETHING
+$patternPswd = '/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,15}/';//8 to 15 character string with at least one upper case letter, one lower case letter, and one digit
+$patterUsername = '/^[a-zA-Z0-9]+([_ -]?[a-zA-Z0-9])*$/';//alpha numeric with some and characters like _-
+
+//PROCESSING DATA QUAND SUBMIT
+if($_SERVER['REQUEST_METHOD'] == 'POST')
+{
+    //VALIDATION USERNAME
+    if(empty(trim($_POST['username'])))
+    {
+        $usernameErr = 'Entrez un nom d\'utilisateur';
+    }else
+    {
+        //PREPARATION REQUÊTE SQL
+        $sql = 'SELECT UtilisateursID FROM utilisateurs WHERE UtilisateursUser = ?';
+
+        if($stmt = mysqli_prepare($dbconnect, $sql))
+        {
+            //LIAISON DES VARIABLES À LA REQUÊTE
+            mysqli_stmt_bind_param($stmt, 's', $param_username);
+
+            //SET PARAM
+            $param_username = trim($_POST['username']);
+
+            //ESSAI D'EXECUTION DE LA REQUÊTE
+            if(mysqli_stmt_execute($stmt))
+            {
+                //ENREGISTRE
+                mysqli_stmt_store_result($stmt);
+
+                if(mysqli_stmt_num_rows($stmt) == 1)
+                {
+                    $usernameErr = 'Ce nom d\'utilisateur est déjà pris';
+                }else
+                {
+                    $username = trim($_POST['username']);
+                }
+            }else
+            {
+                echo 'Oups ! ça c\'est mal passé ! Veuillez réessayer plus tard';
+            }
+        }
+
+        //FERMETURE DE LA REQUÊTE
+        mysqli_stmt_close($stmt);
+    }
+
+    //VALIDATION PASSWORD
+    if(empty(trim($_POST['password'])))
+    {
+        $passwordErr = 'Entrez un mot de passe';
+    }else
+    {
+        $password = trim($_POST['password']);
+    }
+
+    //VALIDATION CONFIRM PASSWORD
+    if(empty(trim($_POST['confirmPassword'])))
+    {
+        $confirm_password_err = 'Veuillez confirmer le mot de passe';
+    }else
+    {
+        $confirm_password = trim($_POST['confirmPassword']);
+        if(empty($passwordErr) && ($password != $confirm_password))
+        {
+            $confirm_password_err = 'Les mots de passe ne correspondent pas';
+        }
+    }
+
+    //VERIFICATION DES ENTRÉES AVANT L'ENREGISTREMENT DANS LA DB
+    if(empty($usernameErr) && empty($passwordErr) && empty($confirm_password_err))
+    {
+        //PRÉPARATION DE LA REQUÊTE
+        $sql = 'INSERT INTO utilisateurs (UtilisateursUser, UtilisateursMotDePasse) VALUES (?,?)';
+
+        if($stmt = mysqli_prepare($dbconnect, $sql))
+        {
+            //LIAISON DES VARIABLES AVEC LA REQUÊTE
+            mysqli_stmt_bind_param($stmt, 'ss', $param_username, $param_password);
+
+            //SET PARAM
+            $param_username = $username;
+            $param_password = password_hash($password, PASSWORD_DEFAULT);//CRÉE UN HASH
+
+            //TENTATIVE D'EXÉCUTION DE LA REQUÊTE
+            if(mysqli_stmt_execute($stmt))
+            {
+                //REDIRECTION VERS LA PAGE DE LOGIN
+                header('location:?page=login');
+            }else
+            {
+                echo 'Oups ! ça n\'a pas fonctionné ! Veuillez réessayer plus tard';
+            }
+        }
+
+        //FERMETURE DE LA REQUÊTE
+        mysqli_stmt_close($stmt);
+    }
+
+    //FERMETURE DE LA CONNEXION
+    mysqli_close($dbconnect);
+}
+
+
+/*$sErrorMessage = '';
 
 //CHECK DES DONNÉES ET ENREGISTREMENT
 if(isset($_POST['submit']))
 {
     Controller::checkData();
-}
+}*/
