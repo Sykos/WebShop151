@@ -143,7 +143,27 @@
 #                          #
 ############################
 
-//FICHIER DE CONFIG DB
+$sErrorMessage = '';
+
+//CHECK DES DONNÉES ET ENREGISTREMENT
+if(isset($_POST['submit']))
+{
+    Controller::checkData();
+}
+
+
+
+
+##########################
+#                        #
+#   NE FONCTIONNE PAS    #
+#           |            #
+#           |            #
+#           |            #
+#                        #
+##########################
+
+/*//FICHIER DE CONFIG DB
 include('./views/config.php');
 
 //DÉFINITION DES VARIABLES ET INIT
@@ -252,13 +272,4 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 
     //FERMETURE DE LA CONNEXION
     mysqli_close($dbconnect);
-}
-
-
-/*$sErrorMessage = '';
-
-//CHECK DES DONNÉES ET ENREGISTREMENT
-if(isset($_POST['submit']))
-{
-    Controller::checkData();
 }*/
