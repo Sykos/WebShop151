@@ -10,7 +10,7 @@
     /* Attempt to connect to MySQL database */
     $dbconnect = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
 
-    if (mysqli_connect_errno())
+    if ($dbconnect === false)
     {
         die("Database connection failed: " . mysqli_connect_error());
     }

@@ -31,18 +31,23 @@
 
           <div class="row">
               <div class="col-md-12">
-                  <!-- INSERT BODY -->
-
-               <form action = "?page=login" method = "post">
-
-                       <label>UserName  :</label>
-                       <input type = "text" name = "username" class = "box"/><br /><br />
-
-                       <label>Password  :</label>
-                       <input type = "password" name = "password" class = "box" /><br/><br />
-
-                       <input type = "submit" class="btn btn-primary" name="submit" value = "Login"/><br /> 
-               </form>
+                  <div class="wrapper">
+                      <h2>Login</h2>
+                      <p>Entrez vos informations pour vous connecter</p>
+                      <form action = "?page=login" method = "post">
+                          <div>
+                              <label>Nom d'utilisateur : </label>
+                              <input type = "text" name = "username" class = "form-control"/>
+                          </div>
+                          <div>
+                              <label>Mot de passe : </label>
+                              <input type = "password" name = "password" class = "form-control" />
+                          </div>
+                          <div>
+                            <input type = "submit" class="btn btn-primary" name="submit" value = "Login"/>
+                          </div>
+                      </form>
+                  </div>
           </div>
           </div>
 
