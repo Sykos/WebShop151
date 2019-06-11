@@ -40,7 +40,7 @@
                               <input type = "text" name = "username" class = "form-control" value="<?php if($username != ''){echo $username;} ?>"/>
                               <span class="help-block"><?php if($usernameErr != ''){echo $usernameErr;} ?></span>
                           </div>
-                          <div class="form-group <?php echo(!empty($passwordErr)) ? 'has-error' : '' ?>">
+                          <div class="form-group <?php echo(!empty($passwordErr)) ? 'has-error' : ''; ?>">
                               <label>Mot de passe : </label>
                               <input type = "password" name = "password" class = "form-control"/>
                               <span class="help-block"><?php if($passwordErr != ''){echo $passwordErr;} ?></span>
