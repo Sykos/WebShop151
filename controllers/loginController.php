@@ -34,16 +34,27 @@
     {
 
         // username and password sent from form
-
-        $myusername = mysqli_real_escape_string($db,$_POST['UtilisateursUser']);
-        $mypassword = mysqli_real_escape_string($db,$_POST['UtilisateursMotDePasse']);
-
-
-        $sql = "SELECT id FROM utilisateurs WHERE UtilisateursUser = '$myusername' and UtilisateursMotDePasse = '$mypassword'";
-        $result = mysqli_query($db,$sql);
+        $thisUsername = mysqli_real_escape_string($_POST['username']);
+        $thisPassword = mysqli_real_escape_string($_POST['password']);
+        $dbUsername;
+        $dbPassword;
 
 
-        $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+        /*$myusername = mysqli_real_escape_string($db,$_POST['UtilisateursUser']);
+        $mypassword = mysqli_real_escape_string($db,$_POST['UtilisateursMotDePasse']);*/
+
+
+        $sql = "SELECT UtilisateursUser, UtilisateursMotDePasse FROM utilisateurs WHERE UtilisateursUser = '".$dbUsername."' and UtilisateursMotDePasse = '".$dbPassword."'";
+        $result = mysqli_query($sql);
+
+        echo mysql_fetch_assoc($result);
+
+        /*while($row = mysql_fetch_assoc($result))
+        {
+            $check_username = $row[]
+        }*/
+
+        /*$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
         $active = $row['active'];
 
 
@@ -61,5 +72,5 @@
         {
             $error = "Your Login Name or Password is invalid";
         }
-        echo 'Test validé';
+        echo 'Test validé';*/
     }

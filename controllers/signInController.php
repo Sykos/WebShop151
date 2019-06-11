@@ -64,7 +64,7 @@
 
         public static function checkData()
         {
-            $salt = 'i;151-120#';
+            $salt = 'i;151-120#';//Pour l'ajouter au mot de passe avant l'enregistrement dans la db
             //INITIALISATION DES VARIABLES
             $sNom = self::getSurname();
             $sPrenom = self::getName();
