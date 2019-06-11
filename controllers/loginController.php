@@ -52,9 +52,9 @@
         /*while($row = mysql_fetch_assoc($result))
         {
             $check_username = $row[]
-        }*/
+        }
 
-        /*$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+        $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
         $active = $row['active'];
 
 
