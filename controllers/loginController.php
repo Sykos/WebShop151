@@ -44,7 +44,7 @@
         $mypassword = mysqli_real_escape_string($db,$_POST['UtilisateursMotDePasse']);*/
 
 
-        $sql = "SELECT UtilisateursUser, UtilisateursMotDePasse FROM utilisateurs WHERE UtilisateursUser = '".$dbUsername."' and UtilisateursMotDePasse = '".$dbPassword."'";
+        $sql = "SELECT UtilisateursUser, UtilisateursMotDePasse FROM utilisateurs WHERE UtilisateursUser =".$dbUsername." and UtilisateursMotDePasse = ".$dbPassword."";
         $result = mysqli_query($sql);
 
         $testResult = mysql_fetch_assoc($result);
