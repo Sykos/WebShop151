@@ -26,7 +26,7 @@
     # TRAITEMENT DES DONNÉES #
     #                        #
     ##########################
-    session_start();
+    /*session_start();
 
     if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true)
     {
@@ -38,7 +38,7 @@
     $username = $password = '';
     $usernameErr = $passwordErr = '';
 
-    /*if($_SERVER['REQUEST_METHOD'] == 'POST')
+    if($_SERVER['REQUEST_METHOD'] == 'POST')
     {
         if(empty(trim($_POST['username'])))
         {
