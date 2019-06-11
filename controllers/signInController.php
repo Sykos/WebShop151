@@ -64,6 +64,7 @@
 
         public static function checkData()
         {
+            $salt = 'i;151-120#';
             //INITIALISATION DES VARIABLES
             $sNom = self::getSurname();
             $sPrenom = self::getName();
@@ -88,6 +89,7 @@
             }
             else
             {
+                $sPassword = sha1($salt.$sPassword);
                 self::db();
                 echo 'Enregistrement ok';
             }
