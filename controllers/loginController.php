@@ -47,7 +47,7 @@
         $sql = "SELECT UtilisateursUser, UtilisateursMotDePasse FROM utilisateurs WHERE UtilisateursUser = '".$dbUsername."' and UtilisateursMotDePasse = '".$dbPassword."'";
         $result = mysqli_query($sql);
 
-        echo mysql_fetch_assoc($result);
+        echo $result;
 
         /*while($row = mysql_fetch_assoc($result))
         {
