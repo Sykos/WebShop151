@@ -3,10 +3,10 @@ class Controller extends mainController
 {
     public function __construct()
     {
-        parent::construct();
+        parent::__construct();
 
         $this->aContent['viewPath'] = './views/viewOrder.php';
-        $this->aContent['pageTitle'] = 'Mes commandes';
+        $this->aContent['pageTitle'] = 'Espace membre';
     }
 
     public function render()
