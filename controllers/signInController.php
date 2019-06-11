@@ -162,9 +162,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
     if(empty(trim($_POST['username'])))
     {
         $usernameErr = 'Entrez un nom d\'utilisateur';
-    }elseif()
-    {
-
     }else
     {
         //PREPARATION REQUÊTE SQL
