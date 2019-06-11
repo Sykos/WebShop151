@@ -85,13 +85,7 @@
             //-- RÉCUPÉRATION DES DONNÉS DE L'ARTICLE --
             self::getProductData();
             $x = 0;
-            while($info = mysql_fetch_array( $result ))
-
-            { $name = $info['ProduitNom']; $prix = $info['ProduiPrix']; $desc = $info['ProduitCartDesc'];
-                echo $name; 
-                echo $prix;
-                echo $desc; 
-
+         
           /* while ($x <= count($yourArray))
             {
                 echo '<div class "cardProduct">
@@ -105,6 +99,5 @@
             }*/
 
         }
-        Controller::getProductData();
     }
-}
+    Controller::getProductData();
