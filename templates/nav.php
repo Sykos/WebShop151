@@ -15,6 +15,12 @@
                     <li><a href="#">Vin</a></li>
                     <li><a href="#">Four</a></li>
                     <li><a href="?page=admin">Administration</a></li>
+                    <li><a href="?page=member">Modifier votre profile</a></li>
+                    <?php
+                        /*if(isset($_SESSION['loggedin'])){
+                            echo '<li><a href="?page=member">Modifier votre profile</a></li>';
+                        }*/
+                    ?>
       </ul>
 
   </nav>

@@ -8,5 +8,6 @@
     'testForm' => 'testFormController.php',
     'login' => 'loginController.php',
     'signIn' => 'signInController.php',
-    'admin' => 'adminController.php'
+    'admin' => 'adminController.php',
+    'member' => 'memberSpaceController.php'
   ];

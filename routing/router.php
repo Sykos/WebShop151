@@ -48,6 +48,9 @@
         case 'admin':
             $controllerToLoad = 'admin';
             break;
+        case 'member':
+            $controllerToLoad = 'member';
+            break;
     }
 
     //APPEL DU MAINCONTROLLER ET DU CONTROLLER AD HOC
