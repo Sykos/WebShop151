@@ -42,8 +42,10 @@
     include('./views/config.php');
 
     //DÉFINITONS DES VARIABLES ET INIT VIDE
-    $username = $password = '';
-    $usernameErr = $passwordErr = '';
+    $username = '';
+    $password = '';
+    $usernameErr = '';
+    $passwordErr = '';
 
     //PROCESSING DES DATA QUAND SUBMIT
     if($_SERVER['REQUEST_METHOD'] == 'POST')
