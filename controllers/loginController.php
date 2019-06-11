@@ -47,11 +47,13 @@
         $sql = "SELECT UtilisateursUser, UtilisateursMotDePasse FROM utilisateurs WHERE UtilisateursUser = '".$dbUsername."' and UtilisateursMotDePasse = '".$dbPassword."'";
         $result = mysqli_query($sql);
 
-        echo $result;
+        $testResult = mysql_fetch_assoc($result);
+
+        echo $testResult;
 
         /*while($row = mysql_fetch_assoc($result))
         {
-            $check_username = $row[]
+            $check_username = $row[''];
         }
 
         $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
