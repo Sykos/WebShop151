@@ -34,7 +34,7 @@
         exit;
     }
 
-    require_once 'config.php';
+    include('config.php');
 
 
 
