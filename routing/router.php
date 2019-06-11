@@ -63,6 +63,12 @@
         case 'adminArticles':
             $controllerToLoad = 'adminArticles';
             break;
+        case 'adminCommandes':
+            $controllerToLoad = 'adminCommandes';
+            break;
+        case 'adminClients':
+            $controllerToLoad = 'adminClients';
+            break;
     }
 
     //APPEL DU MAINCONTROLLER ET DU CONTROLLER AD HOC

@@ -4,7 +4,7 @@
         public function __construct(){
             parent::__construct();
 
-            $this->aContent['viewPath'] = './views/adminArticlesView.php';
+            $this->aContent['viewPath'] = './views/adminCommandesView.php';
             $this->aContent['pageTitle'] = 'Administration';
         }
 

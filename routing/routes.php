@@ -8,10 +8,13 @@
     'testForm' => 'testFormController.php',
     'login' => 'loginController.php',
     'signIn' => 'signInController.php',
-    'admin' => 'adminController.php',
+
     'member' => 'memberSpaceController.php',
     'changePassword' => 'changePasswordController.php',
     'changeEmail' => 'changeEmailController.php',
     'viewOrder' => 'viewOrderController.php',
-    'adminArticles' => 'adminArticlesController.php'
+    'adminArticles' => 'adminArticlesController.php',
+    'adminCommandes' => 'adminCommandesController.php',
+    'admin' => 'adminController.php',
+    'adminClients' => 'adminClientsController.php'
   ];
