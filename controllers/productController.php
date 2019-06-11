@@ -65,6 +65,8 @@
                         "PRIX : {$row['ProduitPrix']} <br> ".
                         " DESC : {$row['ProduitCartDesc']} <br> ".
                         "--------------------------------<br>";
+                        $test = $row['ProduitNom'];
+                        echo($test);
       
       
                          $result = mysql_query($sql); // This line executes the MySQL query that you typed above
