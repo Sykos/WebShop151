@@ -33,7 +33,7 @@
               <div class="col-md-12">
                   <!-- INSERT BODY -->
 
-               <form action = "" method = "post">
+               <form action = "?page=login" method = "post">
                   <label>UserName  :</label><input type = "text" name = "username" class = "box"/><br /><br />
                   <label>Password  :</label><input type = "password" name = "password" class = "box" /><br/><br />
                   <input type = "submit" value = " Submit "/><br />
