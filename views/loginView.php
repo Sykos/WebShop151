@@ -33,12 +33,10 @@
               <div class="col-md-12">
                   <!-- INSERT BODY -->
 
-               <form action = "" method = "post">
-                  <label>UserName  :</label><input type = "text" name = "UtilisateursNomDeFamille" class = "box"/><br /><br />
-                  <label>Password  :</label><input type = "password" name = "UtilisateursMotDePasse" class = "box" /><br/><br />
-                  <img src="captcha.php">
-
-                  <input type = "submit" value = " Submit "/><br />
+               <form action = "?page=login" method = "post">
+                  <label>UserName  :</label><input type = "text" name = "username" class = "box"/><br /><br />
+                  <label>Password  :</label><input type = "password" name = "password" class = "box" /><br/><br />
+                  <input type = "submit" name="submit" value = " Submit "/><br />
                </form>
           </div>
           </div>

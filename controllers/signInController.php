@@ -49,11 +49,12 @@
                 $password = $_POST['password'];
                 $user = $_POST['user'];*/
 
-                $query = "INSERT INTO `utilisateurs` (`UtilisateursNomDeFamille`, `UtilisateursPrenom`, `UtilisateursEmail`, `UtilisateursMotDePasse`,`UtilisateursUser`) VALUES ('$nom', '$prenom', '$email', '$password','$user')";
+                $query = "INSERT INTO `utilisateurs` (`UtilisateursNomDeFamille`, `UtilisateursPrenom`, `UtilisateursEmail`, `UtilisateursMotDePasse`,`UtilisateursUser`) VALUES ('$sNom', '$sPrenom', '$sEmail', '$sPassword','$sUsername')";
 
                 if ($dbconnect->query($query) === TRUE)
                 {
                     echo "New record created successfully";
+
                 }else
                 {
           	        die($dbconnect->error);
@@ -63,24 +64,33 @@
 
         public static function checkData()
         {
+            $salt = 'i;151-120#';//Pour l'ajouter au mot de passe avant l'enregistrement dans la db
             //INITIALISATION DES VARIABLES
             $sNom = self::getSurname();
             $sPrenom = self::getName();
             $sDateOfBirth = self::getDateOfBirth();
+            $sEmail = self::getEmail();
             $sUsername = self::getUsername();
             $sPassword = self::getPassword();
             $patternString = '/^[a-zA-Z]+$/'; //ONLY ALPHA
             $patternDate = '/\d{1,2}\.\d{1,2}\.\d{4}/';//DD.MM.YYYY
-            $patternEmail = '/\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,6}/'//SOMETHING@SOMETHING.SOMETHING
+            $patternEmail = '/\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,6}/';//SOMETHING@SOMETHING.SOMETHING
             $patternPswd = '/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,15}/';//8 to 15 character string with at least one upper case letter, one lower case letter, and one digit
+            $patterUsername = '/^[a-zA-Z0-9]+([_ -]?[a-zA-Z0-9])*$/';//alpha numeric with some and characters like _-
 
-            if((preg_match($patternString, $sNom) != 1) && (preg_match($patternString, $sPrenom) != 1) && (preg_match($patternDate, $sDateOfBirth) !=1) && (preg_match($patternEmail, $sEmail) != 1) && (preg_match($patternString, $sUsername) != 1) && (preg_match($patternPswd, $sPassword) != 1)){
-
-                echo 'Ton truc fonctionne pas gros';
+            if((preg_match($patternString, $sNom) != 1) && (preg_match($patternString, $sPrenom) != 1) && (preg_match($patternDate, $sDateOfBirth) != 1) && (preg_match($patternEmail, $sEmail) != 1) && (preg_match($patternUsername,$sUsername) != 1) &&
+            (preg_match($patternPswd, $sPassword) != 1))
+            {
+                echo 'Données invalides ! Le nom et le prénom ne doivent contenir que des lettres ! <br>
+                     La date de naissance doit respecter la forme jj.mm.aaaa ! <br>
+                     L\'adresse mail doit respecter la forme d\'une adresse mail ! <br>
+                     Le nom d\'utilisateur n\'accepte comme caractères spéciaux que "-" et "_" ! <br>
+                     Le mot de passe doit contenir entre 8 et 15 caractères, au moins une majuscule, une minuscule et un chiffre !';
             }
             else
             {
-                //self::db();
+                $sPassword = sha1($salt.$sPassword);
+                self::db();
                 echo 'Enregistrement ok';
             }
 
