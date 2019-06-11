@@ -87,7 +87,10 @@
             $x = 0;
             while($info = mysql_fetch_array( $result ))
 
-            { $name = $info['ProduitNom']; $description = $info['ProduiPrix']; $upcNumber = $info['ProduitCartDesc'];
+            { $name = $info['ProduitNom']; $prix = $info['ProduiPrix']; $desc = $info['ProduitCartDesc'];
+                echo $name; 
+                echo $prix;
+                echo $desc; 
 
           /* while ($x <= count($yourArray))
             {
