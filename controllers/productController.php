@@ -1,3 +1,4 @@
+
 <?php
 
     class Controller extends mainController
@@ -82,25 +83,25 @@
 
         public static function createProduct()
         {
-            //-- RÉCUPÉRATION DES DONNÉS DE L'ARTICLE --
-            self::getProductData();
-            foreach($yourArray as $key => $value){
-                ${something.$key} = $value;
-                }
-          
-            echo $something1;
-           /*while ($x <= count($yourArray))
-            {
-                echo '<div class "cardProduct">
-                    <img src="../public/images/'.Nom du produit = nom image.' alt="'.Nom produit.'" style="width=100%">
-                        <h1>'.Nom produit.'</h1>
-                        <p class="price">'.Prix de l'article.'</p>
-                        <p>'.Description article.'</p>
-                        <p><button>Ajouter au panier</button></p>
-                    </div>';
-                variable incrément ++
-            }*/
+            include('connection.php');
+            if (isset($_GET["page"])) { $page  = $_GET["page"]; } else { $page=1; };  
+            $start_from = ($page-1) * $limit;  
+  
+            $sql = "SELECT * FROM produits ORDER BY ProduitNom";  
+            $rs_result = mysqli_query($conn, $sql);    
+
+            while ($row = mysqli_fetch_assoc($rs_result)) {
+                
+                echo '<div class="clearfix card" style="width: 20rem;">';
+	            echo '<img class="card-img-top" src="http://placehold.it/150x100" alt="">';
+	            echo '<div class="card-body">';
+                echo '<h4 class="card-title">';
+                echo $row['productName']; 
+
+
+            }
 
         }
     }
+
     Controller::createProduct();
