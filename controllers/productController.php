@@ -84,9 +84,9 @@
                            $index++;
                           return $yourArray;
 
+       }           
       }
-            
-        }
     }
+}
 
     Controller::createProduct();
