@@ -10,6 +10,7 @@
 
             $this->aContent['viewPath'] = './views/signInView.php';
             $this->aContent['pageTitle'] = 'Inscription';
+            $this->aContent['css'][] = './public/vendor/css/signInCSS.css';
 
         }
 
