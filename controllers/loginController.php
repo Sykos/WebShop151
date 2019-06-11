@@ -28,15 +28,31 @@
     ##########################
 
     session_start();
-
+    //SI L'UTILISATEUR EST CONNECTÉ REDIRECTION VERS LA HOMEPAGE
     if(isset($_SESSION['loggedin']) && $_SESSION === true){
         header('location:?page=home');
         exit;
     }
 
+    //FICHIER DE CONFIG DE LA DB
     include('config.php');
 
+    //DÉFINITONS DES VARIABLES ET INIT VIDE
+    $username = $password = '';
+    $usernameErr = $passwordErr = '';
 
+    //PROCESSING DES DATA QUAND SUBMIT
+    if($_SERVER['REQUEST_METHOD'] == 'POST')
+    {
+        //SI USERNAME VIDE
+        if(empty(trim($_POST['username'])))
+        {
+            $usernameErr = 'Entrez votre nom d\'utilisateur';
+        }else
+        {
+            $username = trim($_POST['username']);
+        }
+    }
 
 
 
