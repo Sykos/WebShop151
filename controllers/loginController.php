@@ -103,7 +103,7 @@
         mysqli_close($link);
     }
 
-    if(isset($_POST['submit']))
+    /*if(isset($_POST['submit']))
     {
 
         // username and password sent from form
@@ -113,8 +113,8 @@
         $dbPassword;
 
 
-        /*$myusername = mysqli_real_escape_string($db,$_POST['UtilisateursUser']);
-        $mypassword = mysqli_real_escape_string($db,$_POST['UtilisateursMotDePasse']);*/
+        $myusername = mysqli_real_escape_string($db,$_POST['UtilisateursUser']);
+        $mypassword = mysqli_real_escape_string($db,$_POST['UtilisateursMotDePasse']);
 
 
         $sql = "SELECT UtilisateursUser, UtilisateursMotDePasse FROM utilisateurs WHERE UtilisateursUser =".$dbUsername." AND UtilisateursMotDePasse = ".$dbPassword."";
@@ -123,7 +123,7 @@
         $testResult = mysql_fetch_assoc($result);
 
         var_dump($testResult);
-        /*while($row = mysql_fetch_assoc($result))
+        while($row = mysql_fetch_assoc($result))
         {
             $check_username = $row[''];
         }
@@ -146,5 +146,5 @@
         {
             $error = "Your Login Name or Password is invalid";
         }
-        echo 'Test validé';*/
-    }
+        echo 'Test validé';
+    }*/
