@@ -61,12 +61,14 @@
                   
                   while($row = mysql_fetch_assoc($retval)) {
                       //Test
-                     echo "NOM :{$row['ProduitNom']}  <br> ".
+                    /* echo "NOM :{$row['ProduitNom']}  <br> ".
                         "PRIX : {$row['ProduitPrix']} <br> ".
                         " DESC : {$row['ProduitCartDesc']} <br> ".
-                        "--------------------------------<br>";
-                        $test = $row['ProduitNom'];
-                        echo($test);
+                        "--------------------------------<br>";*/
+                        $nom = $row['ProduitNom'];
+                        $prix = $row['ProduitPrix'];
+                        $desc = $row['ProduitCartDesc'];
+                      
       
       
                          $result = mysql_query($sql); // This line executes the MySQL query that you typed above
@@ -79,6 +81,10 @@
                            $yourArray[$index] = $row;
                            $index++;
                           return $yourArray;
+
+                          <html lang="en">
+                          <p>test</p>
+                          </html>
 
          }           
      }
