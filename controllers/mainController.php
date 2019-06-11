@@ -8,7 +8,7 @@
 
         public function __construct()
         {
-
+            
             $this->aContent['css'][] = '../public/vendor/css/bootstrap.css';
             $this->aContent['css'][] = '../public/vendor/css/headerCSS.css';
             $this->aContent['css'][] = '../public/vendor/css/navCSS.css';
