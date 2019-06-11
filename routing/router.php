@@ -51,6 +51,12 @@
         case 'member':
             $controllerToLoad = 'member';
             break;
+        case 'changeEmail':
+            $controllerToLoad = 'changeEmail';
+            break;
+        case 'changePassword':
+            $controllerToLoad = 'changePassword';
+            break;
     }
 
     //APPEL DU MAINCONTROLLER ET DU CONTROLLER AD HOC

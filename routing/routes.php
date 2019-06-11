@@ -9,5 +9,7 @@
     'login' => 'loginController.php',
     'signIn' => 'signInController.php',
     'admin' => 'adminController.php',
-    'member' => 'memberSpaceController.php'
+    'member' => 'memberSpaceController.php',
+    'changePassword' => 'changePasswordController.php',
+    'changeEmail' => 'changeEmailController.php'
   ];
