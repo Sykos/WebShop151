@@ -49,8 +49,7 @@
 
         $testResult = mysql_fetch_assoc($result);
 
-        echo $testResult;
-
+        var_dump($testResult);
         /*while($row = mysql_fetch_assoc($result))
         {
             $check_username = $row[''];
