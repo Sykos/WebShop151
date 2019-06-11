@@ -35,7 +35,7 @@ error_reporting(E_ALL);
           </div>
           <div class="row">
               <div class="col-md-12">
-                  <?php echo Controller::createForm(); ?>
+                  <?php echo(self::createForm()); ?>
                   <!--<div class="wrapper">
                       <h2>Inscription</h2>
                       <p>Insérez vos informations pour créer votre compte</p>
