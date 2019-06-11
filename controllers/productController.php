@@ -84,8 +84,6 @@
         public static function createProduct()
         {
             include('connection.php');
-            if (isset($_GET["page"])) { $page  = $_GET["page"]; } else { $page=1; };  
-            $start_from = ($page-1) * $limit;  
   
             $sql = "SELECT * FROM produits ORDER BY ProduitNom";  
             $rs_result = mysqli_query($conn, $sql);    
