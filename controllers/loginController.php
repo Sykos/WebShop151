@@ -38,7 +38,7 @@
     $username = $password = '';
     $usernameErr = $passwordErr = '';
 
-    if($_SERVER['REQUEST_METHOD'] == 'POST')
+    /*if($_SERVER['REQUEST_METHOD'] == 'POST')
     {
         if(empty(trim($_POST['username'])))
         {
@@ -101,7 +101,7 @@
             mysqli_stmt_close($stmt);
         }
         mysqli_close($link);
-    }
+    }*/
 
     /*if(isset($_POST['submit']))
     {
