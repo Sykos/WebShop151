@@ -89,6 +89,7 @@
                 }
             
             echo $something1;
+            echo "test";
            /*while ($x <= count($yourArray))
             {
                 echo '<div class "cardProduct">
