@@ -11,5 +11,6 @@
     'admin' => 'adminController.php',
     'member' => 'memberSpaceController.php',
     'changePassword' => 'changePasswordController.php',
-    'changeEmail' => 'changeEmailController.php'
+    'changeEmail' => 'changeEmailController.php',
+    'viewOrder' => 'viewOrderController.php'
   ];

@@ -35,6 +35,7 @@
                 <div class="col-md-12">
                     <a href="?page=changeEmail"><button class="btn btn-primary">Changer Email</button></a>
                     <a href="?page=changePassword"><button class="btn btn-primary">Changer Mot de Passe</button></a>
+                    <a href="?page=viewOrder"><button class="btn btn-primary">Vos commandes</button></a>
                     <!--<div class="wrapper">
                         <div align="center">
                            <h2>Edition de mon profil</h2>
