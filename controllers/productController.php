@@ -89,7 +89,7 @@
                 }
             
             echo $something1;
-          /* while ($x <= count($yourArray))
+           /*while ($x <= count($yourArray))
             {
                 echo '<div class "cardProduct">
                     <img src="../public/images/'.Nom du produit = nom image.' alt="'.Nom produit.'" style="width=100%">
