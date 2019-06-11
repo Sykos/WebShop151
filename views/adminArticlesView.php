@@ -33,7 +33,28 @@ error_reporting(E_ALL);
             </div>
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <?php
+                    //NE FONCTIONNE PAS
+                    /*echo $_GET['article'];
+                    require_once 'function.php';
+
+                    getArticle($db, 1, $_GET['id']);*/
+                    ?>
                     <h1>Gestion des articles</h1>
+                    <h2><?php //echo $article->name; ?></h2>
+                    <h5><?php //echo $article->content ?></h5>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <?php
+                    //NE FONCTIONNE PAS
+                    /*if(isset($_SESSION['admin']) && !empty($_SESSION['admin'])){
+                        echo '<div class="row">
+                          <a href="delete_article.php"><h5>Supprimer cet article</h5>
+                          <a href="modify_article.php"><h5>Modifier cet article</h5>';
+                    }*/
+                    ?>
                 </div>
             </div>
             <div class="row">

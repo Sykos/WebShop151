@@ -41,12 +41,5 @@
                 </div>
             </div>
         </div>
-        <?php
-            //APPEL DE TOUTES LES PARTIES DE LA PAGE
-
-
-
-
-        ?>
     </body>
 </html>
