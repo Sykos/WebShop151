@@ -45,7 +45,7 @@
     include('./views/config.php');
 
     //DÉFINITONS DES VARIABLES ET INIT VIDE
-    $username = '';
+    $username = 'Coucou';
     $password = '';
     $usernameErr = '';
     $passwordErr = '';
