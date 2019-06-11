@@ -36,7 +36,6 @@
                   
      }
             
-        }
 
         public static function createProduct()
         {
