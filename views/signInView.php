@@ -68,7 +68,7 @@ error_reporting(E_ALL);
                               <input type="password" name="confirmPassword" class="form-control">
                           </div>
                           <div>
-                              <input type="submit" name="submit" value="S'enregistrer" class="btn btn-default">
+                              <input type="submit" name="submit" value="S'enregistrer" class="btn btn-primary">
                           </div>
                       </form>
                   </div>
