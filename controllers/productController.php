@@ -36,11 +36,6 @@
                   
      }
             
-            echo "Fetched data successfully\n";
-            
-            mysql_close($conn);
-            
-        
         }
 
         public static function createProduct()
