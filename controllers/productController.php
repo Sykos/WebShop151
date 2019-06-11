@@ -78,66 +78,6 @@
                            $index++;
                           return $yourArray;
 
-                          
-                        // start session
-                        session_start();
- 
-                        // set page title
-                        $page_title="Products";
-
-                          // database connection and table name
-                            private $table_name="produits";
-                        
-                            // object properties
-                            public $produitID;
-                            public $ProduitNom ;
-                            public $ProduitPrix ;
-                            public $ProduitCartDesc ;
-
-                            // constructor
-                            public function __construct($db){
-                                $this->conn = $db;
-
-                                while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
-                                    extract($row);
-                                 
-                                    // creating box
-                                    echo "<div class='col-md-4 m-b-20px'>";
-                                 
-                                        // product id for javascript access
-                                        echo "<div class='product-id display-none'>{$produitID}</div>";
-                                 
-                                        echo "<a href='product.php?id={$produitID}' class='product-link'>";
-                                            // select and show first product image
-                                            $product_image->product_id=$produitID;
-                                            $stmt_product_image=$product_image->readFirst();
-                                 
-                                            while ($row_product_image = $stmt_product_image->fetch(PDO::FETCH_ASSOC)){
-                                                echo "<div class='m-b-10px'>";
-                                                    echo "<img src='uploads/images/{$row_product_image['name']}' class='w-100-pct' />";
-                                                echo "</div>";
-                                            }
-                                 
-                                            // product name
-                                            echo "<div class='product-name m-b-10px'>{$ProduitNom}</div>";
-                                        echo "</a>";
-                                 
-                                        // add to cart button
-                                        echo "<div class='m-b-10px'>";
-                                            if(array_key_exists($produitID, $_SESSION['cart'])){
-                                                echo "<a href='cart.php' class='btn btn-success w-100-pct'>";
-                                                    echo "Update Cart";
-                                                echo "</a>";
-                                            }else{
-                                                echo "<a href='add_to_cart.php?id={$produitID}&page={$page}' class='btn btn-primary w-100-pct'>Add to Cart</a>";
-                                            }
-                                        echo "</div>";
-                                 
-                                    echo "</div>";
-            
-                       
- 
-
          }           
      }
   }
