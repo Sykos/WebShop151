@@ -36,6 +36,11 @@ error_reporting(E_ALL);
                     <h2>Mes commandes</h2>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <?php require_once './templates/footer.php'; ?>
+                </div>
+            </div>
         </div>
     </body>
 </html>
