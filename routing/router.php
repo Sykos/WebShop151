@@ -57,7 +57,7 @@
         case 'changePassword':
             $controllerToLoad = 'changePassword';
             break;
-        case: 'viewOrder':
+        case 'viewOrder':
             $controllerToLoad = 'viewOrder';
             break;
     }
