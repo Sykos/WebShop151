@@ -35,8 +35,7 @@ error_reporting(E_ALL);
           </div>
           <div class="row">
               <div class="col-md-12">
-                  <?php echo(self::createForm()); ?>
-                  <!--<div class="wrapper">
+                  <div class="wrapper">
                       <h2>Inscription</h2>
                       <p>Insérez vos informations pour créer votre compte</p>
                       <form action="?page=signIn" method="post">
@@ -72,7 +71,7 @@ error_reporting(E_ALL);
                               <input type="submit" name="submit" value="S'enregistrer" class="btn btn-primary">
                           </div>
                       </form>
-                  </div>-->
+                  </div>
               </div>
           </div>
           <div class="row">

@@ -20,42 +20,7 @@
 
         }
 
-        public static function createForm()
-        {
-            //APPEL DE LA FONCTION DE CRÉATION DE FORMULAIRE
-            include './templates/form.php';
-
-            //CRÉATION DU FORMULAIRE
-            $formInscription = new Form('formulaire_inscription');
-
-            $formInscription->method('POST');
-
-            $formInscription->add('Text', 'nom');
-                            ->label('Nom');
-
-            $formInscription->add('Text', 'prenom');
-                            ->label('Prénom');
-
-            $formInscription->add('Email', 'email');
-                            ->label('E-mail');
-
-            $formInscription->add('Text', 'username');
-                            ->label('Nom d\'utilisateur');
-
-            $formInscription->add('Password', 'password');
-                            ->label('Mot de passe');
-
-            $formInscription->add('Password', 'password_verif');
-                            ->label('Entrez votre mot de passe à nouveau');
-
-            $formInscription->add('Submit', 'submit');
-                            ->value('S\'inscrire');
-
-            $formInscription->bound($_POST);
-
-            return $formInscription;
-        }
-        /*public static function db()
+        public static function db()
         {
             // Include config file
             define('DB_SERVER', '127.0.0.1:49386');
@@ -96,9 +61,9 @@
           	        die($dbconnect->error);
                 }
             }
-        }*/
+        }
 
-        /*public static function checkData()
+        public static function checkData()
         {
             $salt = 'i;151-120#';//Pour l'ajouter au mot de passe avant l'enregistrement dans la db
             //INITIALISATION DES VARIABLES
@@ -131,7 +96,7 @@
             }
 
 
-        }*/
+        }
 
         ##########################################
         #                                        #
