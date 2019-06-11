@@ -57,9 +57,6 @@
         case 'changePassword':
             $controllerToLoad = 'changePassword';
             break;
-        case 'viewOrder':
-            $controllerToLoad = 'viewOrder';
-            break;
     }
 
     //APPEL DU MAINCONTROLLER ET DU CONTROLLER AD HOC
