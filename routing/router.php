@@ -60,6 +60,9 @@
         case 'viewOrder':
             $controllerToLoad = 'viewOrder';
             break;
+        case 'adminArticles':
+            $controllerToLoad = 'adminArticles';
+            break;
     }
 
     //APPEL DU MAINCONTROLLER ET DU CONTROLLER AD HOC

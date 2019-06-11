@@ -33,7 +33,7 @@ error_reporting(E_ALL);
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <h2>Mes commandes</h2>
+                    <h1>Mes commandes</h1>
                 </div>
             </div>
             <div class="row">
