@@ -33,7 +33,8 @@
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <div class="wrapper">
+                    <a href="./views/changeEmail.php"><button class="btn btn-primary">Changer Email</button></a>
+                    <!--<div class="wrapper">
                         <div align="center">
                            <h2>Edition de mon profil</h2>
                            <div align="left">
@@ -50,7 +51,7 @@
                               </form>
                            </div>
                     </div>
-                </div>
+                </div>-->
             </div>
 
             </div>
