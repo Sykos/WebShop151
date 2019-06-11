@@ -87,7 +87,7 @@
             foreach($yourArray as $key => $value){
                 ${something.$key} = $value;
                 }
-            echo $yourArray;
+            echo getProductData();
             echo $something1;
            /*while ($x <= count($yourArray))
             {
