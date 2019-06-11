@@ -36,24 +36,6 @@
                     <a href="?page=changeEmail"><button class="btn btn-primary">Changer Email</button></a>
                     <a href="?page=changePassword"><button class="btn btn-primary">Changer Mot de Passe</button></a>
                     <a href="?page=viewOrder"><button class="btn btn-primary">Vos commandes</button></a>
-                    <!--<div class="wrapper">
-                        <div align="center">
-                           <h2>Edition de mon profil</h2>
-                           <div align="left">
-                              <form method="POST" action="" enctype="multipart/form-data">
-                                 <label>Pseudo :</label>
-                                 <input type="text" name="newpseudo" placeholder="Pseudo" value="<?php echo $user['pseudo']; ?>" class="form-control"/><br /><br />
-                                 <label>Mail :</label>
-                                 <input type="text" name="newmail" placeholder="Mail" value="<?php echo $user['mail']; ?>" class="form-control" /><br /><br />
-                                 <label>Mot de passe :</label>
-                                 <input type="password" name="newmdp1" placeholder="Mot de passe" class="form-control"/><br /><br />
-                                 <label>Confirmation - mot de passe :</label>
-                                 <input type="password" name="newmdp2" placeholder="Confirmation du mot de passe" class="form-control" /><br /><br />
-                                 <input type="submit" value="Mettre à jour mon profil !" class="btn btn-primary"/>
-                              </form>
-                           </div>
-                    </div>
-                </div>-->
             </div>
 
             </div>

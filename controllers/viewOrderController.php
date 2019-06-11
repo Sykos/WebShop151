@@ -8,4 +8,9 @@ class Controller extends mainController
         $this->aContent['viewPath'] = './views/viewOrder.php';
         $this->aContent['pageTitle'] = 'Mes commandes';
     }
+
+    public function render()
+    {
+        parent::render();
+    }
 }
