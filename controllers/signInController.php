@@ -231,13 +231,13 @@
 #                          #
 ############################
 
-$sErrorMessage = '';
+/*$sErrorMessage = '';
 
 //CHECK DES DONNÉES ET ENREGISTREMENT
 if(isset($_POST['submit']))
 {
     //Controller::checkData();
-}
+}*/
 
 
 
