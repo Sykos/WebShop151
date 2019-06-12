@@ -71,7 +71,7 @@
             $sPassword = self::getPassword();
             $patternString = '/^[a-zA-Z]+$/'; //ONLY ALPHA
             $patternDate = '/\d{1,2}\.\d{1,2}\.\d{4}/';//DD.MM.YYYY
-            $patternEmail = '/\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,6}/'//SOMETHING@SOMETHING.SOMETHING
+            $patternEmail = '/\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,6}/';//SOMETHING@SOMETHING.SOMETHING
             $patternEmail = '/\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,6}/';//SOMETHING@SOMETHING.SOMETHING
             $patternPswd = '/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,15}/';//8 to 15 character string with at least one upper case letter, one lower case letter, and one digit
             $patterUsername = '/^[a-zA-Z0-9]+([_ -]?[a-zA-Z0-9])*$/';//alpha numeric with some and characters like _-
@@ -187,8 +187,7 @@
         # CONTRE L'INJECTION                     #
         #                                        #
         ##########################################
-
-        public static function getSurname()
+/*public static function getSurname()
         {
             $sSurname = htmlspecialchars(trim($_POST['nom']));
             return $sSurname;
@@ -222,7 +221,7 @@
         {
             $sConfirmPassword = htmlspecialchars(trim($_POST['confirmPassword']));
             return $sConfirmPassword;
-        }
+        }*/
     }
 
 ############################
@@ -231,13 +230,13 @@
 #                          #
 ############################
 
-$sErrorMessage = '';
+//$sErrorMessage = '';
 
 //CHECK DES DONNÉES ET ENREGISTREMENT
-if(isset($_POST['submit']))
-{
+//if(isset($_POST['submit']))
+//{
     //Controller::checkData();
-}
+//}
 
 
 
@@ -358,3 +357,4 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
     //FERMETURE DE LA CONNEXION
     mysqli_close($dbconnect);
 }*/
+    }
