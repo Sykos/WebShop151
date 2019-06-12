@@ -1,5 +1,5 @@
 <?php
-
+//TEST D'INTÉGRATION PDO NON CONCLUANT
 /**
  * Classe implémentant le singleton pour PDO
  * @author Savageman

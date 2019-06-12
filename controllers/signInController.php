@@ -22,19 +22,7 @@
 
         public static function db()
         {
-            // Include config file
-            define('DB_SERVER', '127.0.0.1:49386');
-            define('DB_USERNAME', 'azure');
-            define('DB_PASSWORD', '6#vWHD_$');
-            define('DB_NAME', 'raclettev2');
-
-            // Attempt to connect to MySQL database
-            $dbconnect = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
-
-            if (mysqli_connect_errno())
-            {
-                die("Database connection failed: " . mysqli_connect_error());
-            }
+            include('connection.php');
 
             if(isset($_POST['submit']))
             {
@@ -65,7 +53,7 @@
 
         public static function checkData()
         {
-            /*//INTIALISATION DES VARIABLES
+            //INTIALISATION DES VARIABLES
             $aErrorMessage = array();
             $sNom = self::getSurname();
             $sPrenom = self::getName();
@@ -117,7 +105,7 @@
                 {
 
                 }
-            }*/
+            }
             $salt = 'i;151-120#';//Pour l'ajouter au mot de passe avant l'enregistrement dans la db
             //INITIALISATION DES VARIABLES
             $sNom = self::getSurname();
@@ -214,10 +202,7 @@ if(isset($_POST['submit']))
 
 ##########################
 #                        #
-#   NE FONCTIONNE PAS    #
-#           |            #
-#           |            #
-#           |            #
+# TESTS NON FONCTIONNELS #
 #                        #
 ##########################
 

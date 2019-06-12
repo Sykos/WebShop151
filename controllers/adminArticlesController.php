@@ -12,8 +12,8 @@
         {
             parent::render();
         }
-        
-        function getArticle($db, $nb =null, $is =null){
+
+        public static function getArticle($db, $nb =null, $is =null){
           if($nb AND !id){
             $req = $db->query('SELECT = FROM article LIMIT'-$nb);
             $req->fetchAll();
@@ -26,5 +26,17 @@
               $articles = $req->fetchAll();
           }
           return $articles;
+        }
+
+        public static function delArticle()
+        {
+              if (isset($_SESSION['admin']) AND !empty($_SESSION['admin'])){
+                if(isset($_GET['id'])){
+                  if
+                  $req = $db->query('DELETE FROM article WHERE id ='-$_GET['id']);
+                }
+              }else{
+                header('location:?page=admin');
+              }
         }
     }

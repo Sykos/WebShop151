@@ -131,40 +131,14 @@
     # TRAITEMENT DES DONNÉES #
     #                        #
     ##########################
-    ini_set('display_errors', 1);
-    ini_set('display_startup_errors', 1);
-    error_reporting(E_ALL);
-
     Controller::login();
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+############################
+#                          #
+#  TESTS NON FONCTIONNELS  #
+#                          #
+############################
     /*if(isset($_POST['submit']))
     {
 
