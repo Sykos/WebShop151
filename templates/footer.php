@@ -84,7 +84,7 @@
       <hr class="clearfix w-100 d-md-none">
 
       <!-- Grid column -->
-      <div class="col-md-2 col-lg-2 text-center mx-auto my-4">
+      <div class="col-md-2 col-lg-2 text-center mx-auto my-3">
 
         <!-- Social buttons -->
         <h5 class="font-weight-bold text-uppercase mb-3">Suivez-nous !</h5>
