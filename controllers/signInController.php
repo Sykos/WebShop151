@@ -22,7 +22,15 @@
 
         public static function db()
         {
-            include('connection.php');
+            $dbhost = '127.0.0.1:49386';
+                 $dbuser = 'azure';
+                 $dbpass = '6#vWHD_$';
+
+                 $conn = mysql_connect($dbhost, $dbuser, $dbpass);
+
+                 if(! $conn ) {
+                    die('Could not connect: ' . mysql_error());
+                 }
 
             if(isset($_POST['submit']))
             {
