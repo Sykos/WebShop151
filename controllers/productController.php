@@ -29,7 +29,15 @@
         {
                   //RÉCUPÉRATION DES DONNÉES RELATIVES AU PRODUIT À AFFICHER
 
-                  include('connection.php');
+                 $dbhost = '127.0.0.1:49386';
+                 $dbuser = 'azure';
+                 $dbpass = '6#vWHD_$';
+
+                 $conn = mysql_connect($dbhost, $dbuser, $dbpass);
+
+                 if(! $conn ) {
+                    die('Could not connect: ' . mysql_error());
+                 }
 
                   $sql = 'SELECT ProduitNom, ProduitPrix, ProduitCartDesc FROM produits';
                   mysql_select_db('raclettev2');
